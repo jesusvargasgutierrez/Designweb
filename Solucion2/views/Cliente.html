@@ -1,0 +1,216 @@
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link href="../style/style.css" rel="stylesheet">
+    
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-secondary navbar-expand-md">
+        <div class="container">
+           <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav-menu-acciones"
+               aria-controls="nav-menu-acciones" aria-expanded="false" aria-label="Opciones">
+              <span class="navbar-toggler-icon"></span>
+           </button>
+           
+           <div class="collapse navbar-collapse" id="nav-menu-acciones">
+               <section class="container d-flex justify-content-center">
+                   <div class="flex-fill">
+                       <span><i class="fas fa-file"></i></span>&nbsp;New
+                   </div>
+                   <div class="flex-fill">
+                       <span><i class="fas fa-save"></i></span>&nbsp;Save
+                   </div>
+                   <div class="flex-fill">
+                       <a href="#modal" id="modal" data-href="views/BuscarCliente.html" class="Buscar"><i class="fas fa-search"></i></a>&nbsp;Search
+                   </div>
+                   <div class="flex-fill">
+                       <span><i class="fas fa-print"></i></span>&nbsp;Print
+                   </div>
+                   <div class="flex-fill">
+                       <span><i class="fas fa-undo"></i></span>&nbsp;Exit
+                   </div>
+               </section>
+           </div>
+       </div>
+    </nav>
+    <div class="container mt-3">
+        <ul class="nav row nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="col-lg-3 nav-item col-12 text-center border border-success">
+              <a class="nav-link active" id="pills-General-Section" data-toggle="pill" href="#General-Section" 
+              role="tab" aria-controls="General-Section" aria-selected="true">General Information</a>
+            </li>
+            <li class="col-lg-3 nav-item col-12 text-center border border-success">
+              <a class="nav-link" id="pills-Address-Section" data-toggle="pill" href="#Address-Section" 
+              role="tab" aria-controls="Address-Section" aria-selected="false">Address</a>
+            </li>
+            <li class="col-lg-3 nav-item col-12 text-center border border-success">
+                <a class="nav-link" id="pills-Identification-Section" data-toggle="pill" href="#Identification-Section" 
+                role="tab" aria-controls="Identification-Section" aria-selected="false">Identification</a>
+            </li>
+            <li class="col-lg-3 nav-item col-12 text-center border border-success">
+                <a class="nav-link" id="pills-Works-Section" data-toggle="pill" href="#Works-Section" 
+                role="tab" aria-controls="Works-Section" aria-selected="false">Works</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="tab-content" id="Sections-content">
+        <section class="border border-primary tab-pane fade show active" role="tabpanel" aria-labelledby="pills-home-tab" id="General-Section">
+            <div class="d-flex flex-column flex-lg-row align-items-lg-center">
+                <div class="flex-fill border border-danger">
+                    <label class="col-form-label">Client ID:</label>
+                    <input type="text" disabled class="form-control-sm enabled" placeholder=""/>
+                </div>
+            </div>
+            <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
+                <div class="flex-fill border border-danger order-3">
+                    <input type="text" class="form-control" placeholder="Full name"/>
+                </div>
+                <div class="flex-fill border border-danger order-0">
+                    <input type="text" class="form-control" placeholder="Names"/>
+                </div>
+                <div class="flex-fill border border-danger order-1">
+                    <input type="text" class="form-control" placeholder="First name"/>
+                </div>
+                <div class="flex-fill border border-danger order-2">
+                    <input type="text" class="form-control" placeholder="Surname"/>
+                </div>
+            </div>
+            <div class="d-flex flex-column mt-3 mt-md-2 flex-lg-row align-items-lg-center">
+                <div class="flex-fill border border-danger">
+                    <input class="form-control" type="date" name="bday">
+                </div>
+                <div class="flex-fill border border-danger">
+                    <input type="text" class="form-control" disabled placeholder="Age"/>
+                </div>
+                <div class="flex-fill border border-danger">
+                    <select class="form-control" id="select-genero">
+                        <option selected>Selection Gender</option>
+                        <option>Male</option>
+                        <option>Femaile</option>
+                    </select>
+                </div>
+                <div class="flex-fill border border-danger">
+                    <select class="form-control" id="select-estado-civil">
+                        <option selected>Selection marital status</option>
+                        <option>Single</option>
+                        <option>Married</option>
+                    </select>   
+                </div>
+            </div>
+            <div class="d-flex flex-column mt-3 mt-md-2 flex-lg-row align-items-lg-center">
+                <div class="flex-fill border border-danger">
+                    <input type="text" class="form-control" placeholder="Curp"/>
+                </div>
+                <div class="flex-fill border border-danger">
+                    <input type="text" class="form-control" placeholder="RFC"/>
+                </div>
+                <div class="flex-fill border border-danger">
+                    <select class="form-control" id="Select-Nacionality">
+                        <option selected>Selection Nacionality</option>
+                        <option>Mexican</option>
+                        <option>foreign</option>
+                    </select>  
+                </div>
+                <div class="flex-fill border border-danger">
+                    <select class="form-control" id="Select-Country">
+                        <option selected>Seleccione Country</option>
+                        <option>MEXICO</option>
+                        <option>USA</option>
+                        <option>CANADA</option>
+                    </select>  
+                </div>
+            </div>
+        </section>
+
+        <section class="border border-primary tab-pane fade show active" role="tabpanel" aria-labelledby="pills-home-tab" id="Address-Section">
+            <div class="d-flex flex-column flex-lg-row align-items-lg-center">
+                <div class="flex-fill border border-danger">
+                    <input type="text" class="form-control" placeholder="Address"/>
+                </div>
+                <div class="flex-fill border border-danger">
+                    <input type="text" class="form-control" placeholder="Internal Number"/>
+                </div>
+                <div class="flex-fill border border-danger">
+                    <input type="text" class="form-control" placeholder="External Number"/>
+                </div>
+                <div class="flex-fill border border-danger">
+                    <input type="text" class="form-control" placeholder="Colonia"/>
+                </div>
+            </div>
+            <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
+                <div class="flex-fill border border-danger">
+                    <input type="text" class="form-control" placeholder="City"/>
+                </div>
+                <div class="flex-fill border border-danger">
+                    <select class="form-control" id="Select-State">
+                        <option selected>Selection State</option>
+                        <option>Chihuahua</option>
+                        <option>Durango</option>
+                    </select>
+                </div>
+                <div class="flex-fill border border-danger">
+                    <select class="form-control" id="Select-Locality">
+                        <option selected>Selection Locality</option>
+                        <option>Lorem ipsum dolor sit amet</option>
+                    </select>
+                </div>
+            </div>
+            <div class="container overflow-auto border border-warning">
+                <div class="d-flex flex-column flex-lg-row border border-info align-items-lg-center">
+                    <div class="flex-fill border border-danger">
+                        1
+                    </div>
+                    <div class="flex-fill border border-danger">
+                        2
+                    </div>
+                    <div class="flex-fill border border-danger">
+                        <table class="flex-fill mt-3 table table-striped table-dark">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Lorem ipsum dolor. </th>
+                                    <th scope="col">Lorem ipsum dolor. </th>
+                                    <th scope="col">Lorem ipsum dolor. </th>
+                                    <th scope="col">Lorem ipsum dolor. </th>
+                                    <th scope="col">Lorem ipsum dolor. </th>
+                                    <th scope="col">Lorem ipsum dolor. </th>
+                                    <th scope="col">Lorem ipsum dolor. </th>
+                                </tr>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Lorem ipsum dolor sit. </td>
+                                        <td>Lorem ipsum dolor sit. </td>
+                                        <td>Lorem ipsum dolor sit. </td>
+                                        <td>Lorem ipsum dolor sit. </td>
+                                        <td>Lorem ipsum dolor sit. </td>
+                                        <td>Lorem ipsum dolor sit. </td>
+                                        <td>Lorem ipsum dolor sit. </td>
+                                    </tr>
+                                </tbody>
+                            </thead>
+                        </table>  
+                    </div>
+                    
+                </div> 
+            </div>
+        </section>
+    </div>
+</body>
+    <script src="../script/script.js"></script>
+    <script src="../style/bootstrap/js/bootstrap.min.js"></script>
+</html>
