@@ -14,19 +14,63 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        #ancle-options, #ancle-options:hover,#ancle-options:focus{
+            color: inherit;
+        }
+    </style>
 </head>
 <body>
-
     <div style="background:#139499;">
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar flex-nowrap">
             <a id="sidebarCollapse" href="#">
                 <span><i id="icon-slide" class="fas fa-angle-double-left"></i></span>
                 <span><i class="fas fa-bars"></i></span>
             </a>
+            <div class="d-flex text-center">
+                <div class="flex-fill mx-1">
+                    <span>
+                        <a>
+                            <i class="fas fa-comments"></i>&nbsp;
+                            <span class="d-none d-sm-none d-md-none d-lg-block">Messages</span>
+                        </a >
+                    </span>
+                </div>
+                <div class="flex-fill mx-1">
+                    <span>
+                        <a>
+                            <i class="fas fa-bell"></i>&nbsp;
+                            <span class="d-none d-sm-none d-md-none d-lg-block">Notifications</span>
+                        </a>
+                    </span>
+                </div>
+                <div class="flex-fill mx-1">
+                    <span>
+                        <a>
+                            <i class="fas fa-star"></i>&nbsp;
+                            <span class="d-none d-sm-none d-md-none d-lg-block">Favorite</span>
+                        </a>
+                    </span>
+                </div>
+                <div class="dropdown flex-fill">
+                    <a href="#" role="button" id="ancle-options"
+                        data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                        <i class="fas fa-th-large"></i>
+                        <span class="d-none d-sm-none d-md-none d-lg-block">Options</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="ancle-options">
+                        <a class="dropdown-item" href="#"><i class="fas fa-globe"></i>&nbsp;Change Languaje</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-shield-alt"></i>&nbsp;Security</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-question-circle"></i>&nbsp;About Us</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-door-open"></i>&nbsp;Log-out</a>
+                    </div>
+                </div>
+            </div>
         </nav>
     </div>
+    
     <div class="wrapper">
         <nav id="sidebar" class="bg-dark">
             <section class="container">
@@ -51,12 +95,18 @@
         </nav>
 
         <!--Here put main content-->
+        <a href="#popUp" data-href="BuscarCliente1.html" class="Buscar btn btn-primary">
+            <i class="fas fa-th-large"></i>
+            Options
+        </a>
     </div>
     
-    <div class="modal fade" id="popUpModal" tabindex="-1" role="dialog" aria-labelledby="popUpModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body">
+    <div class="modal fade overflow-auto" id="popUpModal"
+        tabindex="-1" role="dialog" aria-labelledby="popUpModalLabel" aria-hidden="true">
+        <div class="modal-dialog overflow-auto" style="width: 796px; height: 630px;">
+            <div class="modal-content overflow-auto" style="width: 796px; height: 550px;">
+                <div class="modal-body overflow-auto" style="width: 796px; height: 524px;" >
+                    sda
                 </div>
             </div>
         </div>
@@ -72,7 +122,7 @@
         });
     </script>
     
-</body>
     <script src="script/script.js"></script>
     <script src="style/bootstrap/js/bootstrap.min.js"></script>
+</body>
 </html>
