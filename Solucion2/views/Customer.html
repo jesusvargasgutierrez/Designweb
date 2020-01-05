@@ -73,6 +73,9 @@
                 <div class="flex-fill">
                     <label class="col-form-label">Client ID:</label>
                     <input type="text" disabled class="form-control-sm enabled" placeholder=""/>
+                    <a href="#" role="button" id="ancle-options" class="btn btn-info">
+                        <i class="fas fa-search"></i>
+                    </a>
                 </div>
             </div>
             <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
@@ -201,7 +204,208 @@
                                 </tr>
                             </tbody>
                         </thead>
-                    </table>  
+                    </table> 
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item">
+                                <a href="#" role="button" id="ancle-Add" class="btn btn-info">
+                                    <i class="fas fa-plus-circle"></i>
+                                </a>
+                            </li>
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav> 
+                </div>
+            </div>
+        </section>
+
+        <section class="tab-pane fade show active" role="tabpanel" aria-labelledby="pills-home-tab" id="Identification-Section">
+            <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
+                <div class="flex-fill">
+                    <select class="form-control" id="Select-State">
+                        <option selected>Selecct Document</option>
+                        <option>Mexican ID</option>
+                        <option>Professional ID</option>
+                        <option>driver's license</option>
+                        <option>Passport Number</option>
+                    </select>
+                </div>
+                <div class="mx-1 my-1 flex-fill">
+                    <input type="text" class="form-control" placeholder="Number"/>
+                </div>
+            </div>
+            <div class="d-flex flex-row mt-3 text-white overflow-auto">
+                <div class="flex-fill">
+                    <table class="flex-fill mt-3 table table-striped table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">Selection</th>
+                                <th scope="col">#</th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span><a href="#"><i class="fas fa-edit"></i></a></span>
+                                        <span><a href="#"><i class="fas fa-trash-alt"></i></a></span>
+                                    </td>
+                                    <th scope="row">1</th>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                </tr>
+                            </tbody>
+                        </thead>
+                    </table> 
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item">
+                                <a href="#" role="button" id="ancle-Add" class="btn btn-info">
+                                    <i class="fas fa-plus-circle"></i>
+                                </a>
+                            </li>
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>  
+                </div>
+            </div>
+        </section>
+
+        <section class="tab-pane fade show active" role="tabpanel" aria-labelledby="pills-home-tab" id="Works-Section">
+            <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
+                <div class="flex-fill mx-1 my-1">
+                    <input type="text" class="form-control" placeholder="Company"/>
+                </div>
+                <div class="flex-fill mx-1 my-1">
+                    <div class="flex-fill">
+                        <select class="form-control" id="select-spin">
+                            <option selected>Sector</option>
+                            <option>Public</option>
+                            <option>Privade</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex-fill mx-1 my-1">
+                    <input type="text" class="form-control" placeholder="Phone"/>
+                </div>
+                <div class="flex-fill mx-1 my-1">
+                    <input type="text" class="form-control" placeholder="Lead"/>
+                </div>
+            </div>
+            <div class="d-flex flex-column mt-3 mt-md-2 flex-lg-row align-items-lg-center">
+                <div class="flex-fill mx-1 my-1">
+                    <input type="text" class="form-control" placeholder="RFC"/>
+                </div>
+                <div class="flex-fill mx-1 my-1">
+                    <input type="text" class="form-control" placeholder="Address"/>
+                </div>
+                <div class="flex-fill mx-1 my-1">
+                    <input type="text" class="form-control" placeholder="Internal Number"/>
+                </div>
+                <div class="flex-fill mx-1 my-1">
+                    <input type="text" class="form-control" placeholder="External Number"/>
+                </div>
+            </div>
+            <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
+                <div class="flex-fill mx-1 my-1">
+                    <input type="text" class="form-control" placeholder="Colonia"/>
+                </div>
+                <div class="flex-fill mx-1 my-1">
+                    <input type="text" class="form-control" placeholder="City"/>
+                </div>
+                <div class="flex-fill mx-1 my-1">
+                    <select class="form-control" id="Select-State">
+                        <option selected>Selection State</option>
+                        <option>Chihuahua</option>
+                        <option>Durango</option>
+                    </select>
+                </div>
+                <div class="flex-fill mx-1 my-1">
+                    <select class="form-control" id="Select-Locality">
+                        <option selected>Selection Locality</option>
+                        <option>Lorem ipsum dolor sit amet</option>
+                    </select>
+                </div>
+            </div>
+            <div class="d-flex flex-row mt-3 text-white overflow-auto">
+                <div class="flex-fill">
+                    <table class="flex-fill mt-3 table table-striped table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">Selection</th>
+                                <th scope="col">#</th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span><a href="#"><i class="fas fa-edit"></i></a></span>
+                                        <span><a href="#"><i class="fas fa-trash-alt"></i></a></span>
+                                    </td>
+                                    <th scope="row">1</th>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                </tr>
+                            </tbody>
+                        </thead>
+                    </table> 
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item">
+                                <a href="#" role="button" id="ancle-Add" class="btn btn-info">
+                                    <i class="fas fa-plus-circle"></i>
+                                </a>
+                            </li>
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav> 
                 </div>
             </div>
         </section>
