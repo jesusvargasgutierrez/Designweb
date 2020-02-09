@@ -26,13 +26,7 @@
     <link href="style/fontawesome/css/solid.css" rel="stylesheet">
     
     <style>
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-        .dropdown-menu {background-color: transparent;}
+        
     </style>
 </head>
 <body>
@@ -74,27 +68,77 @@
             <div class="h5 pb-3 font-weight-bold">Nuestras muestras de paginas</div>
             
             <nav class="navbar row">
-                <ul class="col-12 navbar-nav">
-                    <li class="row nav-item dropdown">
-                        <a href="#" role="button" data-toggle="dropdown" 
-                            class="col-12 nav-link">[Option1]</a>
-                        <div class="col-12 dropdown-content dropdown-menu" role="menu" aria-labelledby="ancle-options">
-                            <a>ffff</a>
-                            <a>ggg</a>
-                        </div>
-                    </li>
-                    <li class="row">
-                        <a href="#" role="button" data-toggle="dropdown" class="col-12 nav-link">[Option2]</a>
-                        <div class="col-12 dropdown-menu" role="menu" aria-labelledby="ancle-options">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item list-group-item-action list-group-item-light">Cras justo odio</li>
-                                <li class="list-group-item list-group-item-action list-group-item-light">Dapibus ac facilisis in</li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
+                 <div class="col-12 navbar-nav navbar-expand-lg">
+                    <div class="row container ml-auto">
+                        <article class="col-12 col-lg-3 mb-3 mb-lg-0">
+                           <button type="button" class="flex-fill navbar-toggler dropdown" data-toggle="collapse"
+                            data-target="#Lista-sistemas" aria-controls="Lista-sistemas" aria-expanded="false"
+                            aria-label="Ver mas">
+                            Sistemas
+                           </button>
 
+                            <div class="border-0 flex-fill collapse navbar-collapse dropdown-content dropdown-menu"
+                                 role="menu" id="Lista-sistemas" aria-labelledby="ancle-options">
+                                <ul class="list-group list-group-flush">
+                                  <li class="list-group-item border-0 d-none d-lg-block"><strong>Sistemas</strong></li>
+                                  <li class="list-group-item border-0">RP CodersWeb</li>
+                                  <li class="list-group-item border-0">Modulos independientes</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="col-12 col-lg-3 mb-3">
+                            <button type="button" class="flex-fill navbar-toggler dropdown" data-toggle="collapse"
+                            data-target="#Lista-Templates" aria-controls="Lista-Templates" aria-expanded="false"
+                            aria-label="Ver mas">
+                            Templates
+                            </button>
+
+                            <div class="border-0 flex-fill collapse navbar-collapse dropdown-content dropdown-menu"
+                                 role="menu" id="Lista-Templates" aria-labelledby="ancle-options">
+                                <ul class="list-group list-group-flush">
+                                  <li class="list-group-item d-none d-lg-block"><strong>Templates</strong></li>
+                                  <li class="list-group-item border-0">Multimedia</li>
+                                  <li class="list-group-item border-0">Templates 2</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="col-12 col-lg-3 mb-3">
+                            <button type="button" class="flex-fill navbar-toggler dropdown" data-toggle="collapse"
+                            data-target="#Lista-Servicios" aria-controls="Lista-Servicios" aria-expanded="false"
+                            aria-label="Ver mas">
+                            Servicios
+                            </button>
+
+                            <div class="border-0 flex-fill collapse navbar-collapse dropdown-content dropdown-menu"
+                                 role="menu" id="Lista-Servicios" aria-labelledby="ancle-options">
+                                <ul class="list-group list-group-flush">
+                                  <li class="list-group-item d-none d-lg-block"><strong>Servicios</strong></li>
+                                  <li class="list-group-item border-0">Web api login</li>
+                                  <li class="list-group-item border-0">Web api clientes</li>
+                                  <li class="list-group-item border-0">Web api Seguridad</li>
+                                  <li class="list-group-item border-0">Web api RP</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="col-12 col-lg-3 mb-3">
+                            <button type="button" class="flex-fill navbar-toggler dropdown" data-toggle="collapse"
+                                data-target="#Lista-Contratos" aria-controls="Lista-Contratos" aria-expanded="false"
+                                aria-label="Ver mas">
+                                 Nuestras Politicas
+                                </button>
+
+                                <div class="border-0 flex-fill collapse navbar-collapse dropdown-content dropdown-menu"
+                                     role="menu" id="Lista-Contratos" aria-labelledby="ancle-options">
+                                    <ul class="list-group list-group-flush border-0">
+                                      <li class="list-group-item border-0 d-none d-lg-block"><strong>Nuestras Politicas</strong></li>
+                                      <li class="list-group-item border-0">Al contratar</li>
+                                      <li class="list-group-item border-0">Durante el contrato</li>
+                                    </ul>
+                                </div>
+                        </article>
+                    </div>
+                </div>
+            </nav>
         </div>
     </section>
 
