@@ -7,6 +7,7 @@ Main page: https://coders-web.000webhostapp.com/
     then press enter
 
 https://hackerthemes.com/bootstrap-cheatsheet/
+
 https://stackoverflow.com/questions/27707282/use-modal-with-external-url-body-and-dynamic-links-from-data-attribute
 
 https://www.jqueryscript.net/demo/bootstrap-carousel-templates/logo-carousel/
