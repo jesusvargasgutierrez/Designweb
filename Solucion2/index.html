@@ -17,14 +17,12 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
     <style type="text/css">
-        #ancle-options, #ancle-options:hover,#ancle-options:focus{
-            color: inherit;
-        }
+
     </style>
 </head>
 <body>
-    <div style="background:#139499;">
-        <nav class="navbar flex-nowrap">
+    <div>
+        <nav class="navbar flex-nowrap bg-primary">
             <a id="sidebarCollapse" href="#">
                 <span><i id="icon-slide" class="fas fa-angle-double-left"></i></span>
                 <span><i class="fas fa-bars"></i></span>
@@ -72,7 +70,7 @@
     </div>
     
     <div class="wrapper">
-        <nav id="sidebar" class="bg-dark">
+        <nav id="sidebar" class="bg-primary">
             <section class="container">
                 <span class="row">
                     <div class="col-12">
@@ -95,10 +93,12 @@
         </nav>
 
         <!--Here put main content-->
-        <a href="#popUp" data-href="BuscarCliente1.html" class="Buscar btn btn-primary">
-            <i class="fas fa-th-large"></i>
-            Options
-        </a>
+        <section class="container">
+            <a href="#popUp" data-href="BuscarCliente1.html" class="Buscar btn btn-primary">
+                <i class="fas fa-th-large"></i>
+                Options
+            </a>
+        </section>
     </div>
     
     <div class="modal fade overflow-auto" id="popUpModal"
