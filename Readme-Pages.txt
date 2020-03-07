@@ -15,3 +15,18 @@ https://www.jqueryscript.net/demo/bootstrap-carousel-templates/logo-carousel/
 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_right
 
 https://uigradients.com/#RoyalBlue+Petrol
+
+
+Dialnet.com
+pubmed.com
+scopus.com
+Redalyc.com
+scielo.com
+academia.edu.com
+refseek.com
+eric.com
+
+jquery load html into div 
+
+gestor de referencias
+Mendeley
