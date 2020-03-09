@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
-    <link href="style_slide.css" rel="stylesheet">
+    <link href="../style/style_slide.css" rel="stylesheet">
     
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     
@@ -16,17 +16,8 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    
-    <style type="text/css">
-        .Lista li{
-            background-color: transparent;
-        }
-        .Lista li:hover{
-            background-color:darkturquoise;
-        }
-    </style>
 </head>
-<body>
+<body class="bg-dark">
     <div>
         <nav class="page-header navbar navbar-light bg-lignt navbar-expand-md">
             <a class="navbar-brand" href="#">
@@ -41,39 +32,36 @@
             </button>
 
             <div class="collapse navbar-collapse" id="menu-principal">
-                <h5 class="navbar-nav ml-auto">Ejemplos</h5>
+                <h5 class="navbar-nav ml-auto"><strong>Ejemplos</strong></h5>
             </div>
         </nav>
     </div>
     
     <div class="d-flex flex-sm-column flex-lg-row">
-        <nav class="border border-warning navbar navbar-light navbar-expand">
+        <nav id="" class="sidebar border border-warning navbar navbar-light navbar-expand">
             <div class="collapse navbar-collapse" id="nav-side">
                 <ul class="Lista list-group list-group-flush">
-                    <li class="text-dark list-group-item list-group-item-action border-0">Tablero de ejemplos</li>
-                    <li class="text-dark list-group-item list-group-item-action border-0 disabled">Lorem ipsum dolor sit</li>
-                    <li class="text-dark list-group-item list-group-item-action border-0"><a id="ancla-main" class="ancla-main">Cras justo odio</a></li>
-                    <li class="text-dark list-group-item list-group-item-action border-0">
-                        Dapibus ac facilisis in
+                    <li class="bg-dark list-group-item list-group-item-action border-0 disabled font-weight-bold">Dash Board</li>
+                    <li class="bg-dark list-group-item list-group-item-action border-0 disabled font-weight-bold">Menus</li>
+                    <li class="bg-dark list-group-item list-group-item-action border-0">
+                        <a id="ancla-main" class="ancla-main">Horizontal</a>
                     </li>
-                    <li class="text-dark list-group-item list-group-item-action border-0 disabled">MenusII</li>
-                    <li class="text-dark list-group-item list-group-item-action border-0">Cras justo odio</li>
-                    <li class="text-dark list-group-item list-group-item-action border-0">Dapibus ac facilisis in</li>
+                    <li class="bg-dark list-group-item list-group-item-action border-0 disabled font-weight-bold">
+                        Javascript
+                    </li>
+                    <li class="bg-dark list-group-item list-group-item-action border-0">Alerts</li>
+                    <li class="bg-dark list-group-item list-group-item-action border-0">Fields</li>
                 </ul>
             </div>
         </nav>
         <div class="container border border-danger" id="Main-content">
-            <h1>Hello word!</h1>
-            <!--Here put main content Html-Examples-->
         </div>
     </div>
 
-    <footer id=Forter-content>
+    <footer class="border border-success">
         <h1>footer content</h1>
     </footer>
     
-
-
     <script type="text/javascript">
         $(document).ready(function(){
             $(".ancla-main").click(function(){   
