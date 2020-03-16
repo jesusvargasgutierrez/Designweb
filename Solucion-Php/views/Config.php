@@ -1,7 +1,7 @@
 <?php
 
 function conectar(){
-    include_once('view/libs/adodb/adodb.inc.php');
+    include_once('adodb/adodb.inc.php');
     
     $cnn = ADONewConnection('mysqli');
     
@@ -12,7 +12,7 @@ function conectar(){
         </script>
        <?php
     }
-    if(!$cnn->Connect('localhost','root','','tecnoventa')){
+    if(!$cnn->Connect('localhost','root','','solucion1')){
        ?>
         <script type="text/javascript">
            alert("Existen Problemas al Realizar la conexion con la base de datos");

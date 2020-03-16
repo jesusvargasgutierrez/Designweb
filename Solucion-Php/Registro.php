@@ -83,16 +83,16 @@
                 </div>
                 <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
                     <div class="flex-fill order-3 my-1 mx-1">
-                        <input type="text" class="form-control" value="Full Name" name="Full-Name" placeholder="Full name"/>
+                        <input type="text" class="form-control" value="Full Name" name="FullName" placeholder="Full name"/>
                     </div>
                     <div class="flex-fill order-0 my-1 mx-1">
                         <input type="text" class="form-control" value="Names" name="Names" placeholder="Names"/>
                     </div>
                     <div class="flex-fill order-1 my-1 mx-1">
-                        <input type="text" class="form-control" value="First Name" name="First-name" placeholder="First name"/>
+                        <input type="text" class="form-control" value="First Name" name="Firstname" placeholder="First name"/>
                     </div>
                     <div class="flex-fill order-2 my-1 mx-1">
-                        <input type="text" class="form-control" placeholder="Surname"/>
+                        <input type="text" class="form-control" value="Second-name" name="Secondname" placeholder="Surname"/>
                     </div>
                 </div>
                 <div class="d-flex flex-column mt-3 mt-md-2 flex-lg-row align-items-lg-center">
