@@ -9,11 +9,11 @@
     
     <link href="../style/style_slide.css" rel="stylesheet">
     
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-    
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </head>
@@ -62,7 +62,11 @@
                        <span><i class="fas fa-print"></i></span>&nbsp;Print
                    </div>
                    <div class="flex-fill">
-                       <span><i class="fas fa-undo"></i></span>&nbsp;Exit
+                       <span>
+                        <button type="button" onclick="accion('salir')" name="boton" class="btn btn-link">
+                          <i class="fas fa-undo"></i>&nbsp;Link
+                        </button>
+                      </span>
                    </div>
                </section>
            </div>
@@ -71,6 +75,7 @@
 
     <div class="tab-content" id="Sections-content">
         <section class="tab-pane fade show active" role="tabpanel" aria-labelledby="pills-home-tab" id="General-Section">
+          <?php include_once('views/messages.php') ?>
             <form action="Account.php" id="formulario" name="formulario" method="POST">
                 <div class="d-flex flex-column my-1 flex-lg-row align-items-lg-center">
                     <div class="flex-fill">
@@ -122,11 +127,26 @@
             </form>
         </section>
     </div>
-
     <footer class="border border-success">
         <h1>footer content</h1>
     </footer>
-    
+
+    <script type="text/javascript">
+        var url1="Acciones.php";
+        function accion(valor)
+        {
+            $.ajax({
+                type:"POST", //aqui puede ser igual get
+                url: url1,//aqui va tu direccion donde esta tu funcion php
+                data: "datos="+valor,//aqui tus datos
+                success:function(response)
+                {
+                  alert(response);
+                }
+             });
+        }
+    </script>
+
     <script type="text/javascript">
         $(document).ready(function(){
             $(".ancla-main").click(function(){   

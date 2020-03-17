@@ -14,14 +14,13 @@ include_once('views/Config.php');
     $conn = conectar();
     $sql = "call Op_InsUser('".$Names."','".$Firstname."','".$Secondname."','".$FullName."');";
     $set = $conn->Execute($sql);
-    $respuesta = ($set->RecordCount()) ? 1 : 0;
+    $respuesta = ($set->RecordCount()) ? 2 : 1;
 
     echo $respuesta;
-?>
-    <script type="text/javascript">
-      alert("Operacion realizada correctamente");
-    </script>
-<?php
+    
+    session_start();
+    $_SESSION["respuesta"] = $respuesta;
+
     header ("Location: Registro.php");
   }
   else
