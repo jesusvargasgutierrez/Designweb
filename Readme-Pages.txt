@@ -16,6 +16,8 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_right
 
 https://uigradients.com/#RoyalBlue+Petrol
 
+https://uniwebsidad.com/libros/fundamentos-jquery/capitulo-2/arrays
+
 
 Dialnet.com
 pubmed.com
