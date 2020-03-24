@@ -19,7 +19,13 @@
 				break;
 		}
 
-		echo $_POST['datos'];
+		$json = $_POST["datos"];
+
+		$someArray = json_decode($json, true);
+
+		foreach($someArray as $key => $value) {
+		    echo "Property:".$value["name"] . ", value:" . $value["value"];
+		 }
 	}
 	else
 	{

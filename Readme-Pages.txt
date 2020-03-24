@@ -18,6 +18,12 @@ https://uigradients.com/#RoyalBlue+Petrol
 
 https://uniwebsidad.com/libros/fundamentos-jquery/capitulo-2/arrays
 
+https://stackoverflow.com/questions/11338774/serialize-form-data-to-json
+
+https://jonsuh.com/blog/convert-loop-through-json-php-javascript-arrays-objects/
+
+https://youtu.be/2qJT09LAh64
+
 
 Dialnet.com
 pubmed.com
