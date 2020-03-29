@@ -98,7 +98,7 @@
                     </div>
                 </div>
 
-                  <input type="hidden" id="hdIdAction" name="hdIdAction" value="1"> 
+                <input type="hidden" id="HdAction" name="HdAction" value="GuardarCliente"> 
 
                 <input type="submit" value="Registrar!!" class="btn-success" id="regp" name="alta"/>
             </form>

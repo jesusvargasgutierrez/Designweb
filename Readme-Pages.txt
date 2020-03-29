@@ -24,6 +24,13 @@ https://jonsuh.com/blog/convert-loop-through-json-php-javascript-arrays-objects/
 
 https://youtu.be/2qJT09LAh64
 
+https://youtu.be/k5RKM3r2Srk
+
+https://youtu.be/ESWdnCDQnkI
+
+https://www.programadornovato.com/instalar-netbeans-10-en-ubuntu-18-04/
+
+https://www.google.com/search?client=ubuntu&channel=fs&q=trimp+php&ie=utf-8&oe=utf-8
 
 Dialnet.com
 pubmed.com

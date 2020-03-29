@@ -1,31 +1,34 @@
-<?php  
-include_once('views/adodb/adodb.inc.php');
-include_once('views/Config.php');
+<?php
+  include_once('Procedures.php');
+  include_once('views/adodb/adodb.inc.php');
+  include_once('views/Config.php');
 
-  if(isset($_POST['FullName'])){
+class Account
+{
+    function ProcedureParameters($EntidadCliente1)
+    {
+        $DatosProcedures = new Procedures();
 
-    foreach($_POST as $cm=>$val){
-        $intercambio=$cm;
-        $$intercambio=$val;
+        $ArrayProcedure = $DatosProcedures->GetProcedures();
 
-        echo "<br>".$intercambio ."&nbsp;".$$intercambio;
+        $Procedure = $ArrayProcedure[$EntidadCliente1->Accion];
+
+        //$conn = conectar();
+
+        $sql = "call ".$Procedure."(";
+
+        foreach($EntidadCliente1->Datos as $key => $value)
+        {
+          if ($value["value"] != $EntidadCliente1->Accion) {
+            $Values = $Values."'".$value["value"]."',";
+          }
+        }
+
+        echo $sql.trim($Values,",").")";
+
+        //$set = $conn->Execute($sql);
+        //$respuesta = ($set->RecordCount()) ? 2 : 1;
     }
-
-    $conn = conectar();
-    $sql = "call Op_InsUser('".$Names."','".$Firstname."','".$Secondname."','".$FullName."');";
-    $set = $conn->Execute($sql);
-    $respuesta = ($set->RecordCount()) ? 2 : 1;
-
-    echo $respuesta;
-    
-    session_start();
-    $_SESSION["respuesta"] = $respuesta;
-
-    header ("Location: Registro.php");
-  }
-  else
-  {
-    echo "does not exist field";
-  }
+}
 
 ?>
