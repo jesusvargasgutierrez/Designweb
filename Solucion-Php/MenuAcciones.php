@@ -19,7 +19,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </head>
 <body class="bg-dark">
-   <nav class="navbar navbar-dark bg-secondary navbar-expand-md">
+   <nav class="navbar navbar-expand-md">
         <div class="container">
            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav-menu-acciones"
                aria-controls="nav-menu-acciones" aria-expanded="false" aria-label="Opciones">
@@ -30,28 +30,28 @@
                <section class="container d-flex justify-content-center">
                    <div class="flex-fill">
                    	   <span>
-                   		<button type="button" name="boton" class="btn btn-link">
+                   		<button type="button" name="boton" class="btn">
                           <i class="fas fa-file"></i></span>&nbsp;New
                         </button>
                    	   </span>
                    </div>
                    <div class="flex-fill">
                    	  <span>
-                   		<button type="button" id="Save" name="Save" class="btn btn-link">
+                   		<button type="button" id="Save" name="Save" class="btn">
                           <i class="fas fa-save"></i></span>&nbsp;Save
                         </button>
                    	  </span>
                    </div>
                    <div class="flex-fill">
                    	<span>
-                   		<button type="button" name="boton" class="btn btn-link">
+                   		<button type="button" name="boton" class="btn btn">
                           <i class="fas fa-search"></i>&nbsp;Search
                         </button>
                    	</span>
                    </div>
                    <div class="flex-fill">
                        <span>
-                       	<button type="button" name="boton" class="btn btn-link">
+                       	<button type="button" name="boton" class="btn btn">
                           <i class="fas fa-print"></i>&nbsp;Print
                         </button>
                        	
@@ -59,8 +59,8 @@
                    </div>
                    <div class="flex-fill">
                        <span>
-                        <button type="button" name="boton" class="btn btn-link">
-                          <i class="fas fa-undo"></i>&nbsp;Link
+                        <button type="button" name="boton" class="btn btn">
+                          <i class="fas fa-undo"></i>&nbsp;Exit
                         </button>
                       </span>
                    </div>

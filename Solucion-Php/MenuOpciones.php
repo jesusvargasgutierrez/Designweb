@@ -30,69 +30,8 @@
     </style>
 </head>
 <body>
-    <section class="container">
-        <h4>Menu Simple</h4>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <a href="" class="navbar-brand">
-                    [Tu Logotipo]
-                </a>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav ml-auto">
-                      <a class="nav-item nav-link active" href="#">Inicio</a>
-                      <a class="nav-item nav-link" href="#">¿Que es?</a>
-                      <a class="nav-item nav-link" href="#">Caracteristicas</a>
-                      <a class="nav-item nav-link" href="#">Ventajas</a>
-                      <a class="nav-item nav-link" href="#">Contacto</a>
-                    </div>
-                </div>  
-            </div>
-        </nav>
-    </section>
-    <section class="container">
-        <h4 class="container">Menu Desplegable</h4>
-        <nav class="navegacion navbar navbar-expand-lg">
-            <ul class="menu">
-                <li class="position-relative d-inline-block"><a class="pt-3 pr-3 d-block" href="#">Inicio</a></li>
-                <li class="position-relative d-inline-block"><a class="pt-3 pr-3 d-block" href="#">Nosotros</a></li>
-                <li class="position-relative d-inline-block"><a class="pt-3 pr-3 d-block" href="#">Servicios</a>
-                    <ul class="submenu position-absolute">
-                        <li><a class="d-block" href="#">Servicio #1</a></li>
-                        <li><a class="d-block" href="#">Servicio #2</a></li>
-                    </ul>
-                </li>
-                <li class="position-relative d-inline-block"><a class="pt-3 pr-3 d-block" href="#">Contacto</a></li>
-            </ul>
-        </nav>
-    </section>
     <section class="mt-2">
-        <h4 class="container">Menu Responsivo</h4>
-        <nav class="page-header navbar navbar-light bg-lignt navbar-expand-md">
-            <a class="navbar-brand" href="#">
-                <span class="h4">
-                    [Tu Logotipo]
-                </span>
-            </a>
-
-            <button type="button" class="navbar-toggler" data-toggle="collapse"
-            data-target="#menu-principal" aria-controls="menu-principal" aria-expanded="false"
-            aria-label="Ver mas">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="menu-principal">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="text-body nav-link">Inicio</a></li>
-                    <li class="nav-item"><a class="text-body nav-link">Servicios</a></li>
-                    <li class="nav-item"><a class="text-body nav-link">Productos</a></li>
-                    <li class="nav-item"><a class="text-body nav-link">Contacto</a></li>
-                </ul>
-            </div>
-        </nav>
-    </section>
-    <section class="mt-2">
-        <h4 class="container">Menu Responsivo Drop-down</h4>
-        <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <nav class="navbar navbar-expand-md navbar-light">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggler" data-toggle="collapse"
@@ -138,7 +77,6 @@
         </nav>
     </section>
 
-    <script src="../script/script-Ejemplos.js"></script>
-    <script src="../style/bootstrap/js/bootstrap.min.js"></script>
+    <script src="style/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

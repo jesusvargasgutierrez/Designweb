@@ -7,8 +7,6 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
-    <link href="../style/style_slide.css" rel="stylesheet">
-    
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
@@ -21,29 +19,14 @@
 
     <script src="ScriptAcciones.js" type="text/javascript"></script>
 </head>
-<body class="bg-dark">
-    <nav class="page-header navbar navbar-light bg-lignt navbar-expand-md">
-        <a class="navbar-brand" href="#">
-            <span class="h4">
-                Codersweb
-            </span>
-        </a>
+<body class="">
+    <?php
+      include_once('MenuGeneral.php');
+    ?>
 
-        <button type="button" class="navbar-toggler" data-toggle="collapse"
-        data-target="#menu-principal" aria-controls="menu-principal" aria-expanded="false"
-        aria-label="Ver mas">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="menu-principal">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="text-body nav-link">Inicio</a></li>
-                <li class="nav-item"><a class="text-body nav-link">Servicios</a></li>
-                <li class="nav-item"><a class="text-body nav-link">Productos</a></li>
-                <li class="nav-item"><a class="text-body nav-link">Contacto</a></li>
-            </ul>
-        </div>
-    </nav>
+    <?php
+      include_once('MenuOpciones.php');
+    ?>
 
     <?php
       include_once('MenuAcciones.php');
@@ -83,14 +66,14 @@
                         <input type="text" class="form-control" id="age" name="age" value="27" disabled placeholder="Age"/>
                     </div>
                     <div class="flex-fill my-1 mx-1">
-                        <select class="form-control" id="select-genero">
+                        <select class="form-control" id="select-gender" name="idGender">
                             <option selected value="1">Selection Gender</option>
                             <option>Male</option>
                             <option>Femaile</option>
                         </select>
                     </div>
                     <div class="flex-fill my-1 mx-1">
-                        <select class="form-control" id="select-estado-civil">
+                        <select class="form-control" id="select-maritalstatus" name="idMaritalStatus">
                             <option>Selection marital status</option>
                             <option selected value="2">Single</option>
                             <option>Married</option>
@@ -99,14 +82,9 @@
                 </div>
 
                 <input type="hidden" id="HdAction" name="HdAction" value="GuardarCliente"> 
-
-                <input type="submit" value="Registrar!!" class="btn-success" id="regp" name="alta"/>
             </form>
         </section>
     </div>
-    <footer class="border border-success">
-        <h1>footer content</h1>
-    </footer>
 
     <script type="text/javascript">
         $(document).ready(function(){
@@ -114,8 +92,6 @@
                $('#Main-content').load("Html-Examples.html");
             });
         });
-
-      
     </script>
 </body>
 </html>
