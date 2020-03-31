@@ -13,7 +13,7 @@ class Account
 
         $Procedure = $ArrayProcedure[$EntidadCliente1->Accion];
 
-        //$conn = conectar();
+        $conn = conectar();
 
         $sql = "call ".$Procedure."(";
 
@@ -24,10 +24,11 @@ class Account
           }
         }
 
-        echo $sql.trim($Values,",").")";
+        $sql = $sql.trim($Values,",").")";
 
-        //$set = $conn->Execute($sql);
-        //$respuesta = ($set->RecordCount()) ? 2 : 1;
+        $set = $conn->Execute($sql);
+
+        $respuesta = ($set->RecordCount()) ? 2 : 1;
     }
 }
 

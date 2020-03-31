@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
     <title></title>
@@ -48,7 +47,20 @@
                 <div class="dropdown flex-fill mx-1">
                     <a href="#" role="button" id="ancle-options"
                         data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-                        <i class="fas fa-th-large"></i>
+                        <i class="fas fa-th-large"></i>&nbsp;
+                        <span class="d-none d-sm-none d-md-none d-lg-block">Modules</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="ancle-options">
+                        <a class="dropdown-item" href="#"><i class="fas fa-globe"></i>&nbsp;Change Languaje</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-shield-alt"></i>&nbsp;Security</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-question-circle"></i>&nbsp;About Us</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-door-open"></i>&nbsp;Log-out</a>
+                    </div>
+                </div>
+                <div class="dropdown flex-fill mx-1">
+                    <a href="#" role="button" id="ancle-options"
+                        data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                        <i class="fas fa-user"></i>
                         <span class="d-none d-sm-none d-md-none d-lg-block">Options</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="ancle-options">

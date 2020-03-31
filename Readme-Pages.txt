@@ -32,6 +32,14 @@ https://www.programadornovato.com/instalar-netbeans-10-en-ubuntu-18-04/
 
 https://www.google.com/search?client=ubuntu&channel=fs&q=trimp+php&ie=utf-8&oe=utf-8
 
+apt-get remove --purge mysql-\*
+
+https://askubuntu.com/questions/643251/having-trouble-installing-and-removing-mysql-in-ubuntu
+
+https://www.digitalocean.com/community/tutorials/como-instalar-mysql-en-ubuntu-18-04-es
+
+https://geekland.eu/reparar-paquetes-rotos-linux/
+
 Dialnet.com
 pubmed.com
 scopus.com

@@ -42,6 +42,8 @@
                         <a href="#" role="button" id="ancle-options" class="btn btn-info">
                             <i class="fas fa-search"></i>
                         </a>
+                        <label class="col-form-label">Equivalencia:</label>
+                        <input type="text" id="Equivalence" name="Equivalence" value="Client1" placeholder="Equivalence"/>
                     </div>
                 </div>
                 <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
@@ -60,7 +62,7 @@
                 </div>
                 <div class="d-flex flex-column mt-3 mt-md-2 flex-lg-row align-items-lg-center">
                     <div class="flex-fill my-1 mx-1">
-                        <input class="form-control" id="date-age" name="date-age" value="08/02/1993" type="date">
+                        <input class="form-control" id="DateBird" name="DateBird" value="08/02/1993" type="date">
                     </div>
                     <div class="flex-fill my-1 mx-1">
                         <input type="text" class="form-control" id="age" name="age" value="27" disabled placeholder="Age"/>
