@@ -28,7 +28,7 @@ class Account
 
         $set = $conn->Execute($sql);
 
-        $respuesta = ($set->RecordCount()) ? 2 : 1;
+        return ($set == true) ? 1 : 2;
     }
 }
 

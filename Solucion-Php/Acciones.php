@@ -1,5 +1,6 @@
 <?php
-	//include_once('Operacion.php');
+	session_destroy();
+	session_start();
 	include_once('Account.php');
 	include_once('Cliente.php');
 
@@ -21,7 +22,15 @@
 
 		$EntidadCliente->Datos = $someArray;
 
-		echo $DatosIngresar->ProcedureParameters($EntidadCliente);
+		$back = $DatosIngresar->ProcedureParameters($EntidadCliente);
+
+		$_SESSION["respuesta"] = (int)$back;
+
+		if (isset($_SESSION["respuesta"])) {
+			echo "si existe su valor es:".$_SESSION["respuesta"];
+		}
+
+		//echo $_SESSION["respuesta"];
 	}
 	else
 	{

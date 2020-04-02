@@ -9,7 +9,8 @@ $(document).ready(function() {
             datatype:"json",
             data:"datos="+jsonform, //aqui tus datos
             success: function(response) {
-                alert(response);
+                //$(location).attr('href','views/messages.php');
+               //alert(response);
             }
         });
     });
