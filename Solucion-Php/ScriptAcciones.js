@@ -10,10 +10,7 @@ $(document).ready(function() {
             datatype:"json",
             data:"datos="+jsonform, //aqui tus datos
             success: function(response) {
-                //$(location).attr('href','views/messages.php');
-               //alert(response);
                respuestax = response;
-               //Message(response);
             }
         })
         .done(function(){
@@ -36,9 +33,7 @@ function Message(argument) {
         data:"respuesta="+argument,//aqui tus datos
     })
     .done(function(response){
-        //$('.body1_bodymessage').load(response);
-        $(".body1").html(response);
-        //alert(response);
+        $("#message1").html(response);
     })
     .fail(function(){
         alert("fail");

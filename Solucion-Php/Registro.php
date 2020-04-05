@@ -18,10 +18,10 @@
     <script src="ScriptAcciones.js" type="text/javascript"></script>
 
 </head>
-<body class="body1">
-    <?php 
-        include_once('views/messages.php'); 
-    ?>
+<body class="">
+    <div class="message1" id="message1">
+        
+    </div>
 
     <?php
       include_once('MenuGeneral.php');
