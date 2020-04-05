@@ -13,28 +13,42 @@ class Account
 
         $Procedure = $ArrayProcedure[$EntidadCliente1->Accion];
 
-        if ($Procedure == "Cli_ins") {
-          $set = true;
+        $conn = conectar();
+
+        $sql = "call ".$Procedure."(";
+
+        foreach($EntidadCliente1->Datos as $key => $value)
+        {
+          if ($value["value"] != $EntidadCliente1->Accion) {
+            $Values = $Values."'".$value["value"]."',";
+          }
         }
-        else{
-          $set = false;
-        }
-        // $conn = conectar();
 
-        // $sql = "call ".$Procedure."(";
+        $sql = $sql.trim($Values,",").")";
 
-        // foreach($EntidadCliente1->Datos as $key => $value)
-        // {
-        //   if ($value["value"] != $EntidadCliente1->Accion) {
-        //     $Values = $Values."'".$value["value"]."',";
-        //   }
-        // }
-
-        // $sql = $sql.trim($Values,",").")";
-
-        // $set = $conn->Execute($sql);
+        $set = $conn->Execute($sql);
 
         return ($set == true) ? 1 : 2;
+    }
+
+    function ProcedureNoParameters($EntidadCliente1)
+    {
+        $DatosProcedures = new Procedures();
+
+        $ArrayProcedure = $DatosProcedures->GetProcedures();
+
+        $Procedure = $ArrayProcedure[$EntidadCliente1->Accion];
+        
+        $conn = conectar();
+
+        $sql = "call ".$Procedure."";
+
+        $set = $conn->Execute($sql);
+
+        while($info = $set->fetchRow()){
+            $arreglo1["value"][] = $info;
+        }
+        echo json_encode($arreglo1);
     }
 }
 

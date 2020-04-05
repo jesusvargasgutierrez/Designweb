@@ -89,10 +89,35 @@
                     </div>
                 </div>
 
-                <input type="hidden" id="HdAction" name="HdAction" value="GuardarCliente"> 
+                <input type="hidden" id="HdAction" name="HdAction" value="ConsultarCliente"> 
             </form>
         </section>
     </div>
+
+    <div class="" id="Section-Consult">
+        <div class="table-responsive col-sm-12">
+            <table class="table TablaCustomer" id="TablaCustomer">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Equivalence</th>
+                  <th scope="col">FirstName</th>
+                  <th scope="col">SecondName</th>
+                  <th scope="col">Names</th>
+                  <th scope="col">FullName</th>
+                  <th scope="col">DateBird</th>
+                  <th scope="col">idGender</th>
+                  <th scope="col">idMaritalStatus</th>
+                </tr>
+              </thead>
+            </table>
+        </div>
+    </div>
+
+    <script src="jquery.dataTables.min.js"></script>
+    <script src="dataTables.bootstrap.js"></script>   
+    <script src="dataTables.buttons.min.js"></script>
+    <script src="buttons.bootstrap.min.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function(){

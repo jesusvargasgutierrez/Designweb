@@ -44,7 +44,7 @@
                    </div>
                    <div class="flex-fill">
                    	<span>
-                   		<button type="button" name="boton" class="btn btn">
+                   		<button type="button" name="Search" id="Search" class="btn btn">
                           <i class="fas fa-search"></i>&nbsp;Search
                         </button>
                    	</span>

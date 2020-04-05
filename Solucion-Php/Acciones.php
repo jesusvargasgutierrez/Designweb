@@ -21,15 +21,14 @@
 
 		$EntidadCliente->Datos = $someArray;
 
-		$back = $DatosIngresar->ProcedureParameters($EntidadCliente);
+		$back = $DatosIngresar->ProcedureNoParameters($EntidadCliente);
 
-		$_SESSION["respuesta"] = (int)$back;
+		echo $back;
+		// $_SESSION["respuesta"] = (int)$back;
 
-		if (isset($_SESSION["respuesta"])) {
-			echo $_SESSION["respuesta"];
-		}
-
-		//echo $_SESSION["respuesta"];
+		// if (isset($_SESSION["respuesta"])) {
+		// 	echo $_SESSION["respuesta"];
+		// }
 	}
 	else
 	{

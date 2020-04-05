@@ -34,11 +34,15 @@ https://www.google.com/search?client=ubuntu&channel=fs&q=trimp+php&ie=utf-8&oe=u
 
 apt-get remove --purge mysql-\*
 
+sudo chmod -R 777 */
+
 https://askubuntu.com/questions/643251/having-trouble-installing-and-removing-mysql-in-ubuntu
 
 https://www.digitalocean.com/community/tutorials/como-instalar-mysql-en-ubuntu-18-04-es
 
 https://geekland.eu/reparar-paquetes-rotos-linux/
+
+https://www.youtube.com/watch?v=RInf8KPptO0&feature=youtu.be
 
 Dialnet.com
 pubmed.com
