@@ -13,20 +13,26 @@ class Account
 
         $Procedure = $ArrayProcedure[$EntidadCliente1->Accion];
 
-        $conn = conectar();
-
-        $sql = "call ".$Procedure."(";
-
-        foreach($EntidadCliente1->Datos as $key => $value)
-        {
-          if ($value["value"] != $EntidadCliente1->Accion) {
-            $Values = $Values."'".$value["value"]."',";
-          }
+        if ($Procedure == "Cli_ins") {
+          $set = true;
         }
+        else{
+          $set = true;
+        }
+        // $conn = conectar();
 
-        $sql = $sql.trim($Values,",").")";
+        // $sql = "call ".$Procedure."(";
 
-        $set = $conn->Execute($sql);
+        // foreach($EntidadCliente1->Datos as $key => $value)
+        // {
+        //   if ($value["value"] != $EntidadCliente1->Accion) {
+        //     $Values = $Values."'".$value["value"]."',";
+        //   }
+        // }
+
+        // $sql = $sql.trim($Values,",").")";
+
+        // $set = $conn->Execute($sql);
 
         return ($set == true) ? 1 : 2;
     }

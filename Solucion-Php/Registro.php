@@ -18,7 +18,7 @@
     <script src="ScriptAcciones.js" type="text/javascript"></script>
 
 </head>
-<body class="">
+<body class="body1">
     <?php 
         include_once('views/messages.php'); 
     ?>
@@ -34,6 +34,9 @@
     <?php
       include_once('MenuAcciones.php');
     ?>
+
+    <div>
+    </div>
 
     <div class="tab-content" id="Sections-content">
         <section class="tab-pane fade show active" role="tabpanel" aria-labelledby="pills-home-tab" id="General-Section">

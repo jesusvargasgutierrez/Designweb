@@ -1,5 +1,4 @@
 <?php
-	session_destroy();
 	session_start();
 	include_once('Account.php');
 	include_once('Cliente.php');
@@ -27,7 +26,7 @@
 		$_SESSION["respuesta"] = (int)$back;
 
 		if (isset($_SESSION["respuesta"])) {
-			echo "si existe su valor es:".$_SESSION["respuesta"];
+			echo $_SESSION["respuesta"];
 		}
 
 		//echo $_SESSION["respuesta"];
@@ -36,4 +35,6 @@
 	{
 		echo "no existe";
 	}
+
+	session_destroy();
 ?>

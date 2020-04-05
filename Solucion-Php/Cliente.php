@@ -1,8 +1,8 @@
 <?php 
 class Cliente
 {
-    public static $Datos;
-    public static $Accion;
+    public $Datos;
+    public $Accion;
 } 
 
 ?>
