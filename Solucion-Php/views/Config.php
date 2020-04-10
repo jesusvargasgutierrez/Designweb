@@ -12,7 +12,7 @@ function conectar(){
         </script>
        <?php
     }
-    if(!$cnn->Connect('localhost','root','123','solucion1')){
+    if(!$cnn->Connect('localhost','root','123','Solucion1')){
        ?>
         <script type="text/javascript">
            alert("Existen Problemas al Realizar la conexion con la base de datos");

@@ -16,7 +16,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     <script src="ScriptAcciones.js" type="text/javascript"></script>
-
 </head>
 <body class="">
     <div class="message1" id="message1">
@@ -34,9 +33,6 @@
     <?php
       include_once('MenuAcciones.php');
     ?>
-
-    <div>
-    </div>
 
     <div class="tab-content" id="Sections-content">
         <section class="tab-pane fade show active" role="tabpanel" aria-labelledby="pills-home-tab" id="General-Section">
@@ -94,37 +90,34 @@
         </section>
     </div>
 
-    <div class="" id="Section-Consult">
-        <div class="table-responsive col-sm-12">
-            <table class="table TablaCustomer" id="TablaCustomer">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Equivalence</th>
-                  <th scope="col">FirstName</th>
-                  <th scope="col">SecondName</th>
-                  <th scope="col">Names</th>
-                  <th scope="col">FullName</th>
-                  <th scope="col">DateBird</th>
-                  <th scope="col">idGender</th>
-                  <th scope="col">idMaritalStatus</th>
-                </tr>
-              </thead>
-            </table>
-        </div>
+    <div id="secondview" class="secondview">
+        <?php
+          include_once('WucTabla.php');
+        ?>
     </div>
 
-    <script src="jquery.dataTables.min.js"></script>
-    <script src="dataTables.bootstrap.js"></script>   
-    <script src="dataTables.buttons.min.js"></script>
-    <script src="buttons.bootstrap.min.js"></script>
+    <script src="../datatable/js/jquery-1.12.3.js"></script>
+    <script src="../datatable/js/jquery.dataTables.min.js"></script>
+    <script src="../datatable/js/dataTables.bootstrap.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function(){
-            $(".ancla-main").click(function(){   
-               $('#Main-content').load("Html-Examples.html");
-            });
+            listar();
         });
+
+        var listar = function(){
+            var dtTable = $("#dt_cliente").DataTable({
+                "ajax":{
+                    "method":"POST",
+                    "url":"../datatable/jsonarray.php"
+                },
+                "columns":[
+                    {"data":"idCustomer"},
+                    {"data":"Equivalence"},
+                    {"data":"Names"}
+                ]
+            });
+        }
     </script>
 </body>
 </html>

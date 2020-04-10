@@ -21,7 +21,7 @@
 
 		$EntidadCliente->Datos = $someArray;
 
-		$back = $DatosIngresar->ProcedureNoParameters($EntidadCliente);
+		$back = $DatosIngresar->ProcedureParameters($EntidadCliente);
 
 		echo $back;
 		// $_SESSION["respuesta"] = (int)$back;
