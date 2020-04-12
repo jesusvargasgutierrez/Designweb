@@ -92,13 +92,12 @@
 
     <div id="secondview" class="secondview">
         <?php
-          include_once('WucTabla.php');
+          include_once('../datatable/Wucsearch.php');
         ?>
     </div>
 
     <script src="../datatable/js/jquery-1.12.3.js"></script>
     <script src="../datatable/js/jquery.dataTables.min.js"></script>
-    <script src="../datatable/js/dataTables.bootstrap.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function(){
