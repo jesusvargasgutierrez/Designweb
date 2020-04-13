@@ -27,29 +27,30 @@ $(document).ready(function() {
     });
 
     $("#Search").click(function() {
-        var jsonform = JSON.stringify($("#formulario").serializeArray());
+         HideControlsWuc();
+         $("#secondview").addClass("d-block");
+         $("#secondview").removeClass("d-none");
+         $("#firstview").removeClass("d-block");
+         $("#firstview").addClass("d-none");
+    });
 
-        $.ajax({
-            type: "POST",
-            url: url1,
-            datatype:"json",
-            data:"datos="+jsonform,
-            success: function(response) {
-                responsejson1 = response;
-            }
-        })
-        .done(function(){
-            Tabla(responsejson1);
-        })
-        .fail(function(){
-
-        })
-        .always(function(){
-
-        });
+    $("#backview").click(function() {
+        HideControlsWuc();
+        $("#firstview").addClass("d-block");
+        $("#firstview").removeClass("d-none");
+        $("#secondview").removeClass("d-block");
+        $("#secondview").addClass("d-none");
     });
     
 });
+
+
+function HideControlsWuc(){
+    $("#dt_cliente_length").addClass("d-none");
+    $("#dt_cliente_filter").addClass("d-none");
+    $("#dt_cliente_paginate").addClass("d-none");
+    $("#dt_cliente_info").addClass("d-none");
+}
 
 function Message(argument) {
     $.ajax({
