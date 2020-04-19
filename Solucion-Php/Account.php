@@ -45,10 +45,11 @@ class Account
 
         $set = $conn->Execute($sql);
 
-        while($info = $set->fetchRow()){
-            $arreglo1["value"][] = $info;
+        while(!$set->EOF){
+            $arreglo1["data"][] = $set->fetchNextObj();
         }
-        echo json_encode($arreglo1);
+
+        return json_encode($arreglo1);
     }
 }
 

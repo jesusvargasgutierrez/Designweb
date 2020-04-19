@@ -1,5 +1,6 @@
 <?php
 	include_once('DatosWuc.php');
+	include_once('PropertyWuc.php');
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -20,32 +21,22 @@
 				<table id="dt_cliente" class="table table-bordered table-hover" width="100%">
 				  <?php
 					  if(isset($_POST["Consulta"])){
-					  	echo $_POST["Consulta"];
-						//$json = $_POST["Consulta"];
 
-						//$someArray = json_decode($json, true);
+					  	//falta variable POST Tarjeta
 
-						//$EntidadCliente = new Cliente();
+						$EntidadWuc = new PropertyWuc();
 
 						$DatosWuc = new SearchWuc();
 
-						/*foreach($someArray as $key => $value) {
-							if ($value["name"] == "HdAction") {
-								$EntidadCliente->Accion = $value["value"];
-							}
-						 }*/
+						$EntidadWuc->Accion = $_POST["Consulta"];
 
-						//$EntidadCliente->Datos = $someArray;
-
-						$json = $DatosWuc->ProcedureNoParameters1();
-
-						//print($json);
+						$json = $DatosWuc->ProcedureNoParameters($EntidadWuc);
 
 						$someArray = json_decode($json, true);
 
-						//print_r($someArray["data"][0]);
 						?>
 							<tr>
+								<th>Select</th>
 						<?php
 						foreach($someArray["data"][0] as $key => $value) {
 						?>
@@ -56,22 +47,21 @@
 							<tr>
 						<?php
 
+						for ($i=0; $i < count($someArray["data"]); $i++) { 
+							?>
+								<tr>
+									<td><a href="">Select</a></td>
+							<?php
+							foreach($someArray["data"][$i] as $key => $value) {
+								?>
+									<td><?php echo $value; ?></td>
+								<?php
+							}
 
-						while (list($key1,$value1) = each($someArray)) {
-							echo $value1;
-						}
-
-
-						foreach($someArray["data"][0] as $key => $value) {
-						?>
-							<td><?php echo $value; ?></td>
-						<?php
-						}
-						// $_SESSION["respuesta"] = (int)$back;
-
-						// if (isset($_SESSION["respuesta"])) {
-						// 	echo $_SESSION["respuesta"];
-						// }
+							?>
+								</tr>
+							<?php
+					    }
 					}
 					else
 					{

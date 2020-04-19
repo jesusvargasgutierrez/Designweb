@@ -31,13 +31,13 @@ class SearchWuc
         return ($set == true) ? 1 : 2;
     }
 
-    function ProcedureNoParameters($EntidadCliente1)
+    function ProcedureNoParameters($EntidadWuc1)
     {
         $DatosProcedures = new Procedures();
 
         $ArrayProcedure = $DatosProcedures->GetProcedures();
 
-        $Procedure = $ArrayProcedure[$EntidadCliente1->Accion];
+        $Procedure = $ArrayProcedure[$EntidadWuc1->Accion];
         
         $conn = conectar();
 
@@ -45,35 +45,9 @@ class SearchWuc
 
         $set = $conn->Execute($sql);
 
-        while($info = $set->fetchRow()){
-            $arreglo1["value"][] = $info;
-        }
-        echo json_encode($arreglo1);
-    }
-
-    function ProcedureNoParameters1()
-    {
-        // $DatosProcedures = new Procedures();
-
-        // $ArrayProcedure = $DatosProcedures->GetProcedures();
-
-        // $Procedure = $ArrayProcedure[$EntidadCliente1->Accion];
-        
-        $conn = conectar();
-
-        $sql = "call Cli_Consultar";
-
-        $set = $conn->Execute($sql);
-
-        // $arreglo1["value"][] = "";
-
-        // $array["data"] = []; 
         while(!$set->EOF){
             $arreglo1["data"][] = $set->fetchNextObj();
         }
-        //$arreglo1 = $set->getRowAssoc(false);
-
-        //$arreglo1 = $set->fetchObj();
 
         return json_encode($arreglo1);
     }

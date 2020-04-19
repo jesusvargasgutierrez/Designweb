@@ -87,7 +87,7 @@
                             </div>
                         </div>
 
-                        <input type="hidden" id="HdAction" name="HdAction" value="ConsultarCliente"> 
+                        <input type="hidden" id="HdAction" name="HdAction" value="GuardarCliente"> 
                     </form>
                 </section>
             </div>
@@ -96,7 +96,7 @@
         <div id="secondview" class="d-none">           
             <?php
               //session_start();
-              $_POST["Consulta"] = "Basica";
+              $_POST["Consulta"] = "ConsultarCliente";
 
               include_once('Wucsearch.php');
             ?>
