@@ -95,32 +95,14 @@
 
         <div id="secondview" class="d-none">           
             <?php
-              include_once('../datatable/Wucsearch.php');
+              //session_start();
+              $_POST["Consulta"] = "Basica";
+
+              include_once('Wucsearch.php');
             ?>
         </div>
     </div>
 
-    <script src="../datatable/js/jquery-1.12.3.js"></script>
-    <script src="../datatable/js/jquery.dataTables.min.js"></script>
-
-    <script type="text/javascript">
-        $(document).ready(function(){
-            listar();
-        });
-
-        var listar = function(){
-            var dtTable = $("#dt_cliente").DataTable({
-                "ajax":{
-                    "method":"POST",
-                    "url":"../datatable/jsonarray.php"
-                },
-                "columns":[
-                    {"data":"idCustomer"},
-                    {"data":"Equivalence"},
-                    {"data":"Names"}
-                ]
-            });
-        }
-    </script>
+    
 </body>
 </html>
