@@ -67,7 +67,7 @@
                                               for ($s=0; $s < count($someArray["Opciones"][$i]["subOption"]); $s++) 
                                               { 
                                                 ?>
-                                                    <a class="dropdown-item" href="<?php echo $someArray["Opciones"][$i]["subOption"][$s]["Url"];?>">
+                                                    <a class="dropdown-item ItemAction" href="<?php echo $someArray["Opciones"][$i]["subOption"][$s]["Url"];?>">
                                                         <?php echo $someArray["Opciones"][$i]["subOption"][$s]["Title1"]; ?> 
                                                     </a>
                                                 <?php

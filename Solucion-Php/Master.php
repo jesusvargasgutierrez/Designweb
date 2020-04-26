@@ -23,21 +23,30 @@
     </div>
 
     <?php
-      include_once('MenuGeneral.php');
+      include_once('MenuGeneral1.php');
     ?>
 
     <?php
-      include_once('MenuOpciones.php');
+      include_once('MenuOpciones1.php');
     ?>
 
     <?php
       include_once('MenuAcciones.php');
     ?>
 
-    <div id="MainContent" name="MainContent">
+    <div id="MainContent">
         
     </div>
 
-    
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".ItemAction").click(function(){   
+               href = $(this).attr('href');
+               $('#MainContent').load(href);
+
+               return false;
+            });
+        });
+    </script>
 </body>
 </html>

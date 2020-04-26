@@ -47,5 +47,25 @@
 				}
 			]
 		}
+		,{
+			"idOption":"3"
+			,"Equivalence":"3"
+			,"Title":"Customer"
+			,"Url":""
+			,"Image":""
+			,"idisMain":"1"
+			,"subOption":
+			[
+				{
+					"idOption":"10"
+					,"Equivalence":"1"
+					,"Title1":"Register"
+					,"Url":"Registro1.php"
+					,"Image":""
+					,"idisInternalMain":"2"
+					,"InternalOption":[]
+				}
+			]
+		}
 	]
 }
