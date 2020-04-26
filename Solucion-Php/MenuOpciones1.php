@@ -53,7 +53,7 @@
 
                             $someArray = json_decode($json, true);
 
-                            for ($i=0; $i < 2; $i++) { 
+                            for ($i=0; $i < count($someArray["Opciones"]); $i++) { 
                                 if ($someArray["Opciones"][$i]["idisMain"] == "1") {
                                   ?>
                                     <li class="nav-item dropdown">

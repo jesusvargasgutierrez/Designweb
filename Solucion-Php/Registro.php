@@ -23,7 +23,7 @@
     </div>
 
     <?php
-      include_once('MenuGeneral.php');
+      include_once('MenuGeneral1.php');
     ?>
 
     <?php
