@@ -27,7 +27,7 @@
     ?>
 
     <?php
-      include_once('MenuOpciones.php');
+      include_once('MenuOpciones1.php');
     ?>
 
     <?php
