@@ -63,7 +63,7 @@ function Message(argument) {
         $("#message1").html(response);
     })
     .fail(function(){
-        alert("fail");
+        alert(response);
     })
     .always(function(){
         //alert("always");
