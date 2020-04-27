@@ -119,9 +119,13 @@
         </div>
      </div>
 
-     <div id="tabletemplate" class="tabletemplate container my-4">
-        <div class="d-flex flex-column align-items-lg-center bg-warning content-secondary">
-                <table class="flex-fill mt-3 table table-dark">
+    <div id="ContainerViews" class="ContainerViews container">
+
+    </div>  
+
+    <div id="tabletemplate" class="tabletemplate container my-4">
+        <div class="d-flex flex-column align-items-lg-center content-secondary">
+                <table id="Table1" class="flex-fill mt-3 table table-dark">
                     <thead>
                         <tr>
                             <th scope="col">Selection</th>
@@ -133,53 +137,11 @@
                             <th scope="col">Numero Opciones</th>
                         </tr>
                         <tbody id="tbody-content">
-                            <tr>
-                                <td>
-                                    <span>
-                                        <a href="#" class="btn btn bg-primary" id="rid-register" role="button">
-                                            <i class="fas fa-edit"></i>
-                                        </a>
-                                        <a href="#" class="btn btn bg-primary" id="rid-register" role="button">
-                                            <i class="fas fa-trash-alt"></i>
-                                        </a>
-                                    </span>
-                                </td>
-                                <th scope="row">1</th>
-                                <td>Write with future</td>
-                                <td>Multiple Option</td>
-                                <td>WILL</td>
-                                <td>1</td>
-                                <td>3</td>
-                            </tr>
-                        </tbody>
-                    </thead>
-                </table> 
-        </div>
-        <div class="d-flex flex-column align-items-lg-center bg-warning content-secondary">
-                <table class="flex-fill mt-3 table table-dark">
-                    <thead>
-                        <tr>
-                            <th scope="col">Question #</th>
-                            <th scope="col">Option simple</th>
-                            <th scope="col">Option left</th>
-                            <th scope="col">Option rigth</th>
-                        </tr>
-                        <tbody id="tbody-content">
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>xxx</td>
-                                <td>What</td>
-                                <td>you go?</td>
-                            </tr>
                         </tbody>
                     </thead>
                 </table> 
         </div>
     </div>
-
-    <div id="ContainerViews" class="ContainerViews container">
-
-    </div>        
 
     <script src="scriptTemplate.js"></script>
     <script src="scriptExampletext.js"></script>

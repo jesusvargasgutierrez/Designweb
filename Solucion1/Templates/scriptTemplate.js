@@ -28,12 +28,10 @@ $(document).ready(function () {
                         '<td>'+'2'+'</td>'+
                        '</tr>';
 
-                       alert(Tablebody);
-
         $('#tbody-content').append(Tablebody);
+    });
 
-        $('#tbody-content').on('click','#rid-register',function(){
-            $(this).parent().remove();
-        });
+    $("#Table1").on("click", "#rid-register", function() {
+        $(this).closest("tr").remove();
     });
 });
