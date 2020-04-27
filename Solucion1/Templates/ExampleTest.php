@@ -41,7 +41,7 @@
                    <section class="container d-flex justify-content-center">
                        <div class="flex-fill">
                            <span>
-                              <button type="button" name="Search" id="Search" class="btn btn">
+                              <button type="button" name="BtAdd" id="BtAdd" class="btn btn">
                                  <i class="fas fa-plus-circle"></i>&nbsp;Add
                               </button>
                            </span>
@@ -93,6 +93,13 @@
                               </div>  
                             </div>
                         </div>
+                        
+                        <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
+                            <label for="TBAnswer">Answer:</label>
+                            <div class="flex-fill my-1 mx-1">
+                                <input type="text" class="form-control" id="TBAnswer" placeholder="Answer"/>
+                            </div>
+                        </div>
                 </section>
             </div>
         </div>
@@ -105,31 +112,76 @@
                     <input type="text" class="form-control" id="TBQuestion" name="TBQuestion" placeholder="Question"/>
                 </div>
             </div>
-
-            <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
-                <label for="TBAnswer">Answer:</label>
-                <div class="flex-fill my-1 mx-1">
-                    <input type="text" class="form-control" id="TBAnswer" placeholder="Answer"/>
-                </div>
-            </div>
         </div>
 
         <div id="ViewFieldsfill" class="ViewFieldsfill d-none">
-            <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
-                <label for="TBAnswer">Answer:</label>
-                <div class="flex-fill my-1 mx-1">
-                    <input type="text" class="form-control" id="TBAnswer" placeholder="Answer"/>
-                </div>
-            </div>
+
         </div>
      </div>
+
+     <div id="tabletemplate" class="tabletemplate container my-4">
+        <div class="d-flex flex-column align-items-lg-center bg-warning content-secondary">
+                <table class="flex-fill mt-3 table table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">Selection</th>
+                            <th scope="col">Question #</th>
+                            <th scope="col">Instructions</th>
+                            <th scope="col">Question Type</th>
+                            <th scope="col">Answer</th>
+                            <th scope="col">idQuestiomType</th>
+                            <th scope="col">Numero Opciones</th>
+                        </tr>
+                        <tbody id="tbody-content">
+                            <tr>
+                                <td>
+                                    <span>
+                                        <a href="#" class="btn btn bg-primary" id="rid-register" role="button">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a href="#" class="btn btn bg-primary" id="rid-register" role="button">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </a>
+                                    </span>
+                                </td>
+                                <th scope="row">1</th>
+                                <td>Write with future</td>
+                                <td>Multiple Option</td>
+                                <td>WILL</td>
+                                <td>1</td>
+                                <td>3</td>
+                            </tr>
+                        </tbody>
+                    </thead>
+                </table> 
+        </div>
+        <div class="d-flex flex-column align-items-lg-center bg-warning content-secondary">
+                <table class="flex-fill mt-3 table table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">Question #</th>
+                            <th scope="col">Option simple</th>
+                            <th scope="col">Option left</th>
+                            <th scope="col">Option rigth</th>
+                        </tr>
+                        <tbody id="tbody-content">
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>xxx</td>
+                                <td>What</td>
+                                <td>you go?</td>
+                            </tr>
+                        </tbody>
+                    </thead>
+                </table> 
+        </div>
+    </div>
 
     <div id="ContainerViews" class="ContainerViews container">
 
     </div>        
 
+    <script src="scriptTemplate.js"></script>
     <script src="scriptExampletext.js"></script>
-    <script src="../script/script-Ejemplos.js"></script>
-    <script src="../style/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
