@@ -15,15 +15,15 @@
 
 		$string1 = "";
 
-		if ($Cantidad == "1") {
+		if ($Tipopregunta == "1") {
 			 $string1 = $OptionType->OptionMultiple($Cantidad);
 		}
-		elseif ($Cantidad == "2") {
+		elseif ($Tipopregunta == "2") {
 			$string1 = $OptionType->OptionFillField($Cantidad);
 		}
 
-		if (is_numeric($Cantidad)) {
-				switch ($Cantidad) {
+		if (is_numeric($Tipopregunta)) {
+				switch ($Tipopregunta) {
 					case '1':
 						$string1; 
 					break;

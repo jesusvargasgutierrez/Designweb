@@ -77,6 +77,7 @@
                               <div class="form-group">
                                 <label for="DDQuestionType">Question Type:</label>
                                 <select class="form-control" id="DDQuestionType">
+                                  <option selected value="0">Selection</option>
                                   <option value="1">Multiple Option</option>
                                   <option value="2">Field Fill</option>
                                   <option value="3">Write Text</option>
@@ -96,7 +97,8 @@
             </div>
         </div>
 
-        <div id="Viewmultipleoption" class="Viewmultipleoption container">
+      <div id="secondview" class="secondview container">
+        <div id="Viewmultipleoption" class="Viewmultipleoption d-none">
             <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
                 <label for="TBQuestion">Question:</label>
                 <div class="flex-fill my-1 mx-1">
@@ -112,7 +114,7 @@
             </div>
         </div>
 
-        <div id="ViewFieldsfill" class="ViewFieldsfill container">
+        <div id="ViewFieldsfill" class="ViewFieldsfill d-none">
             <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
                 <label for="TBAnswer">Answer:</label>
                 <div class="flex-fill my-1 mx-1">
@@ -120,40 +122,13 @@
                 </div>
             </div>
         </div>
+     </div>
 
-        <div id="ContainerViews" class="ContainerViews container">
+    <div id="ContainerViews" class="ContainerViews container">
 
-        </div>
-        
-        <script type="text/javascript">
-            $('#TBNumberOption').on("keypress", function(e){
-                if(e.which == 13){
-                    //alert($('#TBNumberOption').val());
-                    var Valuetypequestion = $('#DDQuestionType').val();
+    </div>        
 
-                    var numberx = $('#TBNumberOption').val();
-
-                    var buildjson = JSON.stringify({Numbercontrols: numberx, DDValue: Valuetypequestion}); 
-
-                       $.ajax({
-                            type: "POST",
-                            url: "TestNegocio.php",
-                            datatype:"script",
-                            data:"respuestas="+buildjson,
-                        })
-                        .done(function(response){
-                          //alert(response);
-                          $("#ContainerViews").html(response);
-                        })
-                        .fail(function(response){
-                            alert("fail");
-                        })
-                        .always(function(){
-                        });
-               }
-            });
-        </script>
-
+    <script src="scriptExampletext.js"></script>
     <script src="../script/script-Ejemplos.js"></script>
     <script src="../style/bootstrap/js/bootstrap.min.js"></script>
 </body>

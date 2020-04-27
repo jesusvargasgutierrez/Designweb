@@ -6,12 +6,11 @@ $(document).ready(function() {
         var jsonform = JSON.stringify($("#formulario").serializeArray());
 
         $.ajax({
-            type: "POST", //aqui puede ser igual get
-            url: url1, //aqui va tu direccion donde esta tu funcion php
+            type: "POST",
+            url: url1,
             datatype:"json",
-            data:"datos="+jsonform, //aqui tus datos
+            data:"datos="+jsonform,
             success: function(response) {
-              //alert(response);
               respuestax = response;
             }
         })
