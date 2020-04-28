@@ -10,7 +10,7 @@ $(document).ready(function () {
         var Tablebody='<tr>'+
                         '<td>\
                             <span>\
-                                <a href="#" class="btn btn bg-primary" id="rid-register"\
+                                <a href="#" class="btn btn bg-primary" id="edit-register"\
                                      role="button">\
                                 <i class="fas fa-edit"></i>\
                                 </a>\

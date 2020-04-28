@@ -67,7 +67,7 @@
         <div class="collapse navbar-collapse" id="menu-principal">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a class="text-body nav-link" href="https://github.com/jesusvargasgutierrez/">Gihub&nbsp;<i class="fab fa-github"></i></a></li>
-                <li class="nav-item"><a class="text-body nav-link">Linkedin&nbsp;<i class="fab fa-linkedin"></i></a></li>
+                <li class="nav-item"><a class="text-body nav-link" href="https://www.linkedin.com/in/jesus-vargas-gutierrez-848b41187">Linkedin&nbsp;<i class="fab fa-linkedin"></i></a></li>
             </ul>
         </div>
     </nav>
@@ -79,17 +79,36 @@
                     <a class="list-group-item list-group-item-action anclalist" id="list-home-list" data-parent="#accordion" data-toggle="collapse" href="#list-home" role="tab" aria-controls="home">Programacion</a>
                     <div class="" id="list-home">
                         <ul class="list-group-item-text">
-                          <li><a href="#dvJavascript">Javascript</a></li>
-                          <li><a href="#dvPHP">PHP</a></li>
-                          <li><a href="#dvASP">ASP.NET</a></li>
-                          <li><a href="#dvWs">Webservice</a></li>
+                          <li>
+                            <button type="button" value="jsdiv" class="btn accion1">
+                              Javascript
+                            </button>
+                           </li>
+                          <li>
+                            <button type="button" value="phpdv" class="btn accion1">
+                              PHP
+                            </button>
+                           </li>
+                          <li>
+                            <button type="button" value="netdv" class="btn accion1">
+                              ASP.NET y Webservice
+                            </button>
+                           </li>
                         </ul>
                       </div>
                     <a class="list-group-item list-group-item-action" id="list-profile-list" data-parent="#accordion" data-toggle="collapse" href="#list-profile" role="tab" aria-controls="profile">Bases de datos</a>
                     <div class="" id="list-profile">
                         <ul class="list-group-item-text">
-                          <li><a href="#dvServer">SQL Server</a> </li>
-                          <li><a href="#dvMySQL">MySQL Server</a></li>
+                          <li>
+                            <button type="button" value="sqldv" class="btn accion1">
+                             SQL Server
+                            </button>
+                          </li>
+                          <li>
+                            <button type="button" value="msdv" class="btn accion1">
+                              MySQL Server
+                            </button>
+                           </li>
                         </ul>
                     </div>
                     <a class="list-group-item list-group-item-action" id="list-messages-list" data-parent="#accordion" data-toggle="collapse" href="#list-messages" role="tab" aria-controls="messages">Paginas Ejemplo</a>
@@ -102,35 +121,38 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-8 col-md-12" id="dvJavascript">
-                <p class="text-justify">
-                    Como seguimiento de cursos de udemy <a href="#">ejemplos</a>
+            <div class="col-lg-8 col-md-12" id="dvInformation">
+                <p id="jsdiv" class="text-justify d-none">
+                    Utilizado en menus, y acciones de controles combinando jquery
+                    <a href="Templates/JSExamples.html">ejemplos</a>
                 </p>
-                <p class="text-justify">
-                    <a href="#">Ejemplos</a> con el lenguaje PHP sin utilizar algun framework de por medio y utilizando la POO, pero si tengo conocimiento con algunos de ellos
-                    como por ejemplo, cake php, perl, o laravel
+                <p id="phpdv" class="text-justify d-none">
+                    <a href="Templates/PHPExamples.html">Ejemplos</a> con el lenguaje PHP sin utilizar algun framework de por medio y utilizando la POO
                 </p> 
-                <p class="text-justify">
-                    <strong>ASP .NET</strong> es el entorno en el que trabajo diariamente si es necesario puedo crear una interfaz o bien a&ntilde;adir nuevas funciones
+                <p id="netdv" class="text-justify d-none">
+                    <strong>ASP .NET</strong> es el entorno de trabajo diario si es necesario puedo crear una interfaz o bien a&ntilde;adir nuevas funciones
                     utilizando el framework de dise&ntilde;o de boostrap
+                    web API para separar el front-end del backend algunos de ellos son para el envio de correos,
+                    importacion de informacion etc. <a href="Templates/ASPexamples.html">ejemplos</a>
                 </p>
-                <p class="text-justify">
-                    Realizo web API para separar el front-end del backend algunos de ellos son para el envio de correos,
-                    importacion de informacion etc. <a href="#">ejemplos</a>
+                <p id="sqldv" class="text-justify d-none">
+                    El lenguaje de consultas SQL server usado diariamente
+                    es posible crear desde simples procedimientos para el CRUD, 
+                    cursores o funciones dependiendo del requerimiento
+                    <a href="Templates/SQLServer.html">ejemplos</a>
                 </p>
-                <p class="text-justify">
-                    El lenguaje de consultas SQL server es el que mas utilizo, generalmente es posible crear desde simples procedimientos para el CRUD, 
-                    cursores o triggers <a href="#">ejemplos</a>
-                </p>
-                <p class="text-justify">
-                    Realizo los proyectos de PHP con conexion a MySQL server en un entorno de linux, mas concretamente Ubuntu generalmente realizo
-                    todos los procesos mediante rutinas utilizando la herramienta de Phpmyadmin <a href="#">ejemplos</a>
+                <p id="msdv" class="text-justify d-none">
+                    Motor de base de datos utilizado en conjunto con PHP 
+                    en un entorno de linux, mas concretamente Ubuntu generalmente
+                    los procesos estan realizadas mediante rutinas utilizando la herramienta de Phpmyadmin 
+                    <!-- <a href="Templates/MySQL.html">ejemplos</a> -->
                 </p>
             </div>
         </div>
     </div>
 
     <!-- https://codepen.io/El-SheNNawY/pen/mPKOYz -->
+    <script src="script/portafolio.js"></script>
     <script src="script/script.js"></script>
     <script src="style/bootstrap/js/bootstrap.min.js"></script>
 </body>
