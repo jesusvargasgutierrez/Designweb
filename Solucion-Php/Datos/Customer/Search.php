@@ -1,8 +1,8 @@
 <?php
-  include_once('../Procedures.php');
-  include_once('../adodb/adodb.inc.php');
-  include_once('../Config.php');
-
+  include_once('../../Datos/Procedures.php');
+  include_once('../../Datos/adodb/adodb.inc.php');
+  include_once('../../Datos/Config.php');
+  
 class SearchWuc
 {
     function ProcedureParameters($EntidadCliente1)

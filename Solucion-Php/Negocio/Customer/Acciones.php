@@ -1,7 +1,9 @@
 <?php
+try
+{
 	session_start();
-	include_once('../Datos/Customer/Customer.php');
-	include_once('../View/Customer/Customer.php');
+	include_once('../../Datos/Customer/Customer.php');
+	include_once('../../views/Customer/Base.php');
 
 	if(isset($_POST["datos"])){
 
@@ -31,4 +33,9 @@
 	}
 
 	session_destroy();
+
+} catch(Exception $Ex)
+{
+	echo $Ex->getMessage();
+}
 ?>

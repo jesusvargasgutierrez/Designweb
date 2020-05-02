@@ -96,6 +96,6 @@
         </nav>
     </section>    
 
-    <script src="style/bootstrap/js/bootstrap.min.js"></script>
+<!--     <script src="../../style/bootstrap/js/bootstrap.min.js"></script> -->
 </body>
 </html>

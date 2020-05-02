@@ -78,15 +78,15 @@
                     </form>
                 </section>
             </div>
-        </div>
+    </div>
 
-        <div id="secondview" class="d-none">           
-            <?php
-              //session_start();
-              $_POST["Consulta"] = "ConsultarCliente";
+    <div id="secondview" class="d-none">           
+        <?php
+         $_POST["Consulta"] = "ConsultarCliente";
 
-              include_once('Search.php');
-            ?>
-        </div>
+           include_once('Search.php');
+        ?>
+    </div>
+
 </body>
 </html>

@@ -1,4 +1,4 @@
-var url1 = "Acciones.php";
+var url1 = "../Negocio/Customer/Acciones.php";
 var respuestax = "";
 var responsejson1 = "";
 $(document).ready(function() {
@@ -53,10 +53,10 @@ function HideControlsWuc(){
 
 function Message(argument) {
     $.ajax({
-        type: "POST", //aqui puede ser igual get
-        url: "views/messages.php",
-        datatype:"script", //aqui va tu direccion donde esta tu funcion php
-        data:"respuesta="+argument,//aqui tus datos
+        type: "POST",
+        url: "../views/messages.php",
+        datatype:"script",
+        data:"respuesta="+argument,
     })
     .done(function(response){
         $("#message1").html(response);
@@ -65,6 +65,5 @@ function Message(argument) {
         alert(response);
     })
     .always(function(){
-        //alert("always");
     });;
 }
