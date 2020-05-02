@@ -44,6 +44,8 @@ https://geekland.eu/reparar-paquetes-rotos-linux/
 
 https://www.youtube.com/watch?v=RInf8KPptO0&feature=youtu.be
 
+Slide_menu.html.- this file has a vertical menu, it had ridded but is in git
+
 Dialnet.com
 pubmed.com
 scopus.com
