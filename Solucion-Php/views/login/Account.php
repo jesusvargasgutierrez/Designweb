@@ -63,6 +63,12 @@
                         </a>
                     </div>
                 </div>
+
+                <div class="d-flex flex-md-row my-3 align-items-center">
+                    <div class="flex-fill text-center border-0">
+                        <label class="d-none font-weight-bold text-danger">any thing had ocurred</label>
+                    </div>
+                </div>
             </form>
     </div>
 
