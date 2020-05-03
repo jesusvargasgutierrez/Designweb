@@ -1,0 +1,416 @@
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link href="../style/style.css" rel="stylesheet">
+    
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-secondary navbar-expand-md">
+        <div class="container">
+           <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav-menu-acciones"
+               aria-controls="nav-menu-acciones" aria-expanded="false" aria-label="Opciones">
+              <span class="navbar-toggler-icon"></span>
+           </button>
+           
+           <div class="collapse navbar-collapse" id="nav-menu-acciones">
+               <section class="container d-flex justify-content-center">
+                   <div class="flex-fill">
+                       <span><i class="fas fa-file"></i></span>&nbsp;New
+                   </div>
+                   <div class="flex-fill">
+                       <span><i class="fas fa-save"></i></span>&nbsp;Save
+                   </div>
+                   <div class="flex-fill">
+                       <a href="#modal" id="modal" data-href="views/BuscarCliente.html" class="Buscar"><i class="fas fa-search"></i></a>&nbsp;Search
+                   </div>
+                   <div class="flex-fill">
+                       <span><i class="fas fa-print"></i></span>&nbsp;Print
+                   </div>
+                   <div class="flex-fill">
+                       <span><i class="fas fa-undo"></i></span>&nbsp;Exit
+                   </div>
+               </section>
+           </div>
+       </div>
+    </nav>
+    <div class="container mt-3">
+        <ul class="nav row nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="col-lg-3 nav-item col-12 text-center">
+              <a class="nav-link active" id="pills-General-Section" data-toggle="pill" href="#General-Section" 
+              role="tab" aria-controls="General-Section" aria-selected="true">General Information</a>
+            </li>
+            <li class="col-lg-3 nav-item col-12 text-center">
+              <a class="nav-link" id="pills-Address-Section" data-toggle="pill" href="#Address-Section" 
+              role="tab" aria-controls="Address-Section" aria-selected="false">Address</a>
+            </li>
+            <li class="col-lg-3 nav-item col-12 text-center">
+                <a class="nav-link" id="pills-Identification-Section" data-toggle="pill" href="#Identification-Section" 
+                role="tab" aria-controls="Identification-Section" aria-selected="false">Identification</a>
+            </li>
+            <li class="col-lg-3 nav-item col-12 text-center">
+                <a class="nav-link" id="pills-Works-Section" data-toggle="pill" href="#Works-Section" 
+                role="tab" aria-controls="Works-Section" aria-selected="false">Works</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="tab-content" id="Sections-content">
+        <section class="tab-pane fade show active" role="tabpanel" aria-labelledby="pills-home-tab" id="General-Section">
+            <div class="d-flex flex-column my-1 flex-lg-row align-items-lg-center">
+                <div class="flex-fill">
+                    <label class="col-form-label">Client ID:</label>
+                    <input type="text" disabled class="form-control-sm enabled" placeholder=""/>
+                    <a href="#" role="button" id="ancle-options" class="btn btn-info">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
+                <div class="flex-fill order-3 my-1 mx-1">
+                    <input type="text" class="form-control" placeholder="Full name"/>
+                </div>
+                <div class="flex-fill order-0 my-1 mx-1">
+                    <input type="text" class="form-control" placeholder="Names"/>
+                </div>
+                <div class="flex-fill order-1 my-1 mx-1">
+                    <input type="text" class="form-control" placeholder="First name"/>
+                </div>
+                <div class="flex-fill order-2 my-1 mx-1">
+                    <input type="text" class="form-control" placeholder="Surname"/>
+                </div>
+            </div>
+            <div class="d-flex flex-column mt-3 mt-md-2 flex-lg-row align-items-lg-center">
+                <div class="flex-fill my-1 mx-1">
+                    <input class="form-control" type="date" name="bday">
+                </div>
+                <div class="flex-fill my-1 mx-1">
+                    <input type="text" class="form-control" disabled placeholder="Age"/>
+                </div>
+                <div class="flex-fill my-1 mx-1">
+                    <select class="form-control" id="select-genero">
+                        <option selected>Selection Gender</option>
+                        <option>Male</option>
+                        <option>Femaile</option>
+                    </select>
+                </div>
+                <div class="flex-fill my-1 mx-1">
+                    <select class="form-control" id="select-estado-civil">
+                        <option selected>Selection marital status</option>
+                        <option>Single</option>
+                        <option>Married</option>
+                    </select>   
+                </div>
+            </div>
+            <div class="d-flex flex-column mt-3 mt-md-2 flex-lg-row align-items-lg-center">
+                <div class="flex-fill my-1 mx-1">
+                    <input type="text" class="form-control" placeholder="Curp"/>
+                </div>
+                <div class="flex-fill my-1 mx-1">
+                    <input type="text" class="form-control" placeholder="RFC"/>
+                </div>
+                <div class="flex-fill my-1 mx-1">
+                    <select class="form-control" id="Select-Nacionality">
+                        <option selected>Selection Nacionality</option>
+                        <option>Mexican</option>
+                        <option>foreign</option>
+                    </select>  
+                </div>
+                <div class="flex-fill my-1 mx-1">
+                    <select class="form-control" id="Select-Country">
+                        <option selected>Seleccione Country</option>
+                        <option>MEXICO</option>
+                        <option>USA</option>
+                        <option>CANADA</option>
+                    </select>  
+                </div>
+            </div>
+        </section>
+
+        <section class="tab-pane fade show active" role="tabpanel" aria-labelledby="pills-home-tab" id="Address-Section">
+            <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
+                <div class="flex-fill my-1 mx-1">
+                    <input type="text" class="form-control" placeholder="Address"/>
+                </div>
+                <div class="flex-fill my-1 mx-1">
+                    <input type="text" class="form-control" placeholder="Internal Number"/>
+                </div>
+                <div class="flex-fill my-1 mx-1">
+                    <input type="text" class="form-control" placeholder="External Number"/>
+                </div>
+                <div class="flex-fill my-1 mx-1">
+                    <input type="text" class="form-control" placeholder="Colonia"/>
+                </div>
+            </div>
+            <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
+                <div class="flex-fill my-1 mx-1">
+                    <input type="text" class="form-control" placeholder="City"/>
+                </div>
+                <div class="flex-fill my-1 mx-1">
+                    <select class="form-control" id="Select-State">
+                        <option selected>Selection State</option>
+                        <option>Chihuahua</option>
+                        <option>Durango</option>
+                    </select>
+                </div>
+                <div class="flex-fill my-1 mx-1">
+                    <select class="form-control" id="Select-Locality">
+                        <option selected>Selection Locality</option>
+                        <option>Lorem ipsum dolor sit amet</option>
+                    </select>
+                </div>
+            </div>
+            <div class="d-flex flex-row mt-3 text-white overflow-auto">
+                <div class="flex-fill">
+                    <table class="flex-fill mt-3 table table-striped table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">Selection</th>
+                                <th scope="col">#</th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span><a href="#"><i class="fas fa-edit"></i></a></span>
+                                        <span><a href="#"><i class="fas fa-trash-alt"></i></a></span>
+                                    </td>
+                                    <th scope="row">1</th>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                </tr>
+                            </tbody>
+                        </thead>
+                    </table> 
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item">
+                                <a href="#" role="button" id="ancle-Add" class="btn btn-info">
+                                    <i class="fas fa-plus-circle"></i>
+                                </a>
+                            </li>
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav> 
+                </div>
+            </div>
+        </section>
+
+        <section class="tab-pane fade show active" role="tabpanel" aria-labelledby="pills-home-tab" id="Identification-Section">
+            <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
+                <div class="flex-fill">
+                    <select class="form-control" id="Select-State">
+                        <option selected>Selecct Document</option>
+                        <option>Mexican ID</option>
+                        <option>Professional ID</option>
+                        <option>driver's license</option>
+                        <option>Passport Number</option>
+                    </select>
+                </div>
+                <div class="mx-1 my-1 flex-fill">
+                    <input type="text" class="form-control" placeholder="Number"/>
+                </div>
+            </div>
+            <div class="d-flex flex-row mt-3 text-white overflow-auto">
+                <div class="flex-fill">
+                    <table class="flex-fill mt-3 table table-striped table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">Selection</th>
+                                <th scope="col">#</th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span><a href="#"><i class="fas fa-edit"></i></a></span>
+                                        <span><a href="#"><i class="fas fa-trash-alt"></i></a></span>
+                                    </td>
+                                    <th scope="row">1</th>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                </tr>
+                            </tbody>
+                        </thead>
+                    </table> 
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item">
+                                <a href="#" role="button" id="ancle-Add" class="btn btn-info">
+                                    <i class="fas fa-plus-circle"></i>
+                                </a>
+                            </li>
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>  
+                </div>
+            </div>
+        </section>
+
+        <section class="tab-pane fade show active" role="tabpanel" aria-labelledby="pills-home-tab" id="Works-Section">
+            <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
+                <div class="flex-fill mx-1 my-1">
+                    <input type="text" class="form-control" placeholder="Company"/>
+                </div>
+                <div class="flex-fill mx-1 my-1">
+                    <div class="flex-fill">
+                        <select class="form-control" id="select-spin">
+                            <option selected>Sector</option>
+                            <option>Public</option>
+                            <option>Privade</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex-fill mx-1 my-1">
+                    <input type="text" class="form-control" placeholder="Phone"/>
+                </div>
+                <div class="flex-fill mx-1 my-1">
+                    <input type="text" class="form-control" placeholder="Lead"/>
+                </div>
+            </div>
+            <div class="d-flex flex-column mt-3 mt-md-2 flex-lg-row align-items-lg-center">
+                <div class="flex-fill mx-1 my-1">
+                    <input type="text" class="form-control" placeholder="RFC"/>
+                </div>
+                <div class="flex-fill mx-1 my-1">
+                    <input type="text" class="form-control" placeholder="Address"/>
+                </div>
+                <div class="flex-fill mx-1 my-1">
+                    <input type="text" class="form-control" placeholder="Internal Number"/>
+                </div>
+                <div class="flex-fill mx-1 my-1">
+                    <input type="text" class="form-control" placeholder="External Number"/>
+                </div>
+            </div>
+            <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
+                <div class="flex-fill mx-1 my-1">
+                    <input type="text" class="form-control" placeholder="Colonia"/>
+                </div>
+                <div class="flex-fill mx-1 my-1">
+                    <input type="text" class="form-control" placeholder="City"/>
+                </div>
+                <div class="flex-fill mx-1 my-1">
+                    <select class="form-control" id="Select-State">
+                        <option selected>Selection State</option>
+                        <option>Chihuahua</option>
+                        <option>Durango</option>
+                    </select>
+                </div>
+                <div class="flex-fill mx-1 my-1">
+                    <select class="form-control" id="Select-Locality">
+                        <option selected>Selection Locality</option>
+                        <option>Lorem ipsum dolor sit amet</option>
+                    </select>
+                </div>
+            </div>
+            <div class="d-flex flex-row mt-3 text-white overflow-auto">
+                <div class="flex-fill">
+                    <table class="flex-fill mt-3 table table-striped table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">Selection</th>
+                                <th scope="col">#</th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                                <th scope="col">Lorem ipsum dolor. </th>
+                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span><a href="#"><i class="fas fa-edit"></i></a></span>
+                                        <span><a href="#"><i class="fas fa-trash-alt"></i></a></span>
+                                    </td>
+                                    <th scope="row">1</th>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                    <td>Lorem ipsum dolor sit. </td>
+                                </tr>
+                            </tbody>
+                        </thead>
+                    </table> 
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item">
+                                <a href="#" role="button" id="ancle-Add" class="btn btn-info">
+                                    <i class="fas fa-plus-circle"></i>
+                                </a>
+                            </li>
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav> 
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+    <script src="../script/script.js"></script>
+    <script src="../style/bootstrap/js/bootstrap.min.js"></script>
+</html>

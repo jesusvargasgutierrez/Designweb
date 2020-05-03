@@ -12,7 +12,7 @@
 		,{
 			"idOption":"2"
 			,"Equivalence":"1"
-			,"Title":"Productos"
+			,"Title":"Catalog"
 			,"Url":""
 			,"Image":""
 			,"idisMain":"1"
@@ -30,8 +30,8 @@
 				,{
 					"idOption":"11"
 					,"Equivalence":"1"
-					,"Title1":"Lorem ipsum dolor"
-					,"Url":"xxxx.php"
+					,"Title1":"Products"
+					,"Url":"../views/Product/Register.php"
 					,"Image":""
 					,"idisInternalMain":"1"
 					,"InternalOption":
@@ -61,6 +61,15 @@
 					,"Equivalence":"1"
 					,"Title1":"Register"
 					,"Url":"../views/Customer/Register.php"
+					,"Image":""
+					,"idisInternalMain":"2"
+					,"InternalOption":[]
+				},
+				{
+					"idOption":"10"
+					,"Equivalence":"1"
+					,"Title1":"Register Test"
+					,"Url":"../views/Customer/RegisterTest.php"
 					,"Image":""
 					,"idisInternalMain":"2"
 					,"InternalOption":[]

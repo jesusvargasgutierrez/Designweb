@@ -31,6 +31,7 @@ $(document).ready(function() {
          $("#secondview").removeClass("d-none");
          $("#firstview").removeClass("d-block");
          $("#firstview").addClass("d-none");
+         $("#tabscontrol").addClass("d-none");
     });
 
     $("#backview").click(function() {
@@ -39,6 +40,7 @@ $(document).ready(function() {
         $("#firstview").removeClass("d-none");
         $("#secondview").removeClass("d-block");
         $("#secondview").addClass("d-none");
+        $("#tabscontrol").addClass("d-block");
     });
     
 });
@@ -52,18 +54,18 @@ function HideControlsWuc(){
 }
 
 function Message(argument) {
-    $.ajax({
+     $.ajax({
         type: "POST",
         url: "../views/messages.php",
         datatype:"script",
         data:"respuesta="+argument,
-    })
+     })
     .done(function(response){
-        $("#message1").html(response);
+         $("#message1").html(response);
     })
     .fail(function(){
-        alert(response);
+         alert(response);
     })
     .always(function(){
-    });;
+    });
 }
