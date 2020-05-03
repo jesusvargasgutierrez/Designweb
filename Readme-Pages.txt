@@ -4,7 +4,7 @@ Main page: https://coders-web.000webhostapp.com/
     write your merge message
     press "esc"
     write ":wq"
-    then press enter
+    then press 'Enter'
 
 https://hackerthemes.com/bootstrap-cheatsheet/
 
@@ -44,7 +44,7 @@ https://geekland.eu/reparar-paquetes-rotos-linux/
 
 https://www.youtube.com/watch?v=RInf8KPptO0&feature=youtu.be
 
-Slide_menu.html.- this file has a vertical menu, it had ridded but is in git
+Slide_menu.html.- This file has a vertical menu, it had ridded but is in git
 
 Dialnet.com
 pubmed.com
@@ -55,7 +55,7 @@ academia.edu.com
 refseek.com
 eric.com
 
-jquery load html into div 
+jquery loads html into div 
 
 gestor de referencias
 Mendeley
