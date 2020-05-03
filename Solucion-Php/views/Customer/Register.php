@@ -90,31 +90,31 @@
                 <section class="tab-pane fade show active" role="tabpanel" aria-labelledby="pills-home-tab" id="Address-Section">
                     <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
                         <div class="flex-fill my-1 mx-1">
-                            <input type="text" class="form-control" placeholder="Address" />
+                            <input type="text" class="form-control" value="Address" placeholder="Address" name="address" id="address" />
                         </div>
                         <div class="flex-fill my-1 mx-1">
-                            <input type="text" class="form-control" placeholder="Internal Number" />
+                            <input type="text" class="form-control" value="262" placeholder="Internal Number" name="intnumber" id="intnumber" />
                         </div>
                         <div class="flex-fill my-1 mx-1">
-                            <input type="text" class="form-control" placeholder="External Number" />
+                            <input type="text" class="form-control" placeholder="External Number" name="exnumber" id="exnumber" />
                         </div>
                         <div class="flex-fill my-1 mx-1">
-                            <input type="text" class="form-control" placeholder="Colonia" />
+                            <input type="text" class="form-control" value="colony" placeholder="colony" name="colony" id="colony" />
                         </div>
                     </div>
                     <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
                         <div class="flex-fill my-1 mx-1">
-                            <input type="text" class="form-control" placeholder="City" />
+                            <input type="text" class="form-control" value="city" placeholder="City" name="city" id="city" />
                         </div>
                         <div class="flex-fill my-1 mx-1">
-                            <select class="form-control" id="Select-State">
+                            <select class="form-control" id="DDstate" name="DDstate">
                                 <option selected>Selection State</option>
                                 <option>Chihuahua</option>
                                 <option>Durango</option>
                             </select>
                         </div>
                         <div class="flex-fill my-1 mx-1">
-                            <select class="form-control" id="Select-Locality">
+                            <select class="form-control" id="DDlocation" name="DDlocation">
                                 <option selected>Selection Locality</option>
                                 <option>Lorem ipsum dolor sit amet</option>
                             </select>

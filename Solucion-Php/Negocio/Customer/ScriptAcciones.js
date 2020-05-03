@@ -11,6 +11,7 @@ $(document).ready(function() {
             datatype:"json",
             data:"datos="+jsonform,
             success: function(response) {
+              //alert(response);
               respuestax = response;
             }
         })
@@ -61,10 +62,10 @@ function Message(argument) {
         data:"respuesta="+argument,
      })
     .done(function(response){
-         $("#message1").html(response);
+        $("#message1").html(response);
     })
     .fail(function(){
-         alert(response);
+         //alert(response);
     })
     .always(function(){
     });
