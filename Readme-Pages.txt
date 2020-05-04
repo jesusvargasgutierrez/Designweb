@@ -44,6 +44,10 @@ https://geekland.eu/reparar-paquetes-rotos-linux/
 
 https://www.youtube.com/watch?v=RInf8KPptO0&feature=youtu.be
 
+http://sandritascs.blogspot.com/2015/06/tipos-de-peticionesrequest-con-php-curl.html
+
+https://www.youtube.com/watch?v=5Xr1uAXICWE
+
 Slide_menu.html.- this file has a vertical menu, it had ridded but is in git
 
 Dialnet.com
