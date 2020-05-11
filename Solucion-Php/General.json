@@ -1,0 +1,156 @@
+{
+"General":[
+		{
+			"idOption":"1"
+			,"Equivalence":"1"
+			,"Title":"Notifications"
+			,"Url":""
+			,"Image":"fas fa-bell"
+			,"subOption":
+			[
+				{
+					"idOption":"10"
+					,"Equivalence":"1"
+					,"Title1":"Change Languaje"
+					,"Url":"xxxx.php"
+					,"Image":"fas fa-globe"
+				}
+				,{
+					"idOption":"11"
+					,"Equivalence":"1"
+					,"Title1":"Security"
+					,"Url":"xxxx.php"
+					,"Image":"fas fa-shield-alt"
+				}
+				,{
+					"idOption":"11"
+					,"Equivalence":"1"
+					,"Title1":"About Us"
+					,"Url":"xxxx.php"
+					,"Image":"fas fa-question-circle"
+				}
+				,{
+					"idOption":"11"
+					,"Equivalence":"1"
+					,"Title1":"Log-out"
+					,"Url":"xxxx.php"
+					,"Image":"fas fa-door-open"
+				}
+			]
+		}
+		,{
+			"idOption":"2"
+			,"Equivalence":"2"
+			,"Title":"Favorite"
+			,"Url":""
+			,"Image":"fas fa-star"
+			,"subOption":
+			[
+				{
+					"idOption":"10"
+					,"Equivalence":"1"
+					,"Title1":"Change Languaje"
+					,"Url":"xxxx.php"
+					,"Image":"fas fa-globe"
+				}
+				,{
+					"idOption":"11"
+					,"Equivalence":"1"
+					,"Title1":"Security"
+					,"Url":"xxxx.php"
+					,"Image":"fas fa-shield-alt"
+				}
+				,{
+					"idOption":"11"
+					,"Equivalence":"1"
+					,"Title1":"About Us"
+					,"Url":"xxxx.php"
+					,"Image":"fas fa-question-circle"
+				}
+				,{
+					"idOption":"11"
+					,"Equivalence":"1"
+					,"Title1":"Log-out"
+					,"Url":"xxxx.php"
+					,"Image":"fas fa-door-open"
+				}
+			]
+		}
+		,{
+			"idOption":"3"
+			,"Equivalence":"3"
+			,"Title":"Modules"
+			,"Url":""
+			,"Image":"fas fa-th-large"
+			,"subOption":
+			[
+				{
+					"idOption":"10"
+					,"Equivalence":"1"
+					,"Title1":"Change Languaje"
+					,"Url":"xxxx.php"
+					,"Image":"fas fa-globe"
+				}
+				,{
+					"idOption":"11"
+					,"Equivalence":"1"
+					,"Title1":"Security"
+					,"Url":"xxxx.php"
+					,"Image":"fas fa-shield-alt"
+				}
+				,{
+					"idOption":"11"
+					,"Equivalence":"1"
+					,"Title1":"About Us"
+					,"Url":"xxxx.php"
+					,"Image":"fas fa-question-circle"
+				}
+				,{
+					"idOption":"11"
+					,"Equivalence":"1"
+					,"Title1":"Log-out"
+					,"Url":"xxxx.php"
+					,"Image":"fas fa-door-open"
+				}
+			]
+		}
+		,{
+			"idOption":"4"
+			,"Equivalence":"4"
+			,"Title":"Options"
+			,"Url":""
+			,"Image":"fas fa-user"
+			,"subOption":
+			[
+				{
+					"idOption":"10"
+					,"Equivalence":"1"
+					,"Title1":"lorem"
+					,"Url":"xxxx.php"
+					,"Image":"fas fa-globe"
+				}
+				,{
+					"idOption":"11"
+					,"Equivalence":"1"
+					,"Title1":"Security"
+					,"Url":"xxxx.php"
+					,"Image":"fas fa-shield-alt"
+				}
+				,{
+					"idOption":"11"
+					,"Equivalence":"1"
+					,"Title1":"About Us"
+					,"Url":"xxxx.php"
+					,"Image":"fas fa-question-circle"
+				}
+				,{
+					"idOption":"11"
+					,"Equivalence":"1"
+					,"Title1":"Log-out"
+					,"Url":"xxxx.php"
+					,"Image":"fas fa-door-open"
+				}
+			]
+		}
+	]
+}
