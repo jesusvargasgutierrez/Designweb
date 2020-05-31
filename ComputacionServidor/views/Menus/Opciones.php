@@ -54,7 +54,30 @@
 
                             $opciones1 = $NegocioOpciones->RequestOptions($identificador);
 
-                            var_dump($opciones1);
+                            foreach($opciones1 as $key1 => $value1)
+                            {
+                                    ?>
+                                      <li class="nav-item dropdown">
+                                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <?php    
+                                                echo $key1;
+                                            ?>
+                                          </a>
+                                          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <?php    
+                                                foreach($opciones1[$key1]["Subopciones"] as $k1 => $v1)
+                                                {
+                                                  ?>
+                                                      <a class="dropdown-item ItemAction" href="<?php $opciones1[$key1]["Subopciones"][$k1]["url"];?>">
+                                                          <?php echo $k1; ?> 
+                                                      </a>
+                                                  <?php
+                                                }
+                                            ?>
+                                          </div>
+                                      </li>
+                                    <?php
+                            }
                             //echo $opciones1;
                         ?> 
                     </ul>

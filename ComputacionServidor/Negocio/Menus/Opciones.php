@@ -6,7 +6,7 @@ class OptionsBussines
         switch($ClaveModulo)
         {
             case "Clientes":
-               $this->ObtenerCliente();
+               return $this->ObtenerCliente();
             break;
         }
     }

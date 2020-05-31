@@ -8,9 +8,12 @@ $(document).ready(function() {
             url: url1,
             datatype:"json",
             data:"Identificador="+identificador,
-            success: function(response) {
+            /*success: function(response) {
                 alert(response);
-            }
+            }*/
+        })
+        .done(function(response){
+            $("#principales").html(response);
         })
    });
 });
