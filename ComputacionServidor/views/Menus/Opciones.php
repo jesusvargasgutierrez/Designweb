@@ -68,7 +68,7 @@
                                                 foreach($opciones1[$key1]["Subopciones"] as $k1 => $v1)
                                                 {
                                                   ?>
-                                                      <a class="dropdown-item ItemAction" href="<?php $opciones1[$key1]["Subopciones"][$k1]["url"];?>">
+                                                      <a class="dropdown-item ItemAction" href="<?php echo $opciones1[$key1]["Subopciones"][$k1]["url"];?>">
                                                           <?php echo $k1; ?> 
                                                       </a>
                                                   <?php
@@ -78,13 +78,23 @@
                                       </li>
                                     <?php
                             }
-                            //echo $opciones1;
                         ?> 
                     </ul>
                 </div>  
             </div>
         </nav>
-    </section>    
+    </section>   
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".ItemAction").click(function(){   
+               href = $(this).attr('href');
+               $('#MainContent').load(href);
+
+               return false;
+            });
+        });
+    </script> 
 </body>
 </html>
 

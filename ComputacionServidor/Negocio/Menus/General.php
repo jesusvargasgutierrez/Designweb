@@ -5,29 +5,34 @@ class General
     {
         $array = array(
             "Modulos" => array(
-                "identificador" => "Mod",
+                "identificador" => "Modulos",
                 "icono" => "fas fa-th-large",
-                "url" => "www.google.com",
+                "url" => "",
                 "Subopciones" => array(
                     "Clientes" => array(
                         "identificador" => "Clientes",
-                        "icono" => "fas fa-globe",
-                        "url" => "www.google.com",
+                        "icono" => "fas fa-users",
+                        "url" => "",
                     ),
                     "Seguridad" => array(
                         "identificador" => "Seguridad",
                         "icono" => "fas fa-shield-alt",
-                        "url" => "xxx.php"
+                        "url" => ""
                     ),
-                    "Acerca de" => array(
-                        "identificador" => "Acerca",
-                        "icono" => "fas fa-question-circle",
-                        "url" => "xxx.php"
+                    "Usuarios" => array(
+                        "identificador" => "Usuarios",
+                        "icono" => "fas fa-user",
+                        "url" => ""
                     ),
-                    "Cerrar Sesion" => array(
+                    "Examenes" => array(
+                        "identificador" => "Examenes",
+                        "icono" => "fas fa-cubes",
+                        "url" => "",
+                    ),
+                    "Empleados" => array(
                         "identificador" => "Cerrar sesion",
-                        "icono" => "fas fa-door-open",
-                        "url" => "xxx.php"
+                        "icono" => "fas fa-building",
+                        "url" => ""
                     )
                 )
             )
