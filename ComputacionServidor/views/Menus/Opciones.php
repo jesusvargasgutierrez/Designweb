@@ -89,8 +89,11 @@
         $(document).ready(function(){
             $(".ItemAction").click(function(){   
                href = $(this).attr('href');
-               $('#MainContent').load(href);
-
+               if (href != "") {
+                 $('#MainContent').load(href);
+               }else{
+                $("#MainContent").html("<h5>No hay interfaz asociada aun</h5>");
+               }
                return false;
             });
         });

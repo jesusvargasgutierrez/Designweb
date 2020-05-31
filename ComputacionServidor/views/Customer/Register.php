@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
 <head>
     <title></title>
     <meta charset="UTF-8">
@@ -16,49 +16,47 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </head>
 <body class="">
-    <?php
-      include_once('../Menus/Actions.php');
-    ?>
-
     <div class="container mt-3" id="tabscontrol">
         <ul class="nav row nav-pills mb-3" id="pills-tab" role="tablist">
             <li class="col-lg-3 nav-item col-12 text-center">
               <a class="nav-link active" id="pills-General-Section" data-toggle="pill" href="#General-Section" 
-              role="tab" aria-controls="General-Section" aria-selected="true">General Information</a>
+              role="tab" aria-controls="General-Section" aria-selected="true">Informacion General</a>
             </li>
             <li class="col-lg-3 nav-item col-12 text-center">
               <a class="nav-link" id="pills-Address-Section" data-toggle="pill" href="#Address-Section" 
-              role="tab" aria-controls="Address-Section" aria-selected="false">Address</a>
+              role="tab" aria-controls="Address-Section" aria-selected="false">Direccion</a>
             </li>
         </ul>
     </div>
 
     <div id="firstview" class="firstview">
-            <form action="" id="formulario" name="formulario" class="tab-content" method="POST">
+            <form action="../Negocio/Customer/Agregarcliente.php" id="formulario" name="formulario" class="tab-content" method="POST" enctype="multipart/form-data">
+                <span>
+                   <button type="submit" id="Save" name="Save" class="btn">
+                      <i class="fas fa-save"></i></span>&nbsp;Save
+                    </button>
+                </span>
                 <section class="tab-pane fade show active" role="tabpanel" aria-labelledby="pseills-home-tab" id="General-Section">
                     <div class="d-flex flex-column my-1 flex-lg-row align-items-lg-center">
                         <div class="flex-fill">
-                            <label class="col-form-label">Client ID:</label>
-                            <input type="text" id="Code1" name="Code1" value="01" disabled class="form-control-sm enabled" placeholder="" />
-                            <a href="#" role="button" id="ancle-options" class="btn btn-info">
-                                <i class="fas fa-search"></i>
-                            </a>
+                            <label class="col-form-label">Identificador:</label>
+                            <input type="text" name="Codigo" value="01" class="form-control-sm enabled" placeholder="" />
                             <label class="col-form-label">Equivalencia:</label>
-                            <input type="text" id="Equivalence" name="Equivalence" value="Client1" placeholder="Equivalence" />
+                            <input type="text" id="Equivalencia" name="Equivalencia" value="Client1" placeholder="Equivalencia" />
                         </div>
                     </div>
                     <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
                         <div class="flex-fill order-3 my-1 mx-1">
-                            <input type="text" class="form-control" value="Full Name" id="FullName" name="FullName" placeholder="Full name" />
+                            <input type="text" class="form-control" value="Nombre Completo" id="NombreCompleto" name="NombreCompleto" placeholder="NombreCompleto" />
                         </div>
                         <div class="flex-fill order-0 my-1 mx-1">
-                            <input type="text" class="form-control" value="Names" id="Names" name="Names" placeholder="Names" />
+                            <input type="text" class="form-control" value="Nombres" id="Nombres" name="Nombres" placeholder="Nombres" />
                         </div>
                         <div class="flex-fill order-1 my-1 mx-1">
-                            <input type="text" class="form-control" value="First Name" id="Firstname" name="Firstname" placeholder="First name" />
+                            <input type="text" class="form-control" value="Primer Nombre" id="PrimerNombre" name="PrimerNombre" placeholder="Primer Nombre" />
                         </div>
                         <div class="flex-fill order-2 my-1 mx-1">
-                            <input type="text" class="form-control" value="Second-name" id="Secondname" name="Secondname" placeholder="Surname" />
+                            <input type="text" class="form-control" value="Segundo Nombre" id="SegundoNombre" name="SegundoNombre" placeholder="SegundoNombre" />
                         </div>
                     </div>
                     <div class="d-flex flex-column mt-3 mt-md-2 flex-lg-row align-items-lg-center">
@@ -69,14 +67,14 @@
                             <input type="text" class="form-control" id="age" name="age" value="27" disabled placeholder="Age" />
                         </div>
                         <div class="flex-fill my-1 mx-1">
-                            <select class="form-control" id="select-gender" name="idGender">
+                            <select class="form-control" id="select-genero" name="idGenero">
                                 <option selected value="1">Selection Gender</option>
                                 <option>Male</option>
                                 <option>Femaile</option>
                             </select>
                         </div>
                         <div class="flex-fill my-1 mx-1">
-                            <select class="form-control" id="select-maritalstatus" name="idMaritalStatus">
+                            <select class="form-control" id="select-estadocivil" name="idestadocivil">
                                 <option>Selection marital status</option>
                                 <option selected value="2">Single</option>
                                 <option>Married</option>
@@ -88,38 +86,31 @@
                 <section class="tab-pane fade show active" role="tabpanel" aria-labelledby="pills-home-tab" id="Address-Section">
                     <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
                         <div class="flex-fill my-1 mx-1">
-                            <input type="text" class="form-control" value="Address" placeholder="Address" name="address" id="address" />
+                            <input type="text" class="form-control" value="Direccion" placeholder="Direccion" name="Direccion" id="Direccion" />
                         </div>
                         <div class="flex-fill my-1 mx-1">
-                            <input type="text" class="form-control" value="262" placeholder="Internal Number" name="intnumber" id="intnumber" />
+                            <input type="text" class="form-control" value="262" placeholder="NumeroInterno" name="NumeroInterno" id="NumeroInterno" />
                         </div>
                         <div class="flex-fill my-1 mx-1">
-                            <input type="text" class="form-control" placeholder="External Number" name="exnumber" id="exnumber" />
+                            <input type="text" class="form-control" placeholder="NumeroExterno" name="NumeroExterno" id="NumeroExterno" />
                         </div>
                         <div class="flex-fill my-1 mx-1">
-                            <input type="text" class="form-control" value="colony" placeholder="colony" name="colony" id="colony" />
+                            <input type="text" class="form-control" value="colonia" placeholder="colonia" name="colonia" id="colonia" />
                         </div>
                     </div>
                     <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
                         <div class="flex-fill my-1 mx-1">
-                            <input type="text" class="form-control" value="city" placeholder="City" name="city" id="city" />
+                            <input type="text" class="form-control" value="ciudad" placeholder="ciudad" name="ciudad" id="ciudad" />
                         </div>
                         <div class="flex-fill my-1 mx-1">
-                            <select class="form-control" id="DDstate" name="DDstate">
+                            <select class="form-control" id="estado" name="idestado">
                                 <option selected>Selection State</option>
                                 <option>Chihuahua</option>
                                 <option>Durango</option>
                             </select>
                         </div>
-                        <div class="flex-fill my-1 mx-1">
-                            <select class="form-control" id="DDlocation" name="DDlocation">
-                                <option selected>Selection Locality</option>
-                                <option>Lorem ipsum dolor sit amet</option>
-                            </select>
-                        </div>
                     </div>
                 </section>
-
                 <input type="hidden" id="HdAction" name="HdAction" value="GuardarCliente">
             </form>
     </div>

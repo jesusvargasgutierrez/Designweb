@@ -15,11 +15,4 @@ $(document).ready(function() {
         })
    });
 
-    $(".ItemAction").click(function(){   
-       href = $(this).attr('href');
-       $('#MainContent').load(href);
-       //return false;
-    });
-
-
 });

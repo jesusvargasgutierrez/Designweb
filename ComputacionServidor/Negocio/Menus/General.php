@@ -12,7 +12,7 @@ class General
                     "Clientes" => array(
                         "identificador" => "Clientes",
                         "icono" => "fas fa-users",
-                        "url" => "",
+                        "url" => ""
                     ),
                     "Seguridad" => array(
                         "identificador" => "Seguridad",
@@ -27,11 +27,23 @@ class General
                     "Examenes" => array(
                         "identificador" => "Examenes",
                         "icono" => "fas fa-cubes",
-                        "url" => "",
+                        "url" => ""
                     ),
                     "Empleados" => array(
                         "identificador" => "Cerrar sesion",
                         "icono" => "fas fa-building",
+                        "url" => ""
+                    )
+                )
+            ),
+            "Opciones" => array(
+                "identificador" => "Modulos",
+                "icono" => "fas fa-bars",
+                "url" => "",
+                "Subopciones" => array(
+                    "Cerrar sesion" => array(
+                        "identificador" => "cierrasession",
+                        "icono" => "fas fa-sign-out-alt",
                         "url" => ""
                     )
                 )
