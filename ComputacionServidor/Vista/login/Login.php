@@ -17,7 +17,7 @@
 </head>
 <body>
     <div id="viewlogin" class="d-flex justify-content-center align-items-center" style="height:100%">
-            <form id="formulario" name="formulario" method="POST" class="" style="width: 35%; height: 40%;">
+            <form id="formulario" action="../../Negocio/Login/login.php" name="formulario" method="POST" class="" style="width: 35%; height: 40%;">
                 <div class="d-flex flex-md-row my-1 align-items-lg-center">
                     <div class="flex-fill text-center">
                     <img src="../image/user.png" width="100" height="200"
@@ -26,7 +26,7 @@
                 </div>
                 <div class="d-flex flex-md-row my-1 align-items-lg-center">
                     <div class="flex-fill text-center">
-                        <h3>Sign in</h3>
+                        <h3>Iniciar Sesion</h3>
                     </div>
                 </div>
                 <div class="d-flex flex-md-row my-1 align-items-lg-center">
@@ -34,7 +34,7 @@
                         <span><i class="fas fa-building"></i></span>&nbsp;
                     </div>
                     <div class="flex-fill">
-                        <input type="text" class="form-control" value="Company Name" id="companyname" name="companyname" placeholder="Company Name" />
+                        <input type="text" class="form-control" name="Codigo" placeholder="Codigo" />
                     </div>
                 </div>
 
@@ -43,7 +43,7 @@
                         <span><i class="fas fa-user"></i></span>&nbsp;
                     </div>
                     <div class="flex-fill">
-                        <input type="text" class="form-control" value="User Name" id="username" name="username" placeholder="User Name" />
+                        <input type="text" class="form-control" name="Usuario" placeholder="Usuario" />
                     </div>
                 </div>
 
@@ -52,27 +52,27 @@
                         <span><i class="fas fa-key"></i></span>&nbsp;
                     </div>
                     <div class="flex-fill">
-                        <input type="Password" class="form-control" value="Password" id="Password" name="Password" placeholder="Password" />
+                        <input type="Password" class="form-control" name="contrasenia" placeholder="contraseña" />
                     </div>
                 </div>
 
                 <div class="d-flex flex-md-row my-3">
                     <div class="flex-fill">
-                        <input type="button" class="form-control btn-primary" value="Log in" />
+                        <input type="submit" name="inicio" class="form-control btn btn-primary" value="Iniciar sesion" />
                     </div>
                 </div>
 
                 <div class="d-flex flex-md-row my-3 align-items-center">
                     <div class="flex-fill text-center border-0">
                         <a href="#" role="button" class="form-control border-0">
-                            I forgot my password
+                            Olvide mi contra&ntilde;a
                         </a>
                     </div>
                 </div>
 
                 <div class="d-flex flex-md-row my-3 align-items-center">
                     <div class="flex-fill text-center border-0">
-                        <label class="d-none font-weight-bold text-danger">any thing had ocurred</label>
+                        <label class="d-none font-weight-bold text-danger">Ha ocurrido algo!</label>
                     </div>
                 </div>
             </form>

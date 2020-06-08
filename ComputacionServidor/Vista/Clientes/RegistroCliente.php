@@ -30,10 +30,10 @@
     </div>
 
     <div id="firstview" class="firstview">
-            <form action="../Negocio/Customer/Agregarcliente.php" id="formulario" name="formulario" class="tab-content" method="POST" enctype="multipart/form-data">
+            <form action="../Negocio/Cliente/Agregarcliente.php" id="formulario" name="formulario" class="tab-content" method="POST" enctype="multipart/form-data">
                 <span>
                    <button type="submit" id="Save" name="Save" class="btn">
-                      <i class="fas fa-save"></i></span>&nbsp;Save
+                      <i class="fas fa-save"></i></span>&nbsp;Guardar
                     </button>
                 </span>
                 <section class="tab-pane fade show active" role="tabpanel" aria-labelledby="pseills-home-tab" id="General-Section">
@@ -61,7 +61,7 @@
                     </div>
                     <div class="d-flex flex-column mt-3 mt-md-2 flex-lg-row align-items-lg-center">
                         <div class="flex-fill my-1 mx-1">
-                            <input class="form-control" id="DateBird" name="DateBird" value="1993/02/08" type="date">
+                            <input class="form-control" id="DateBird" name="DateBird" type="date">
                         </div>
                         <div class="flex-fill my-1 mx-1">
                             <input type="text" class="form-control" id="age" name="age" value="27" disabled placeholder="Age" />

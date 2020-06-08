@@ -1,4 +1,4 @@
-var url1 = "../views/Menus/Opciones.php";
+var url1 = "../Vista/Menus/Opciones.php";
 $(document).ready(function() {
 
     $(".modulo").click(function(){   

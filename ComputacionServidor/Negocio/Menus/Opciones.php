@@ -53,7 +53,7 @@ class OptionsBussines
                     "Registro" => array(
                         "identificador" => "Clientes",
                         "icono" => "fas fa-globe",
-                        "url" => "../views/Customer/Register.php"
+                        "url" => "../Vista/Clientes/RegistroCliente.php"
                     ),
                     "Prospecto" => array(
                         "identificador" => "Prospecto",

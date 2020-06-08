@@ -1,3 +1,3 @@
 <?php
-    header('Location: views/Inicio.php');
+    header('Location: Vista/Inicio.php');
 ?>
