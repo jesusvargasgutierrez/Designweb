@@ -1,4 +1,6 @@
 <?php
+    include_once('Credenciales.php');
+
     if(isset($_POST["Usuario"]))
     {
         $Values = '';
@@ -12,44 +14,70 @@
             $propiedades1 = $propiedades1.$$variable.",";
         }
 
-        print("<strong> Retirando ultima coma de cadena </strong><br/>");
-        echo $propiedades1 = trim($propiedades1,",")."<br/>";
+        $NegocioCredenciales = new Credenciales();
 
-        $propiedades1 = trim($propiedades1,",");
+        $codigo = "";
+        $usuario = "";
+        $contrasenia = "";
 
-        $Values = trim($Values,",");
+        $codigo = $NegocioCredenciales->Codigo;
+
+        $usuario = $NegocioCredenciales->Usuario;
+
+        $contrasenia = $NegocioCredenciales->Contrasenia;
 
         /*Evaluar la longitud de la propiedad del arreglo que tiene el nick 
         La longitud debe ser siempre mayor que 1
         */
-        if(strlen($array["contrasenia"]) >= 10)
-        {
-            /*Si se cumple pasara a mas valicaciones */
+        if(strlen($array["Codigo"]) >= 4)
+        {   
+            $Codigo1 = "";
+            $Usuario1 = "";
+            $Contrasenia1 = "";
+
+            /*Si se cumple pasara a mas validaciones */
+
+            /**
+             * hacemos el inverso al valor del campo Codigo
+             */
+            $Codigo1 = strrev($array["Codigo"])."<br/>";
+
+            /**
+             * convertimos el primer caracter en mayuscula de contraseña
+             */
+            $Contrasenia1 = ucfirst($array["contrasenia"]);
+
+            /**
+             *  hacemos el inverso y covertimos la contraseña invertida a sha1 para comparar
+             */
+            $Contrasenia1 = sha1(strrev($array["contrasenia"]))."<br/>";
+
+            /**
+             * convertimos todo el valor del Usuario en mayusculas
+             */
+            $Usuario1 = sha1(strtoupper($array["Usuario"]))."<br/>";
+
+            /**
+             * Evaluamos si es igual a los valores
+             * si no, marcara un error de inicio de sesion
+             */
+
+             if($codigo == $Codigo1 && $Contrasenia1 == $contrasenia && $Usuario1 == $usuario)
+             {
+                print("<script type=\"text/javascript\" language=\"javascript\">alert(\"Credenciales validas\");</script>");
+             }else{
+                print($Codigo1."<br/>".$contrasenia."<br/>".$usuario."<br/>");
+
+                echo $codigo."<br/>"; 
+                echo $Contrasenia1."<br/>"; 
+                echo $Usuario1;
+                print("<script type=\"text/javascript\" language=\"javascript\">alert(\"Credenciales invalidas verifique\");</script>");
+             }
 
         }else{
             /*si no se cumple es necesario desplegar un mensaje en forma de alert usando javascript*/
             print("<script type=\"text/javascript\" language=\"javascript\">alert(\"No se tiene la longitud adecuada\");</script>");
         }
-
-        /**
-         * convertimos el primer caracter en mayuscula de al contraseña
-         */
-        echo ucfirst($array["contrasenia"]);
-
-        /**
-         * hacemos el inverso al valor del campo contraseña
-         */
-        echo strrev($array["contrasenia"])."<br/>";
-
-        /**
-         * covertimos la contraseña invertida a sha1 para comparar
-         */
-        echo sha1(strrev($array["contrasenia"]))."<br/>";
-
-        /**
-         * convertimos todo el valor del Usuario en mayusculas
-         */
-        echo sha1(strtoupper($array["Usuario"]))."<br/>";
     }
 
 ?>
