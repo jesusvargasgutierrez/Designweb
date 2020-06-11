@@ -20,12 +20,6 @@
         $usuario = "";
         $contrasenia = "";
 
-        $codigo = $NegocioCredenciales->Codigo;
-
-        $usuario = $NegocioCredenciales->Usuario;
-
-        $contrasenia = $NegocioCredenciales->Contrasenia;
-
         /*Evaluar la longitud de la propiedad del arreglo que tiene el nick 
         La longitud debe ser siempre mayor que 1
         */
@@ -40,60 +34,51 @@
             /**
              * hacemos el inverso al valor del campo Codigo
              */
-            $Codigo1 = strrev($array["Codigo"])."<br/>";
-
-            /**
-             * convertimos el primer caracter en mayuscula de contraseña
-             */
-            $Contrasenia1 = ucfirst($array["contrasenia"]);
+            $Codigo1 = strrev($array["Codigo"]);
 
             /**
              *  hacemos el inverso y covertimos la contraseña invertida a sha1 para comparar
              */
-            $Contrasenia1 = sha1(strrev($array["contrasenia"]))."<br/>";
+            $Contrasenia1 = sha1(strrev($array["contrasenia"]));
 
             /**
              * convertimos todo el valor del Usuario en mayusculas
              */
-            $Usuario1 = sha1(strtoupper($array["Usuario"]))."<br/>";
+            $Usuario1 = strtolower($array["Usuario"]);
+            $Usuario1 = sha1(strtoupper($Usuario1));
+
+            /**
+             * Asignamos las credenciales
+             * rescatando los valores del array
+             */
+            $ArrayCredenciales = $NegocioCredenciales->ObtenerCredenciales();
+
+            $Codigo = $ArrayCredenciales["Codigo"];
+
+            $contrasenia = $ArrayCredenciales["Contrasenia"];
+
+            $usuario = $ArrayCredenciales["Usuario"];
 
             /**
              * Evaluamos si es igual a los valores
              * si no, marcara un error de inicio de sesion
              */
-
-             if($codigo == $Codigo1 && $Contrasenia1 == $contrasenia && $Usuario1 == $usuario)
+            
+             if( ($Codigo1 == strrev($Codigo)) and ($Contrasenia1 == sha1(strrev($contrasenia))) and  $Usuario1 == sha1(strtoupper($usuario)))
              {
-                print("<script type=\"text/javascript\" language=\"javascript\">alert(\"Credenciales validas\");</script>");
+                header('Location: ../../Vista/Inicio.php');
              }else{
-                print($Codigo1."<br/>".$contrasenia."<br/>".$usuario."<br/>");
-
-                echo $codigo."<br/>"; 
-                echo $Contrasenia1."<br/>"; 
-                echo $Usuario1;
                 print("<script type=\"text/javascript\" language=\"javascript\">alert(\"Credenciales invalidas verifique\");</script>");
+
+                print("<script type=\"text/javascript\" language=\"javascript\">location.href =\"../../Vista/login/Login.php\";</script>");
              }
 
         }else{
             /*si no se cumple es necesario desplegar un mensaje en forma de alert usando javascript*/
-            print("<script type=\"text/javascript\" language=\"javascript\">alert(\"No se tiene la longitud adecuada\");</script>");
+            print("<script type=\"text/javascript\" language=\"javascript\">alert(\"Credenciales invalidas verifique\");</script>");
+
+            print("<script type=\"text/javascript\" language=\"javascript\">location.href =\"../../Vista/login/Login.php\";</script>");
         }
     }
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-</head>
-<body>
-    
-</body>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-</html>
