@@ -1,6 +1,11 @@
 <?php
 class OptionsBussines
-{
+{   
+            /**
+             * funcion que evalua en cual opcion hizo click el usuario
+             * en caso de que esta opcion aun no cuente con opciones 
+             * retornara el mensaje en default
+         */
     function RequestOptions($ClaveModulo)
     {
         switch($ClaveModulo)
@@ -20,6 +25,13 @@ class OptionsBussines
         }
     }
 
+    /**
+    * declaracion de funciones para retornar el 
+    *resultado en la funcion principal llamada
+    *RequestOptions lo que retornar estas funciones independientes
+    * es una matriz de arreglos de tipo clave => valor los
+    *cuales influyen en la visualizacion del menu
+    */
     function ObtenerCliente()
     {
         $array = array(

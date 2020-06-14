@@ -42,12 +42,17 @@
 
         print($tablahtml);
 
+        /*utilizamos print para mostrar un mensaje en html*/
         print("<br/> <br/><strong>Utilizando la funcion var_dump para imprimir el arreglo de valores </strong> <br/>");
 
+        /*funcion para impresion de arreglo*/
         var_dump($arreglosplitpropiedades);
 
         print("<br/> <br/><strong>Evaluamos si el campo de fecha de ingreso un valor con la funcion strlen </strong> <br/>");
 
+        /*Evaluacion de la fecha
+        *esta funcion por el momento no tiene operatividad
+        */
         if(strlen($_POST["DateBird"]) > 0)
         {
           echo "La funcion strlen determino que el campo date bird si tiene dato";

@@ -1,4 +1,8 @@
 <?php
+/**
+ * incluimos el menu general y realiza el
+ * procesamiento de la matriz correspondiente
+ */
     include_once('../Negocio/Menus/General.php');
 ?>
 <html>
@@ -6,6 +10,7 @@
     <title></title>
 </head>
 <body>
+    <!-- clase nav principal para el menu -->
     <nav class="page-header navbar navbar-light bg-lignt navbar-expand-md">
         <a class="navbar-brand" href="#">
             <span class="h4">
@@ -21,13 +26,27 @@
         <div class="collapse navbar-collapse" id="menu-principal">
             <div class="d-flex text-center ml-auto">
                 <?php
+                    /**
+                     * objeto de la clase general
+                     */
                   $NegocioOpciones = new General();
 
+                  /**
+                   * uso del objeto previo y llamada a la funcion para 
+                   * retornar la matriz de arreglo para comenzar
+                   * con el procesamiento del mismo
+                   */
                   $arregloOpciones = $NegocioOpciones->RequestOptions();
 
+                  /**
+                   * inicia el procesamiento de
+                   * la matriz para la construccion dinamica del menu
+                   * 
+                   */
                   foreach($arregloOpciones as $key1 => $value1)
                   {
                     ?>
+                        <!-- construccion del menu con div y php embebido -->
                         <div class="dropdown flex-fill mx-1">
                             <a href="#" role="button" id="ancle-options"
                             data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
@@ -39,6 +58,10 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="ancle-options">
                               <?php
+                              /**
+                               * uso de PHP embebido para la construccion de la subopcion en caso
+                               * de que exista
+                               */
                                  foreach($arregloOpciones[$key1]["Subopciones"] as $k1 => $v1)
                                  {
                                     ?>

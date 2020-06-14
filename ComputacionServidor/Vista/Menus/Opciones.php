@@ -1,4 +1,8 @@
 <?php
+    /**
+     * se evalua primero si el identificador existe o no
+     * en caso de existir se mostrara el html completo
+     */
     if(isset($_POST["Identificador"])){
         include_once('../../Negocio/Menus/Opciones.php');
 ?>
@@ -48,25 +52,49 @@
                 <div class="collapse navbar-collapse ml-auto" id="navegacion-fm">
                     <ul class="nav navbar-nav">
                         <?php
+                            /**
+                             * construccion del objeto
+                             */
                             $NegocioOpciones = new OptionsBussines();
-
+                            
+                            /**
+                             * la importancia de la primera evaluacion
+                             * de no ser por el primer if de este archivo
+                             * esto causaria una excepcion si la varible identificador fuera
+                             * nula
+                             */
                             $identificador = $_POST["Identificador"];
 
+                            /**
+                             * uso del objeto para retornar la
+                             * matriz y construir las opciones
+                             */
                             $opciones1 = $NegocioOpciones->RequestOptions($identificador);
 
+                            /**
+                             * evaluamos si el arreglo no esta vacio
+                             * si no lo esta comienza el procesamiento
+                             * de la construccion del menu opciones
+                             */                            
                             if(empty($opciones1) == 0)
                             {
                                 foreach($opciones1 as $key1 => $value1)
                                 {
+                                    // recorrer opciones arreglo para la construccion
+                                    // del menu
                                     ?>
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <?php    
+                                                    //desplegamos el valor de la propiedad del arreglo
                                                     echo $key1;
                                                 ?>
                                             </a>
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                                 <?php    
+                                                    /**
+                                                     * funcion embebida para la construcion de subopciones
+                                                    */
                                                     foreach($opciones1[$key1]["Subopciones"] as $k1 => $v1)
                                                     {
                                                     ?>
@@ -106,4 +134,8 @@
 
 <?php
 }
+/**
+ * fin del if
+ * aqui iria un else pero no es necesario por el momento
+ */
 ?>

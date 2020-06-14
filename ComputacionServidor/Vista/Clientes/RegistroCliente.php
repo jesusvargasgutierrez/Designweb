@@ -1,3 +1,5 @@
+<!-- formulario de registro de cliente, no contiene codigo php internamente
+pero si hace uso de una clase al presionar submit -->
 <html lang="en">
 <head>
     <title></title>

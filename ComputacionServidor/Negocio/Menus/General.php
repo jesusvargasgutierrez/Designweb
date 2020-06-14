@@ -1,4 +1,9 @@
 <?php
+        /**
+         * retornamos una funcion con cada una de las opciones del menu general
+         * todo valor que se encuentra despues de la flecha => influira en 
+         * la visualizacion del menu
+         */
 class General
 {
     function RequestOptions()

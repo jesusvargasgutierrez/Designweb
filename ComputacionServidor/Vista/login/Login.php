@@ -1,3 +1,8 @@
+<!-- formulario de login, no contiene codigo php internamente
+pero si hace uso de una clase al presionar submit
+aqui es donde se comienza el uso de la primera matriz de arreglo
+para la construccion del menu
+-->
 <html>
 <head>
     <title></title>

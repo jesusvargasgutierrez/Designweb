@@ -1,3 +1,9 @@
+<!-- formulario de opciones basicas para las interfaces
+para la utilizacion del CRUD por el momento el boton que se utilizara sera
+el SAVE los demas botones se les dara accion una vez se realice un ejercicio
+con base de datos
+es .php debido a que debe incluirse en otro archivo
+ -->
 <!DOCTYPE html>
 <html>
 <head>
