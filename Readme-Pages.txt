@@ -65,3 +65,7 @@ gestor de referencias
 Mendeley
 
 https://www.youtube.com/watch?v=hb8O0qRqiSk
+
+https://sortablejs.github.io/Sortable/
+
+https://codepen.io/bradtraversy/pen/odmVgN

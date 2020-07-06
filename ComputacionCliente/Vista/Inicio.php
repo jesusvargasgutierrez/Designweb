@@ -25,7 +25,7 @@
     ?>
 
     <?php
-      include_once('Menus/Opciones.php');
+      include_once('Menus/Opciones.html');
     ?>
 
     <div id="MainContent">
