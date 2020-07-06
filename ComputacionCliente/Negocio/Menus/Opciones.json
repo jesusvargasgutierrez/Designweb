@@ -1,0 +1,53 @@
+{
+"Opciones":[
+		{	
+			"idOption":"1"
+			,"Equivalence":"1"
+			,"Title":"Inicio"
+			,"Url":"Inicio.php"
+			,"Image":""
+			,"idisMain":"2"
+			,"subOption":[]
+		}
+		,{
+			"idOption":"2"
+			,"Equivalence":"2"
+			,"Title":"Clientes"
+			,"Url":""
+			,"Image":""
+			,"idisMain":"1"
+			,"subOption":
+			[
+				{
+					"idOption":"10"
+					,"Equivalence":"1"
+					,"Title1":"Buscador"
+					,"Url":"Inicio.php"
+					,"Image":""
+					,"idisInternalMain":"2"
+					,"InternalOption":[]
+				}
+			]
+		}
+		,{
+			"idOption":"3"
+			,"Equivalence":"3"
+			,"Title":"Examenes"
+			,"Url":""
+			,"Image":""
+			,"idisMain":"1"
+			,"subOption":
+			[
+				{
+					"idOption":"10"
+					,"Equivalence":"1"
+					,"Title1":"Crear Examen"
+					,"Url":"../Vista/Examenes/Registro.php"
+					,"Image":""
+					,"idisInternalMain":"2"
+					,"InternalOption":[]
+				}
+			]
+		}
+	]
+}

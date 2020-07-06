@@ -1,0 +1,38 @@
+{
+"General":[
+		{
+			"idOption":"1"
+			,"Equivalence":"1"
+			,"Title":"Notificaciones"
+			,"Url":""
+			,"Image":"fas fa-bell"
+			,"subOption":
+			[
+				{
+					"idOption":"10"
+					,"Equivalence":"1"
+					,"Title1":"Change Languaje"
+					,"Url":"xxxx.php"
+					,"Image":"fas fa-globe"
+				}
+			]
+		}
+		,{
+			"idOption":"2"
+			,"Equivalence":"2"
+			,"Title":"Opciones"
+			,"Url":""
+			,"Image":"fas fa-user"
+			,"subOption":
+			[
+				{
+					"idOption":"11"
+					,"Equivalence":"1"
+					,"Title1":"Cerrar Sesion"
+					,"Url":"xxxx.php"
+					,"Image":"fas fa-door-open"
+				}
+			]
+		}
+	]
+}
