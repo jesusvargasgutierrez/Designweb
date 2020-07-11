@@ -70,7 +70,7 @@ para la construccion del menu
                 <div class="d-flex flex-md-row my-3 align-items-center">
                     <div class="flex-fill text-center border-0">
                         <a href="#" role="button" class="form-control border-0">
-                            Olvide mi contrase&ntilde;a
+                            Olvide mi contra&ntilde;a
                         </a>
                     </div>
                 </div>
