@@ -19,6 +19,12 @@ para la construccion del menu
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <style type="text/css">
+        *{
+            background:#e0e0e0;
+        }
+    </style>
 </head>
 <body>
     <div id="viewlogin" class="d-flex justify-content-center align-items-center" style="height:100%">
@@ -77,7 +83,7 @@ para la construccion del menu
 
                 <div class="d-flex flex-md-row my-3 align-items-center">
                     <div class="flex-fill text-center border-0">
-                        <label class="d-none font-weight-bold text-danger">Ha ocurrido algo!</label>
+                        <label class="d-none font-weight-bold text-danger"></label>
                     </div>
                 </div>
             </form>
