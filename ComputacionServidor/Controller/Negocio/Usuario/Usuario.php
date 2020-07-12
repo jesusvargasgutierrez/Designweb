@@ -19,7 +19,7 @@
         $Resultado = array();
 
         if(count($EntidadUsuario) != 0){            
-            $result = $DatosConexion->query("SELECT * FROM operacion_usuarios where Estado=1");
+            $result = $DatosConexion->query("SELECT * FROM operacion_usuarios where Usuario='".$EntidadUsuario['Usuario']."' AND Contrasenia='".$EntidadUsuario['Contrasenia']."' AND Estado=1");
 
             if($result)
             {  
@@ -27,17 +27,15 @@
             }
             else{
                 $Resultado = array (
-                    'Codigo' => 'xx',
-                    'Usuario' => 'xx',
-                    'Response' => 'Success'
+                    'TipoRespuesta' => '2',
+                    'TextoRespuesta' => 'Usuario o Contraseña invalidas'
                 );
             }
         }
         else{
             $Resultado = array (
-                'Codigo' => 'xx',
-                'Usuario' => 'xx',
-                'Response' => 'Success'
+                'TipoRespuesta' => '2',
+                'TextoRespuesta' => 'Acceso vacio'
             );
         }
 
