@@ -1,6 +1,6 @@
 <?php
-    require_once ("../Comun/Operacion.php");
-    require_once ("../Comun/Peticion.php");
+    require_once ("../Comun/OperacionLogin.php");
+    require_once ("../Comun/PeticionLogin.php");
     require_once ("../../nusoap/lib/nusoap.php");
     
     if(isset($_POST["Codigo"]))

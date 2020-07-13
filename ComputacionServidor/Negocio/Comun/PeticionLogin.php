@@ -1,5 +1,5 @@
 <?php
-    require_once ("../nusoap/lib/nusoap.php");
+    require_once ("../../nusoap/lib/nusoap.php");
 class Peticion
 {
     function RealizarPeticion($EntidadPeticion)

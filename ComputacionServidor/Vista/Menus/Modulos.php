@@ -3,7 +3,7 @@
  * incluimos el menu general y realiza el
  * procesamiento de la matriz correspondiente
  */
-    include_once('../Negocio/Menus/General.php');
+    include_once('../Negocio/Menus/Modulos.php');
 ?>
 <html>
 <head>
@@ -27,30 +27,30 @@
             <div class="d-flex text-center ml-auto">
                 <?php
                     /**
-                     * objeto de la clase general
+                     * objeto de la clase Modulos
                      */
-                  $NegocioOpciones = new General();
+                  $NegocioModulos = new Modulos();
 
                   /**
                    * uso del objeto previo y llamada a la funcion para 
                    * retornar la matriz de arreglo para comenzar
                    * con el procesamiento del mismo
                    */
-                  $arregloOpciones = $NegocioOpciones->RequestOptions();
+                  $arregloModulos = $NegocioModulos->ObtenerModulos();
 
                   /**
                    * inicia el procesamiento de
                    * la matriz para la construccion dinamica del menu
                    * 
                    */
-                  foreach($arregloOpciones as $key1 => $value1)
+                  foreach($arregloModulos as $key1 => $value1)
                   {
                     ?>
                         <!-- construccion del menu con div y php embebido -->
                         <div class="dropdown flex-fill mx-1">
                             <a href="#" role="button" id="ancle-options"
                             data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-                            <i class="<?php echo $arregloOpciones[$key1]["icono"]; ?>"></i>
+                            <i class="<?php echo $arregloModulos[$key1]["icono"]; ?>"></i>
                                 &nbsp;
                                 <span class="d-none d-sm-none d-md-none d-lg-block">
                                     <?php echo $key1; ?>
@@ -62,12 +62,12 @@
                                * uso de PHP embebido para la construccion de la subopcion en caso
                                * de que exista
                                */
-                                 foreach($arregloOpciones[$key1]["Subopciones"] as $k1 => $v1)
+                                 foreach($arregloModulos[$key1]["Subopciones"] as $k1 => $v1)
                                  {
                                     ?>
-                                        <a class="dropdown-item modulo" id="<?php echo $arregloOpciones[$key1]["Subopciones"][$k1]["identificador"]; ?>">
-                                            <i class="<?php echo $arregloOpciones[$key1]["Subopciones"][$k1]["icono"]; ?>"></i>
-                                            &nbsp;<?php echo $k1; ?>
+                                        <a class="dropdown-item modulo" id="<?php echo $arregloModulos[$key1]["Subopciones"][$k1]["Identificador"]; ?>">
+                                            <i class="<?php echo $arregloModulos[$key1]["Subopciones"][$k1]["Icono"]; ?>"></i>
+                                            &nbsp;<?php echo $arregloModulos[$key1]["Subopciones"][$k1]["Texto"]; ?>
                                         </a>
                                     <?php
                                  }  

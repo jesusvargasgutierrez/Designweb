@@ -17,7 +17,7 @@
 </head>
 <body class="">
     <?php
-      include_once('Menus/General.php');
+      include_once('Menus/Modulos.php');
     ?>
 
     <div class="principales" id="principales">
