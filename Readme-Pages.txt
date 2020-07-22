@@ -71,3 +71,5 @@ https://sortablejs.github.io/Sortable/
 https://codepen.io/bradtraversy/pen/odmVgN
 
 https://beeznest.com/es/2009/03/22/retornar-arrays-con-nusoap/
+
+https://www.youtube.com/watch?v=n85zlZ3qHBE
