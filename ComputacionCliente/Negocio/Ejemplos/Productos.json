@@ -1,0 +1,17 @@
+[
+    {
+        "Descripcion":"Producto I"
+        ,"Imagen":"imagen"
+        ,"Precio":"10"
+    },
+    {
+        "Descripcion":"Producto II"
+        ,"Imagen":"imagen"
+        ,"Precio":"20"
+    },
+    {
+        "Descripcion":"Producto III"
+        ,"Imagen":"imagen"
+        ,"Precio":"30"
+    }
+]
