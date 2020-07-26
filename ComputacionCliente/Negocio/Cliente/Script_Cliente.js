@@ -4,6 +4,10 @@ $(document).ready(function () {
         Message();
     });
 
+    $('.Nuevo').on('click', function () {
+        Limpiar();
+    });
+
     $('#SegundoApellido').change(function() {
         NombreCompleto = document.getElementById("NombreCompleto");
 
@@ -42,3 +46,13 @@ function CalcularEdad(Valor)
 
     return edad;
 }
+
+function Limpiar()
+{
+    $('#NombreCompleto').val('');
+
+    alert($('#NombreCompleto').attr('type'));
+
+    alert($('#select-genero').attr('type'));
+}
+

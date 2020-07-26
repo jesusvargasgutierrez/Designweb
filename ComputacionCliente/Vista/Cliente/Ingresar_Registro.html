@@ -29,6 +29,9 @@ pero si hace uso de una clase al presionar submit -->
     </div>
 
     <div id="firstview" class="container">
+            <button class="Nuevo btn">
+                <i class="fas fa-file"></i></span>&nbsp;Nuevo
+            </button>
             <button class="Guardar btn">
                 <i class="fas fa-save"></i></span>&nbsp;Guardar
             </button>
@@ -37,14 +40,14 @@ pero si hace uso de una clase al presionar submit -->
                     <div class="d-flex flex-column my-1 flex-lg-row align-items-lg-center">
                         <div class="flex-fill">
                             <label class="col-form-label">Identificador:</label>
-                            <input type="text" id="Identificador" class="form-control-sm enabled" placeholder="" />
+                            <input type="text" id="Identificador" class="form-control-sm enabled" disabled placeholder="" />
                             <label class="col-form-label">Equivalencia:</label>
                             <input type="text" class="form-control-sm" id="Codigo" placeholder="Codigo" />
                         </div>
                     </div>
                     <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
                         <div class="flex-fill order-3 my-1 mx-1">
-                            <input type="text" class="form-control" id="NombreCompleto" disabled placeholder="Nombre Completo" />
+                            <input type="text" class="form-control" id="NombreCompleto" disabled/>
                         </div>
                         <div class="flex-fill order-0 my-1 mx-1">
                             <input type="text" class="form-control" id="Nombres" onchange="this.value = Valor_mayusculas(this.value);" placeholder="Nombres" />
@@ -78,9 +81,20 @@ pero si hace uso de una clase al presionar submit -->
                             </select>
                         </div>
                     </div>
+                    <div class="d-flex flex-column mt-3 mt-md-2 flex-lg-row align-items-lg-center">
+                        <div class="flex-fill my-1 mx-1">
+                            <input type="text" class="form-control" id="RFC" placeholder="RFC"/>
+                        </div>
+                        <div class="flex-fill my-1 mx-1">
+                            <input type="text" class="form-control" id="CURP" placeholder="CURP"/>
+                        </div>
+                        <div class="flex-fill my-1 mx-1">
+                            <input type="text" class="form-control" id="Correo electronico" placeholder="Correo electronico"/>
+                        </div>
+                    </div>
                 </section>
 
-                <section class="tab-pane fade show active" role="tabpanel" aria-labelledby="pills-home-tab" id="Address-Section">
+                <section class="tab-pane fade" role="tabpanel" aria-labelledby="pills-home-tab" id="Address-Section">
                     <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
                         <div class="flex-fill my-1 mx-1">
                             <input type="text" class="form-control" value="Direccion" placeholder="Direccion" name="Direccion" id="Direccion" />

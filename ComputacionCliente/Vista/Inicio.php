@@ -21,7 +21,7 @@
     </div>
 
     <?php
-      include_once('Menus/General.php');
+      include_once('Menus/General.html');
     ?>
 
     <?php
