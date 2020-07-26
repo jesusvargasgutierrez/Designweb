@@ -1,7 +1,8 @@
 $(document).ready(function () {
 
     $('.Guardar').on('click', function () {
-        Message();
+        validar();
+        //Message();
     });
 
     $('.Nuevo').on('click', function () {
@@ -47,12 +48,77 @@ function CalcularEdad(Valor)
     return edad;
 }
 
-function Limpiar()
+function validar()
 {
-    $('#NombreCompleto').val('');
+    let identificadores = [];
+    let valores = [];
 
-    alert($('#NombreCompleto').attr('type'));
+    $(".selectores").find(':input').each(function() {
+        var elemento = this;
+        identificadores.push(elemento.id);
+        valores.push(elemento.value);
+    });
 
-    alert($('#select-genero').attr('type'));
+    let eliminar = ["Identificador"];
+
+    $.each(valores, function( index, value ) {
+        if(eliminar.indexOf(identificadores[index]) >= 0){ return;}
+
+        if((value == "" || value == 1))
+        {
+            $('#'+identificadores[index]).css("border-color", "red");
+        }
+    });
 }
 
+function EliminarPosicion(arreglo,eliminar,valores)
+{
+    let arreglos = [];
+    $.each(eliminar, function( index, valor ) {
+        arreglo = $.grep(arreglo, function(value) {
+            return value != valor;
+        });
+
+        valores = valores.splice(index,1);
+    });
+
+    arreglos.push(arreglo,valores);
+
+    return arreglos;
+}
+
+function Limpiar()
+{
+    let identificadores = [];
+    let valores = [];
+
+    $(".selectores").find(':input').each(function() {
+        var elemento = this;
+        identificadores.push(elemento.id);
+        valores.push(elemento.value);
+    });
+    
+    $.each(valores, function( index, value ) {
+        var tipocontrol = $('#'+identificadores[index]).attr('type');
+
+        if((value != "" || value == "") && tipocontrol == "text")
+        {
+            $('#'+identificadores[index]).css("border-color", "black");
+            $('#'+identificadores[index]).val('');
+        }
+        else if((value >= 1))
+        {
+            $('#'+identificadores[index]).css("border-color", "black");
+            $('#'+identificadores[index]).val(1);
+        }else if(tipocontrol == "date")
+        {
+            $('#'+identificadores[index]).css("border-color", "black");
+            $('#'+identificadores[index]).val('');
+        }
+    });
+}
+
+function validarexpresion(valor,expresion)
+{
+    alert(expresion.test(valor));
+}
