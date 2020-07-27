@@ -1,8 +1,17 @@
 $(document).ready(function () {
 
     $('.Guardar').on('click', function () {
-        validar();
-        //Message();
+        var validado = validar();
+
+        console.log(validado);
+        if(validado)
+        {
+            Message("Los campos marcados son obligatorios!",2);
+        }else{
+            Guardar();
+            Message("Operacion completa!",1);
+            Limpiar();
+        }
     });
 
     $('.Nuevo').on('click', function () {
@@ -25,12 +34,31 @@ $(document).ready(function () {
         $('#edad').val(CalcularEdad(date.getFullYear()));
     });
 
-    function Message() {
+    function Message(texto,tipo) {
         let url = "../Negocio/Cliente/Mensajes.html";
 
         $.get(url, function(html){
             $("#message1").html(html);
+
+            switch(tipo)
+            {
+                case 1:
+                    $(".alert").addClass("alert-success");
+                break;
+                
+                case 2:
+                    $(".alert").addClass("alert-warning");
+                break;
+            }
+
+            $("#message1 .alert .mensaje").html(texto);
         });
+
+        setTimeout(function() {
+            $('.alert').fadeOut('slow');
+            $('.alert').removeClass("alert-success");
+            $('.alert').removeClass("alert-warning");
+        }, 1000);
    }
 });
 
@@ -50,6 +78,7 @@ function CalcularEdad(Valor)
 
 function validar()
 {
+    var bandera = false;
     let identificadores = [];
     let valores = [];
 
@@ -61,14 +90,21 @@ function validar()
 
     let eliminar = ["Identificador"];
 
+    console.log(identificadores);
+    console.log(valores);
+
     $.each(valores, function( index, value ) {
         if(eliminar.indexOf(identificadores[index]) >= 0){ return;}
 
         if((value == "" || value == 1))
         {
             $('#'+identificadores[index]).css("border-color", "red");
+
+            bandera = true;
         }
     });
+
+    return bandera;
 }
 
 function EliminarPosicion(arreglo,eliminar,valores)
@@ -121,4 +157,18 @@ function Limpiar()
 function validarexpresion(valor,expresion)
 {
     alert(expresion.test(valor));
+}
+let persona_array = [];
+function Guardar()
+{
+    var objetopersona = {
+        nombre : $('#Nombres').val(),
+        primerapellido : $('#PrimerApellido').val()
+    };
+
+    persona_array.push(objetopersona);
+
+    localStorage.setItem('Persona', JSON.stringify(persona_array));
+
+    localStorage.getItem('Persona');
 }

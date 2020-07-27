@@ -77,3 +77,13 @@ https://www.youtube.com/watch?v=n85zlZ3qHBE
 https://www.youtube.com/watch?v=-N515SDoYuU&t=1074s
 
 http://www.purojavascript.com/2012/05/recorrer-campos-de-un-formulario-con.html
+
+https://www.youtube.com/watch?v=zeb5PsxWijY
+
+https://www.youtube.com/watch?v=hb8O0qRqiSk
+
+https://www.youtube.com/watch?v=JINHNhFD-kA
+
+/*
+https://www.youtube.com/watch?v=JINHNhFD-kA
+https://www.youtube.com/watch?v=zeb5PsxWijY

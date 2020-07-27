@@ -5,6 +5,7 @@ $(document).ready(function() {
     $("#Save").click(function() {
         var jsonform = JSON.stringify($("#formulario").serializeArray());
 
+        console.log(jsonform);
         $.ajax({
             type: "POST",
             url: url1,

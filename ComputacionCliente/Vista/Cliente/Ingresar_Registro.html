@@ -41,14 +41,14 @@ pero si hace uso de una clase al presionar submit -->
             <button class="Guardar btn">
                 <i class="fas fa-save"></i></span>&nbsp;Guardar
             </button>
-            <div class="tab-content">
+            <form id="formulario" name="formulario" class="tab-content">
                 <section class="selectores tab-pane fade show active" role="tabpanel" aria-labelledby="pills-home-tab" id="General-Section">
                     <div class="d-flex flex-column my-1 flex-lg-row align-items-lg-center">
                         <div class="flex-fill">
                             <label class="col-form-label">Identificador:</label>
                             <input type="text" id="Identificador" class="form-control-sm enabled" disabled placeholder="" />
                             <label class="col-form-label">Equivalencia:</label>
-                            <input type="text" class="form-control-sm" id="Codigo" placeholder="Codigo" />
+                            <input type="text" class="form-control-sm" id="Codigo" name="Codigo" placeholder="Codigo" />
                         </div>
                     </div>
                     <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
@@ -56,21 +56,21 @@ pero si hace uso de una clase al presionar submit -->
                             <input type="text" class="form-control" id="NombreCompleto" disabled/>
                         </div>
                         <div class="flex-fill order-0 my-1 mx-1">
-                            <input type="text" class="form-control" id="Nombres" onchange="this.value = Valor_mayusculas(this.value);" placeholder="Nombres" />
+                            <input type="text" class="form-control" id="Nombres" name="Nombres" onchange="this.value = Valor_mayusculas(this.value);" placeholder="Nombres" />
                         </div>
                         <div class="flex-fill order-1 my-1 mx-1">
-                            <input type="text" class="form-control" id="PrimerApellido" onchange="this.value = Valor_mayusculas(this.value);" placeholder="Primer Apellido" />
+                            <input type="text" class="form-control" id="PrimerApellido" name="PrimerApellido" onchange="this.value = Valor_mayusculas(this.value);" placeholder="Primer Apellido" />
                         </div>
                         <div class="flex-fill order-2 my-1 mx-1">
-                            <input type="text" class="form-control" id="SegundoApellido" onchange="this.value = Valor_mayusculas(this.value);" placeholder="Segundo Apellido" />
+                            <input type="text" class="form-control" id="SegundoApellido" name="SegundoApellido" onchange="this.value = Valor_mayusculas(this.value);" placeholder="Segundo Apellido" />
                         </div>
                     </div>
                     <div class="d-flex flex-column mt-3 mt-md-2 flex-lg-row align-items-lg-center">
                         <div class="flex-fill my-1 mx-1">
-                            <input class="form-control" id="Nacimiento" type="date">
+                            <input class="form-control" id="Nacimiento" name="Nacimiento" type="date">
                         </div>
                         <div class="flex-fill my-1 mx-1">
-                            <input type="text" class="form-control" id="edad" disabled />
+                            <input type="text" class="form-control" id="edad" name="edad" disabled />
                         </div>
                         <div class="flex-fill my-1 mx-1">
                             <select class="form-control" id="select-genero" name="idGenero">
@@ -89,13 +89,14 @@ pero si hace uso de una clase al presionar submit -->
                     </div>
                     <div class="d-flex flex-column mt-3 mt-md-2 flex-lg-row align-items-lg-center">
                         <div class="flex-fill my-1 mx-1">
-                            <input type="text" class="form-control" id="RFC" placeholder="RFC" onchange="validarexpresion(this.value,/^[0-9]+$/);"/>
+                            <!--onchange="validarexpresion(this.value,/^[0-9]+$/);"-->
+                            <input type="text" class="form-control" id="RFC" name="RFC" placeholder="RFC"/>
                         </div>
                         <div class="flex-fill my-1 mx-1">
-                            <input type="text" class="form-control" id="CURP" placeholder="CURP"/>
+                            <input type="text" class="form-control" id="CURP" name="CURP" placeholder="CURP"/>
                         </div>
                         <div class="flex-fill my-1 mx-1">
-                            <input type="text" class="form-control" id="Correo" placeholder="Correo electronico"/>
+                            <input type="text" class="form-control" id="Correo" name="Correo" placeholder="Correo electronico"/>
                         </div>
                     </div>
                 </section>
@@ -128,7 +129,7 @@ pero si hace uso de una clase al presionar submit -->
                         </div>
                     </div>
                 </section>
-            </div>
+            </form>
     </div>
 </body>
     <script src="../Negocio/Cliente/Script_Cliente.js" type="text/javascript"></script>
