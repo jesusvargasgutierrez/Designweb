@@ -75,7 +75,7 @@ class OptionsBussines
                     "Buscar persona" => array(
                         "identificador" => "Acerca",
                         "icono" => "fas fa-question-circle",
-                        "url" => ""
+                        "url" => "../Vista/Clientes/Buscar.php"
                     )
                 )
             ),

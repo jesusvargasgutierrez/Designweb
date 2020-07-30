@@ -55,6 +55,14 @@
         if(count($User) > 0)
         {
             if($User['idUsuario'] != 0){
+                session_start();
+                $Tarjeta = array(
+                    'Conexion' => $AccesoUsuario["BaseDatos"],
+                    'idUsuario' => $User["idUsuario"],
+                    'Nombre' => $User["Nombre"],
+                    'TipoUsuario' => $User["TipoUsuario"]
+                );
+                $_SESSION["Tarjeta"] = $Tarjeta;
                 header('Location: ../../Vista/Inicio.php');
             }
         }

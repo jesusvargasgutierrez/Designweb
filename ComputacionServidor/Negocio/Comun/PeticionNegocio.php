@@ -1,8 +1,8 @@
 <?php
     require_once ("../../nusoap/lib/nusoap.php");
-class TestSpace
+class Peticion
 {
-    function Peticion($EntidadPeticion)
+    function RealizarPeticion($EntidadPeticion)
     {
         $cliente = new nusoap_client($EntidadPeticion['Url'],false);
     

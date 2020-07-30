@@ -85,7 +85,7 @@ pero si hace uso de una clase al presionar submit -->
                     </div>
                 </section>
 
-                <section class="tab-pane fade show active" role="tabpanel" aria-labelledby="pills-home-tab" id="Address-Section">
+                <!-- <section class="tab-pane fade" role="tabpanel" aria-labelledby="pills-home-tab" id="Address-Section">
                     <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
                         <div class="flex-fill my-1 mx-1">
                             <input type="text" class="form-control" value="Direccion" placeholder="Direccion" name="Direccion" id="Direccion" />
@@ -112,8 +112,7 @@ pero si hace uso de una clase al presionar submit -->
                             </select>
                         </div>
                     </div>
-                </section>
-                <input type="hidden" id="HdAction" name="HdAction" value="GuardarCliente">
+                </section> -->
             </form>
     </div>
 </body>

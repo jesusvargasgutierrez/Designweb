@@ -4,8 +4,7 @@ class Operacion
     function ObtenerUrl()
     {
 	  static $object = array (
-	    'Sesion' => 'http://localhost/Desarrollos/Designweb/ComputacionServidor/Controller/Negocio/Sesion/Sesion.php',
-	    'Usuario' => 'http://localhost/Desarrollos/Designweb/ComputacionServidor/Controller/Negocio/Usuario/Usuario.php'
+      'Cliente' => 'http://localhost/Desarrollos/Designweb/ComputacionServidor/Controller/Negocio/Clientes/Clientes.php'
 	   );
 
       return $object;
@@ -13,22 +12,22 @@ class Operacion
     
     function ObtenerValorParametro()
     {
-	  static $object = array (
-	    'Sesion' => 'CodigoSesion',
-	    'Usuario' => 'EntidadUsuario'
-	   );
+      static $object = array (
+        'InsertarCliente' => 'EntidadCliente',
+        'BuscarPersona' => 'BuscarCliente'
+      );
 
       return $object;
     }
     
     function ObtenerValorEndpoint()
     {
-	  static $object = array (
-	    'SesionBD' => 'ObtenerBaseDatos',
-	    'Usuario' => 'ObtenerUsuario'
-	   );
+      static $object = array (
+        'InsertarCliente' => 'InsertarCliente',
+        'BuscarPersona' => 'BuscarCliente'
+      );
 
       return $object;
-	}
+	  }
 }
 ?>
