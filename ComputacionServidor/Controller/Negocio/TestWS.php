@@ -6,17 +6,17 @@
       
     $Resultado = array (
         'BaseDatos' => 'pwebservidor',
-        'Usuario' => 'd5aa170e875913b89d169c57b96b452548fabfff',
-        'Contrasenia' => '5ed547d7adec8ded22e147c4f489d578869d6e48'
+        'values' => "(0,'vargas','gutierrez','jesus','vargas','1900-01-01','1','1','vargas','gutierrez','1')"
     );
     
     $Valores = array(
+        'BaseDatos' => "pwebservidor",
         'Url' => "http://localhost/Desarrollos/Designweb/ComputacionServidor/Controller/Negocio/Clientes/Clientes.php",
-        'Parametro' => "InsertarCliente",
-        'Valor' => "('01','Client1','Nombre Completo','Nombres','Primer Nombre','Segundo Nombre','2020-07-17',1,2,1)",
+        'Parametro' => "EntidadCliente",
+        'Valor' => $Resultado,
         'Endpoint' => 'InsertarCliente'
       );
-
+      //"('01','Client1','Nombre Completo','Nombres','Primer Nombre','Segundo Nombre','2020-07-17',1,2,1)"
     /*$Valores = array(
         'Url' => 'http://localhost/Desarrollos/Designweb/ComputacionServidor/Controller/Negocio/Menus/Modulos.php',
         'Parametro' => "EntidadModulo",

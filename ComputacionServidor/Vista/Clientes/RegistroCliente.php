@@ -31,7 +31,7 @@ pero si hace uso de una clase al presionar submit -->
         </ul>
     </div>
 
-    <div id="firstview" class="firstview">
+    <div id="firstview" class="container firstview">
             <form action="../Negocio/Cliente/Agregarcliente.php" id="formulario" name="formulario" class="tab-content" method="POST" enctype="multipart/form-data">
                 <span>
                    <button type="submit" id="Save" name="Save" class="btn">
@@ -42,9 +42,9 @@ pero si hace uso de una clase al presionar submit -->
                     <div class="d-flex flex-column my-1 flex-lg-row align-items-lg-center">
                         <div class="flex-fill">
                             <label class="col-form-label">Identificador:</label>
-                            <input type="text" name="Codigo" value="01" class="form-control-sm enabled" placeholder="" />
+                            <input type="text" name="Campo1" value="01" class="form-control-sm enabled" placeholder=""/>
                             <label class="col-form-label">Equivalencia:</label>
-                            <input type="text" id="Equivalencia" name="Equivalencia" value="Client1" placeholder="Equivalencia" />
+                            <input type="text" id="Equivalencia" name="Campo2" value="Client1" placeholder="Equivalencia"/>
                         </div>
                     </div>
                     <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
@@ -52,7 +52,7 @@ pero si hace uso de una clase al presionar submit -->
                             <input type="text" class="form-control" value="Nombre Completo" id="NombreCompleto" name="NombreCompleto" placeholder="NombreCompleto" />
                         </div>
                         <div class="flex-fill order-0 my-1 mx-1">
-                            <input type="text" class="form-control" value="Nombres" id="Nombres" name="Nombres" placeholder="Nombres" />
+                            <input type="text" class="form-control" value="Nombres" id="Nombres" name="Nombres[2]" placeholder="Nombres"/>
                         </div>
                         <div class="flex-fill order-1 my-1 mx-1">
                             <input type="text" class="form-control" value="Primer Nombre" id="PrimerNombre" name="PrimerNombre" placeholder="Primer Nombre" />

@@ -18,9 +18,14 @@
 
         $Resultado = array();
 
-        $result = $DatosConexion->query("INSERT INTO sis_persona (Persona,Codigo,Nombres,ApellidoPaterno,ApellidoMaterno,FechaNacimiento,Genero,EstadoCivil,Correo,Telefono,Estado) VALUES ('jesus','vargas','gutierrez')";//. "('01','Client1','Nombre Completo','Nombres','2020-07-17','Primer Nombre','Segundo Nombre','1','2','1')";
-        //('jesus','vargas','gutierrez')
-        mysqli_close($DatosConexion);
+        $result = $DatosConexion->query("INSERT INTO sis_persona (Persona,Codigo,Nombres,ApellidoPaterno,ApellidoMaterno,FechaNacimiento,Genero,EstadoCivil,Correo,Telefono,Estado) VALUES ".$EntidadCliente['values']);
+
+        $Resultado = array (
+            'TipoRespuesta' => $BaseDatos,
+            'TextoRespuesta' => $DatosConexion
+        );
+
+        //mysqli_close($DatosConexion);
 
         return $Resultado;
     }

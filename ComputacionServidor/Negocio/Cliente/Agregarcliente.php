@@ -4,43 +4,49 @@
     require_once ("../../nusoap/lib/nusoap.php");
 
     session_start();
-    if(isset($_SESSION['Tarjeta']) && isset($_POST['Codigo']) ){
+    if(isset($_SESSION['Tarjeta']) && isset($_POST["Campo1"]) ){
 
         $NegocioPeticion = new Peticion();
         $NegocioOperacion = new Operacion();
 
         $array = $_POST;
 
-        $ValoresInsersion = "";
+        /*$ValoresInsersion = "";
 
+        $indice = 0;
         foreach($array as $key1 => $value1)
         {
           if($value1 != ""){
-            $ValoresInsersion .= "'".$value1."',";
+            $ValoresInsersion .= "'".$array["Campo[".$indice."]"]."',";
           }
+          $indice = $indice+1;
         }
 
         $fijo = trim($ValoresInsersion,",");
-        $fijo = "(".$fijo. ","."1)";
+        $fijo = "(".$fijo. ",".")";
 
-        echo $fijo;
+        echo $fijo;*/
+        print_r($array);
+
+        /*$Persona= array (
+          'BaseDatos' => $_SESSION['Tarjeta']["Conexion"],
+          'values' => $fijo
+        );
 
         $ArrayURL = $NegocioOperacion->ObtenerUrl();
         $ArrayValParametro = $NegocioOperacion->ObtenerValorParametro();
         $ArrayEndpoint = $NegocioOperacion->ObtenerValorEndpoint();
 
         $Valores = array(
-          'BaseDatos' => $_SESSION['Tarjeta']["Conexion"],
           'Url' => $ArrayURL["Cliente"],
           'Parametro' => $ArrayValParametro["InsertarCliente"],
-          'Valor' => $fijo,
+          'Valor' => $Persona,
           'Endpoint' => $ArrayEndpoint["InsertarCliente"]
         );
 
-        $Cliente = $NegocioPeticion->RealizarPeticion($Valores);
+        $Cliente = $NegocioPeticion->RealizarPeticion($Valores);*/
 
     }else {
-      //si la variable no existe mostrara este mensaje
      echo "no existe";
     }
 ?>
