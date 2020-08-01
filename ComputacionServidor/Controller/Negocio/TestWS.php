@@ -6,7 +6,7 @@
       
     $Resultado = array (
         'BaseDatos' => 'pwebservidor',
-        'values' => "(0,'vargas','gutierrez','jesus','vargas','1900-01-01','1','1','vargas','gutierrez','1')"
+        'values' => "(0,'vargas','gutierrez','jesus','vargas','jesus vargas gutierrez','1900-01-01','1','1','vargas','gutierrez','1')"
     );
     
     $Valores = array(

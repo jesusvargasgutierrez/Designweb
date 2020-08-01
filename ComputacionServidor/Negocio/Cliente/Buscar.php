@@ -14,7 +14,7 @@ class Buscar
 
     $Parametros = array (
         'BaseDatos' => $Datos,
-        'Valores' => 'Persona, Codigo, Nombres, ApellidoPaterno, ApellidoMaterno, FechaNacimiento, Genero, EstadoCivil, Correo, Telefono, Estado'
+        'Valores' => 'Persona, Codigo, Nombres, ApellidoPaterno, ApellidoMaterno, NombreCompleto, FechaNacimiento, Genero, EstadoCivil, Correo, Telefono, Estado'
     );
     
     $Valores = array(

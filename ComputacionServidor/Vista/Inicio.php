@@ -1,5 +1,6 @@
 <?php
   session_start();
+  if(isset($_SESSION['Tarjeta']) ){
 ?>
 <html>
 <head>
@@ -34,3 +35,10 @@
     <script src="../Negocio/Menus/ScriptInicio.js" type="text/javascript"></script>
 </body>
 </html>
+
+<?php
+    }
+  else{
+      echo "Inicie sesion para ver esta interfaz";
+  }
+?>

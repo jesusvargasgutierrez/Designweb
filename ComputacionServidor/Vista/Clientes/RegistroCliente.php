@@ -1,5 +1,6 @@
 <!-- formulario de registro de cliente, no contiene codigo php internamente
 pero si hace uso de una clase al presionar submit -->
+<?php session_start(); ?>
 <html lang="en">
 <head>
     <title></title>
@@ -16,6 +17,8 @@ pero si hace uso de una clase al presionar submit -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script src="../Negocio/Cliente/Script_Cliente.js" type="text/javascript"></script>
 </head>
 <body class="">
     <div class="container mt-3" id="tabscontrol">
@@ -24,96 +27,157 @@ pero si hace uso de una clase al presionar submit -->
               <a class="nav-link active" id="pills-General-Section" data-toggle="pill" href="#General-Section" 
               role="tab" aria-controls="General-Section" aria-selected="true">Informacion General</a>
             </li>
-            <li class="col-lg-3 nav-item col-12 text-center">
-              <a class="nav-link" id="pills-Address-Section" data-toggle="pill" href="#Address-Section" 
-              role="tab" aria-controls="Address-Section" aria-selected="false">Direccion</a>
-            </li>
         </ul>
     </div>
 
-    <div id="firstview" class="container firstview">
+    <div class="container firstview">
             <form action="../Negocio/Cliente/Agregarcliente.php" id="formulario" name="formulario" class="tab-content" method="POST" enctype="multipart/form-data">
                 <span>
-                   <button type="submit" id="Save" name="Save" class="btn">
+                   <button type="submit" class="btn">
                       <i class="fas fa-save"></i></span>&nbsp;Guardar
+                    </button>
+                    <button type="button" class="Buscar btn btn">
+                       <i class="fas fa-search"></i>&nbsp;Buscar
                     </button>
                 </span>
                 <section class="tab-pane fade show active" role="tabpanel" aria-labelledby="pseills-home-tab" id="General-Section">
                     <div class="d-flex flex-column my-1 flex-lg-row align-items-lg-center">
                         <div class="flex-fill">
                             <label class="col-form-label">Identificador:</label>
-                            <input type="text" name="Campo1" value="01" class="form-control-sm enabled" placeholder=""/>
+                            <input type="text" name="Campo0" value="0" class="form-control-sm enabled" placeholder=""/>
                             <label class="col-form-label">Equivalencia:</label>
-                            <input type="text" id="Equivalencia" name="Campo2" value="Client1" placeholder="Equivalencia"/>
+                            <input type="text" id="Equivalencia" name="Campo1" value="Client1" placeholder="Equivalencia"/>
                         </div>
                     </div>
                     <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
                         <div class="flex-fill order-3 my-1 mx-1">
-                            <input type="text" class="form-control" value="Nombre Completo" id="NombreCompleto" name="NombreCompleto" placeholder="NombreCompleto" />
+                            <input type="text" class="form-control" value="Nombre Completo" id="NombreCompleto" name="Campo5" placeholder="NombreCompleto" />
                         </div>
                         <div class="flex-fill order-0 my-1 mx-1">
-                            <input type="text" class="form-control" value="Nombres" id="Nombres" name="Nombres[2]" placeholder="Nombres"/>
+                            <input type="text" class="form-control" value="Nombres" id="Nombres" name="Campo2" placeholder="Nombres"/>
                         </div>
                         <div class="flex-fill order-1 my-1 mx-1">
-                            <input type="text" class="form-control" value="Primer Nombre" id="PrimerNombre" name="PrimerNombre" placeholder="Primer Nombre" />
+                            <input type="text" class="form-control" value="Primer Apellido" id="PrimerApellido" name="Campo3" placeholder="Primer Apellido" />
                         </div>
                         <div class="flex-fill order-2 my-1 mx-1">
-                            <input type="text" class="form-control" value="Segundo Nombre" id="SegundoNombre" name="SegundoNombre" placeholder="SegundoNombre" />
+                            <input type="text" class="form-control" value="Segundo Apellido" id="SegundoApellido" name="Campo4" placeholder="SegundoApellido" />
                         </div>
                     </div>
                     <div class="d-flex flex-column mt-3 mt-md-2 flex-lg-row align-items-lg-center">
                         <div class="flex-fill my-1 mx-1">
-                            <input class="form-control" id="DateBird" name="DateBird" type="date">
+                            <input class="form-control" id="DateBird" name="Campo6" type="date">
                         </div>
                         <div class="flex-fill my-1 mx-1">
-                            <input type="text" class="form-control" id="age" name="age" value="27" disabled placeholder="Age" />
+                            <input type="text" class="form-control" id="age" name="edad" value="27" disabled placeholder="Age" />
                         </div>
                         <div class="flex-fill my-1 mx-1">
-                            <select class="form-control" id="select-genero" name="idGenero">
-                                <option selected value="1">Selection Gender</option>
-                                <option>Male</option>
-                                <option>Femaile</option>
+                            <select class="form-control" id="select-genero" name="Campo7">
+                                <option selected value="0">Selecciona genero</option>
+                                <option value="1">Hombre</option>
+                                <option value="2">Mujer</option>
                             </select>
                         </div>
                         <div class="flex-fill my-1 mx-1">
-                            <select class="form-control" id="select-estadocivil" name="idestadocivil">
-                                <option>Selection marital status</option>
-                                <option selected value="2">Single</option>
-                                <option>Married</option>
+                            <select class="form-control" id="select-estadocivil" name="Campo8">
+                                <option selected value="0">Secciona estado civil</option>
+                                <option value="1">Soltero</option>
+                                <option value="2">Casado</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column mt-3 mt-md-2 flex-lg-row align-items-lg-center">
+                        <div class="flex-fill my-1 mx-1">
+                            <input class="form-control" placeholder="Correo" id="Correo" name="Campo9" type="text">
+                        </div>
+                        <div class="flex-fill my-1 mx-1">
+                            <input class="form-control" placeholder="Telefono" id="Telefono" name="Campo10" type="text">
+                        </div>
+                        <div class="flex-fill my-1 mx-1">
+                            <select class="form-control" id="select-Estado" name="Campo11">
+                                <option selected value="1">Activo</option>
+                                <option value="2">Inactivo</option>
                             </select>
                         </div>
                     </div>
                 </section>
-
-                <!-- <section class="tab-pane fade" role="tabpanel" aria-labelledby="pills-home-tab" id="Address-Section">
-                    <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
-                        <div class="flex-fill my-1 mx-1">
-                            <input type="text" class="form-control" value="Direccion" placeholder="Direccion" name="Direccion" id="Direccion" />
-                        </div>
-                        <div class="flex-fill my-1 mx-1">
-                            <input type="text" class="form-control" value="262" placeholder="NumeroInterno" name="NumeroInterno" id="NumeroInterno" />
-                        </div>
-                        <div class="flex-fill my-1 mx-1">
-                            <input type="text" class="form-control" placeholder="NumeroExterno" name="NumeroExterno" id="NumeroExterno" />
-                        </div>
-                        <div class="flex-fill my-1 mx-1">
-                            <input type="text" class="form-control" value="colonia" placeholder="colonia" name="colonia" id="colonia" />
-                        </div>
-                    </div>
-                    <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
-                        <div class="flex-fill my-1 mx-1">
-                            <input type="text" class="form-control" value="ciudad" placeholder="ciudad" name="ciudad" id="ciudad" />
-                        </div>
-                        <div class="flex-fill my-1 mx-1">
-                            <select class="form-control" id="estado" name="idestado">
-                                <option selected>Selection State</option>
-                                <option>Chihuahua</option>
-                                <option>Durango</option>
-                            </select>
-                        </div>
-                    </div>
-                </section> -->
             </form>
+    </div>
+    <div id="Secondview" class="d-none container Secondview">
+        <span>
+            <button type="button"class="Regresar btn btn">
+                <i class="fas fa-undo"></i>&nbsp;Regresar
+            </button>
+        </span>
+        <div id="tabletemplate" class="tabletemplate container my-4">
+            <div class="d-flex flex-column align-items-lg-center content-secondary">
+                    <table id="Table1" class="overflow-auto flex-fill mt-3 table table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">Acciones</th>
+                                <th scope="col">Persona</th>
+                                <th scope="col">Codigo</th>
+                                <th scope="col">Nombres</th>
+                                <th scope="col">Apellido Paterno</th>
+                                <th scope="col">Apellido Materno</th>
+                                <th scope="col">Nombre Completo</th>
+                                <th scope="col">Fecha Nacimiento</th>
+                                <th scope="col">Genero</th>
+                                <th scope="col">EstadoCivil</th>
+                                <th scope="col">Correo</th>
+                                <th scope="col">Telefono</th>
+                                <th scope="col">Estado</th>
+                            </tr>
+                            <tbody id="tbody-content">
+                                <?php  
+                                    require_once ("../../Negocio/Cliente/Buscar.php");                                    
+                                    if(isset($_SESSION['Tarjeta']) ){
+                                        $Busqueda = new Buscar();
+                                        $BD = $_SESSION['Tarjeta']["Conexion"];
+                                        $Cliente = $Busqueda->ListarPersona($BD);
+                                ?>
+                                <?php
+                                    foreach($Cliente as $key1 => $value1)
+                                    {
+                                ?>
+                                    <tr>
+                                        <td>
+                                            <span>
+                                                <a href="#" class="btn btn bg-primary" id="edit-register"
+                                                    role="button">
+                                                <i class="fas fa-edit"></i>
+                                                </a>
+                                                <a href="#" class="btn btn bg-primary" id="rid-register"
+                                                    role="button">
+                                                <i class="fas fa-trash-alt"></i>
+                                                </a>
+                                            </span>
+                                        </td>
+                                        <td><?php echo $Cliente[$key1]["Persona"]; ?></td>
+                                        <td><?php echo $Cliente[$key1]["Codigo"]; ?></td>
+                                        <td><?php echo $Cliente[$key1]["Nombres"]; ?></td>
+                                        <td><?php echo $Cliente[$key1]["ApellidoPaterno"]; ?></td>
+                                        <td><?php echo $Cliente[$key1]["ApellidoMaterno"]; ?></td>
+                                        <td><?php echo $Cliente[$key1]["NombreCompleto"]; ?></td>
+                                        <td><?php echo $Cliente[$key1]["FechaNacimiento"]; ?></td>
+                                        <td><?php echo $Cliente[$key1]["Genero"]; ?></td>
+                                        <td><?php echo $Cliente[$key1]["EstadoCivil"]; ?></td>
+                                        <td><?php echo $Cliente[$key1]["Correo"]; ?></td>
+                                        <td><?php echo $Cliente[$key1]["Telefono"]; ?></td>
+                                        <td><?php echo $Cliente[$key1]["Estado"]; ?></td>
+                                    </tr>
+                                <?php
+                                    }
+                                    }
+                                    else 
+                                   {
+                                     echo "no hay datos";
+                                  }
+                                ?>
+                            </tbody>
+                        </thead>
+                    </table> 
+            </div>
+        </div>
     </div>
 </body>
 </html>

@@ -11,24 +11,21 @@
 
         $array = $_POST;
 
-        /*$ValoresInsersion = "";
+        $ValoresInsersion = "";
 
         $indice = 0;
+
         foreach($array as $key1 => $value1)
         {
           if($value1 != ""){
-            $ValoresInsersion .= "'".$array["Campo[".$indice."]"]."',";
+            $ValoresInsersion .= "'".$array["Campo".$indice]."',";
           }
           $indice = $indice+1;
         }
 
-        $fijo = trim($ValoresInsersion,",");
-        $fijo = "(".$fijo. ",".")";
+        $fijo = "(".trim($ValoresInsersion,",").")";
 
-        echo $fijo;*/
-        print_r($array);
-
-        /*$Persona= array (
+        $Persona= array (
           'BaseDatos' => $_SESSION['Tarjeta']["Conexion"],
           'values' => $fijo
         );
@@ -44,7 +41,7 @@
           'Endpoint' => $ArrayEndpoint["InsertarCliente"]
         );
 
-        $Cliente = $NegocioPeticion->RealizarPeticion($Valores);*/
+        $Cliente = $NegocioPeticion->RealizarPeticion($Valores);
 
     }else {
      echo "no existe";
