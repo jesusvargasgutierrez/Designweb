@@ -25,8 +25,6 @@
             'TextoRespuesta' => $DatosConexion
         );
 
-        //mysqli_close($DatosConexion);
-
         return $Resultado;
     }
 
@@ -59,6 +57,81 @@
                 'TextoRespuesta' => 'Usuario o Contraseña invalidas'
             );
         }
+
+        return $Resultado;
+    }
+
+    $server->register("ConsultarCliente",array('EntidadCliente' => 'xsd:Array'),array('return' => 'xsd:Array'),$namespace);
+
+    function ConsultarCliente($EntidadCliente){
+        $Conexion = new Conexion();
+
+        $BaseDatos = $EntidadCliente['BaseDatos'];
+
+        $DatosConexion = $Conexion->ObtenerConexionBD($BaseDatos);
+
+        $Resultado = [];
+        
+        $result = $DatosConexion->query("SELECT ". $EntidadCliente['Valores'] ." FROM sis_persona where Estado=1 and Persona=".$EntidadCliente['Persona']);
+
+        if($result)
+        {  
+            $posts = array();
+            while($row = $result->fetch_array(MYSQLI_ASSOC))
+            {
+                $posts[] = $row;
+            }
+
+            $Resultado = $posts;
+        }
+        else{
+            $Resultado = array (
+                'TipoRespuesta' => '2',
+                'TextoRespuesta' => 'Usuario o Contraseña invalidas'
+            );
+        }
+
+        return $Resultado;
+    }
+
+    $server->register("ActualizarCliente",array('EntidadCliente' => 'xsd:Array'),array('return' => 'xsd:Array'),$namespace);
+
+    function ActualizarCliente($EntidadCliente){
+        $Conexion = new Conexion();
+
+        $BaseDatos = $EntidadCliente['BaseDatos'];
+
+        $DatosConexion = $Conexion->ObtenerConexionBD($BaseDatos);
+
+        $Resultado = array();
+
+        $result = $DatosConexion->query("UPDATE sis_persona SET ".$EntidadCliente['Valores']." WHERE Persona=".$EntidadCliente['Persona']);
+
+        $Resultado = array (
+            'TipoRespuesta' => $BaseDatos,
+            'TextoRespuesta' => $DatosConexion
+        );
+
+        return $Resultado;
+    }
+
+    $server->register("EliminarCliente",array('EntidadCliente' => 'xsd:Array'),array('return' => 'xsd:Array'),$namespace);
+
+    function EliminarCliente($EntidadCliente){
+        $Conexion = new Conexion();
+
+        $BaseDatos = $EntidadCliente['BaseDatos'];
+
+        $DatosConexion = $Conexion->ObtenerConexionBD($BaseDatos);
+
+        $Resultado = array();
+
+        $result = $DatosConexion->query("DELETE FROM sis_persona WHERE Persona=".$EntidadCliente['Persona']);
+
+        $Resultado = array (
+            'TipoRespuesta' => $BaseDatos,
+            'TextoRespuesta' => $DatosConexion
+        );
 
         return $Resultado;
     }

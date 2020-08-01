@@ -14,7 +14,11 @@ class Operacion
     {
       static $object = array (
         'InsertarCliente' => 'EntidadCliente',
-        'BuscarPersona' => 'BuscarCliente'
+        'ListarPersona' => 'BuscarCliente',
+        'ConsultarPersona' => 'ConsultarCliente',
+        'ActualizarPersona' => 'ActualizarCliente',
+        'InactivarPersona' => 'InactivarCliente',
+        'EliminarPersona' => 'EliminarCliente'
       );
 
       return $object;
@@ -24,7 +28,11 @@ class Operacion
     {
       static $object = array (
         'InsertarCliente' => 'InsertarCliente',
-        'BuscarPersona' => 'BuscarCliente'
+        'ListarPersona' => 'BuscarCliente',
+        'ConsultarPersona' => 'ConsultarCliente',
+        'ActualizarPersona' => 'ActualizarCliente',
+        'InactivarPersona' => 'InactivarCliente',
+        'EliminarPersona' => 'EliminarCliente'
       );
 
       return $object;

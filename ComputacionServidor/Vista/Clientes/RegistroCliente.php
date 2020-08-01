@@ -129,11 +129,11 @@ pero si hace uso de una clase al presionar submit -->
                             </tr>
                             <tbody id="tbody-content">
                                 <?php  
-                                    require_once ("../../Negocio/Cliente/Buscar.php");                                    
+                                    require_once ("../../Negocio/Cliente/Proceso.php");                                    
                                     if(isset($_SESSION['Tarjeta']) ){
                                         $Busqueda = new Buscar();
                                         $BD = $_SESSION['Tarjeta']["Conexion"];
-                                        $Cliente = $Busqueda->ListarPersona($BD);
+                                        $Cliente = $Busqueda->EliminarPersona($BD,4);
                                 ?>
                                 <?php
                                     foreach($Cliente as $key1 => $value1)
