@@ -2,7 +2,7 @@
     require_once ("../../Negocio/Comun/Operacion.php");
     require_once ("../../Negocio/Comun/PeticionNegocio.php");
     require_once ("../../nusoap/lib/nusoap.php");
-class Buscar
+class Procesar
 {
   public function ListarPersona($Datos){
     $NegocioPeticion = new Peticion();

@@ -100,6 +100,8 @@ pero si hace uso de una clase al presionar submit -->
                         </div>
                     </div>
                 </section>
+
+                <input type="hidden" name="HdAction" value="1">
             </form>
     </div>
     <div id="Secondview" class="d-none container Secondview">
@@ -131,9 +133,9 @@ pero si hace uso de una clase al presionar submit -->
                                 <?php  
                                     require_once ("../../Negocio/Cliente/Proceso.php");                                    
                                     if(isset($_SESSION['Tarjeta']) ){
-                                        $Busqueda = new Buscar();
+                                        $Busqueda = new Procesar();
                                         $BD = $_SESSION['Tarjeta']["Conexion"];
-                                        $Cliente = $Busqueda->EliminarPersona($BD,4);
+                                        $Cliente = $Busqueda->ListarPersona($BD);
                                 ?>
                                 <?php
                                     foreach($Cliente as $key1 => $value1)
@@ -144,11 +146,11 @@ pero si hace uso de una clase al presionar submit -->
                                             <span>
                                                 <a href="#" class="btn btn bg-primary" id="edit-register"
                                                     role="button">
-                                                <i class="fas fa-edit"></i>
-                                                </a>
+                                                    <i class="fas fa-edit"></i>
+                                                </a><br/><br/>
                                                 <a href="#" class="btn btn bg-primary" id="rid-register"
                                                     role="button">
-                                                <i class="fas fa-trash-alt"></i>
+                                                    <i class="fas fa-trash-alt"></i>
                                                 </a>
                                             </span>
                                         </td>

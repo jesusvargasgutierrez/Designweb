@@ -1,6 +1,7 @@
 <?php  
     require_once ("../Comun/Operacion.php");
     require_once ("../Comun/PeticionNegocio.php");
+    require_once ("../Cliente/Proceso.php");
     require_once ("../../nusoap/lib/nusoap.php");
 
     session_start();
@@ -11,38 +12,97 @@
 
         $array = $_POST;
 
-        $ValoresInsersion = "";
-
         $indice = 0;
 
-        foreach($array as $key1 => $value1)
+        if($_POST["HdAction"] == 1)
         {
-          if($value1 != ""){
-            $ValoresInsersion .= "'".$array["Campo".$indice]."',";
+          $ValoresInsersion = "";
+
+          foreach($array as $key1 => $value1)
+          {
+            if($key1 == "HdAction"){continue;}
+            if($value1 != ""){
+              $ValoresInsersion .= "'".$array["Campo".$indice]."',";
+            }
+            $indice = $indice+1;
           }
-          $indice = $indice+1;
+
+          $insert = "(".trim($ValoresInsersion,",").")";
+
+          $Persona= array (
+            'BaseDatos' => $_SESSION['Tarjeta']["Conexion"],
+            'values' => $insert
+          );
+
+          $ArrayURL = $NegocioOperacion->ObtenerUrl();
+          $ArrayValParametro = $NegocioOperacion->ObtenerValorParametro();
+          $ArrayEndpoint = $NegocioOperacion->ObtenerValorEndpoint();
+
+          $Valores = array(
+            'Url' => $ArrayURL["Cliente"],
+            'Parametro' => $ArrayValParametro["InsertarCliente"],
+            'Valor' => $Persona,
+            'Endpoint' => $ArrayEndpoint["InsertarCliente"]
+          );
+
+          $Cliente = $NegocioPeticion->RealizarPeticion($Valores);
         }
+        else if($_POST["HdAction"] == 2){
+            $ValoresUpdate = "";
 
-        $fijo = "(".trim($ValoresInsersion,",").")";
+            $Columnas = array("0","Codigo","Nombres","ApellidoPaterno","ApellidoMaterno","NombreCompleto","FechaNacimiento","Genero","EstadoCivil","Correo","Telefono","Estado",".");
 
-        $Persona= array (
-          'BaseDatos' => $_SESSION['Tarjeta']["Conexion"],
-          'values' => $fijo
-        );
+            foreach($array as $key1 => $value1)
+            {
+              if($key1 == "HdAction"){continue;}
 
-        $ArrayURL = $NegocioOperacion->ObtenerUrl();
-        $ArrayValParametro = $NegocioOperacion->ObtenerValorParametro();
-        $ArrayEndpoint = $NegocioOperacion->ObtenerValorEndpoint();
+              if($value1 != "" && $indice != 0){
+                $ValoresUpdate .= $Columnas[$indice]."='".$array["Campo".$indice]."',";
+              }
+              $indice = $indice+1;
+            }
 
-        $Valores = array(
-          'Url' => $ArrayURL["Cliente"],
-          'Parametro' => $ArrayValParametro["InsertarCliente"],
-          'Valor' => $Persona,
-          'Endpoint' => $ArrayEndpoint["InsertarCliente"]
-        );
+            $Actualizacion = trim($ValoresUpdate,",");
 
-        $Cliente = $NegocioPeticion->RealizarPeticion($Valores);
+            $Persona= array (
+              'BaseDatos' => $_SESSION['Tarjeta']["Conexion"],
+              'Valores' => $Actualizacion,
+              "Persona" => $array["Campo0"]
+            );
+  
+            $ArrayURL = $NegocioOperacion->ObtenerUrl();
+            $ArrayValParametro = $NegocioOperacion->ObtenerValorParametro();
+            $ArrayEndpoint = $NegocioOperacion->ObtenerValorEndpoint();
+  
+            $Valores = array(
+              'Url' => $ArrayURL["Cliente"],
+              'Parametro' => $ArrayValParametro["ActualizarPersona"],
+              'Valor' => $Persona,
+              'Endpoint' => $ArrayEndpoint["ActualizarPersona"]
+            );
 
+            $Cliente = $NegocioPeticion->RealizarPeticion($Valores);
+        }
+        else if($_POST["HdAction"] == 3){
+          $Persona= array (
+            'BaseDatos' => $_SESSION['Tarjeta']["Conexion"],
+            'Valores' => "",
+            "Persona" => $array["Campo0"]
+          );
+
+          $ArrayURL = $NegocioOperacion->ObtenerUrl();
+          $ArrayValParametro = $NegocioOperacion->ObtenerValorParametro();
+          $ArrayEndpoint = $NegocioOperacion->ObtenerValorEndpoint();
+
+          $Valores = array(
+            'Url' => $ArrayURL["Cliente"],
+            'Parametro' => $ArrayValParametro["EliminarPersona"],
+            'Valor' => $Persona,
+            'Endpoint' => $ArrayEndpoint["EliminarPersona"]
+          );
+
+          $Cliente = $NegocioPeticion->RealizarPeticion($Valores);
+      }
     }else {
      echo "no existe";
     }
