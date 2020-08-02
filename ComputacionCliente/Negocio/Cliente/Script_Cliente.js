@@ -55,19 +55,19 @@ $(document).ready(function () {
              * el mensaje satisfactorio sera el mismo
              */
             Message("Operacion completa!",1);
+
+            /**
+             * se enlistan los registros para visualizar
+             * los cambios en alguna modificacion
+             * o si se agrego uno nuevo
+             */
+            Listar();
+
+            /**
+             * se limpian los campos
+             */
+            Limpiar();
         }
-
-        /**
-         * se enlistan los registros para visualizar
-         * los cambios en alguna modificacion
-         * o si se agrego uno nuevo
-         */
-        Listar();
-
-        /**
-         * se limpian los campos
-         */
-        Limpiar();
     });
 
     /**
@@ -158,6 +158,7 @@ $(document).ready(function () {
         $('.firstview').removeClass("d-none");
         $(".firstview").addClass("d-block");
     });
+});//termina el metodo ready
 
     /**
      * funcion mensaje que recibe el
@@ -239,7 +240,6 @@ $(document).ready(function () {
             $('.alert').removeClass("alert-warning");
         }, 1000);
    }
-});//termina el metodo ready
 
 /**
  * funcion que recibe un texto y
@@ -308,19 +308,16 @@ function validar()
      */
     $(".selectores").find(':input').each(function() {
         var elemento = this;
+        /**
+         * se agregan los valores respectivos a 
+         * cada arreglo con push
+         */
         identificadores.push(elemento.id);
         valores.push(elemento.value);
     });
 
-    /**
-     * el campo identificador no debe
-     * participar debido a que es un campo
-     * inhabilitado y al principio siempre estara
-     * vacio, si no se elimina esta funcion nunca retornara
-     * true
-     */
-    let eliminar = ["Identificador"];
-
+    console.log(identificadores);
+    console.log(valores);
     /**
      * recorremos los arreglos de valores
      * e identificadores la ventaja es que son de la
@@ -328,12 +325,6 @@ function validar()
      * desbordamientos.
      */
     $.each(valores, function( index, value ) {
-        /**detrmina si el index en el que va el ciclo
-         * es el identificador si es asi debe saltearse
-         * esta iteracion para no evaluarlo.
-         */
-        if(eliminar.indexOf(identificadores[index]) >= 0){ return;}
-
         /**
          * evaluacion de los controles
          * como se tienen controles input estos se evaluan con cadenas
@@ -342,6 +333,8 @@ function validar()
          */
         if((value == "" || value == 1))
         {
+            console.log(value);
+            console.log(identificadores[index]);
             /**
              * si se cumple la condicion el control debera
              * cambiar su contorno a rojo
@@ -471,7 +464,11 @@ function validarexpresion(valor,expresion)
      * indicandole la situacion de la
      * validacion
      */
-    alert(expresion.test(valor));
+
+     var valor = expresion.test(valor);
+     if (!valor){
+        Message("El campo no tiene la validacion correcta!",2);
+     }
 }
 
 /**
