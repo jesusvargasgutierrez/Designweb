@@ -39,22 +39,22 @@ pero si hace uso de una clase al presionar submit -->
                         <div class="flex-fill">
                             <label class="col-form-label">Identificador:</label>
                             <input type="text" id="Identificador" name="Campo0" value="" class="form-control-sm enabled" placeholder=""/>
-                            <label class="col-form-label">Equivalencia:</label>
-                            <input type="text" id="Equivalencia" name="Campo1" value="Client1" placeholder="Equivalencia"/>
+                            <label class="col-form-label">Codigo:</label>
+                            <input type="text" id="Equivalencia" name="Campo1" value="" required placeholder="Equivalencia"/>
                         </div>
                     </div>
                     <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
                         <div class="flex-fill order-3 my-1 mx-1">
-                            <input type="text" class="form-control" value="Nombre Completo" id="NombreCompleto" name="Campo5" placeholder="NombreCompleto" />
+                            <input type="text" class="form-control" value="" id="NombreCompleto" name="Campo5" placeholder="NombreCompleto" />
                         </div>
                         <div class="flex-fill order-0 my-1 mx-1">
-                            <input type="text" class="form-control" value="Nombres" id="Nombres" name="Campo2" placeholder="Nombres"/>
+                            <input type="text" class="form-control" value="" id="Nombres" name="Campo2" placeholder="Nombres"/>
                         </div>
                         <div class="flex-fill order-1 my-1 mx-1">
-                            <input type="text" class="form-control" value="Primer Apellido" id="PrimerApellido" name="Campo3" placeholder="Primer Apellido" />
+                            <input type="text" class="form-control" value="" id="PrimerApellido" name="Campo3" placeholder="Primer Apellido" />
                         </div>
                         <div class="flex-fill order-2 my-1 mx-1">
-                            <input type="text" class="form-control" value="Segundo Apellido" id="SegundoApellido" name="Campo4" placeholder="SegundoApellido" />
+                            <input type="text" class="form-control" value="" id="SegundoApellido" name="Campo4" placeholder="SegundoApellido" />
                         </div>
                     </div>
                     <div class="d-flex flex-column mt-3 mt-md-2 flex-lg-row align-items-lg-center">
