@@ -44,7 +44,7 @@ pero si hace uso de una clase al presionar submit -->
                     <div class="d-flex flex-column my-1 flex-lg-row align-items-lg-center">
                         <div class="flex-fill">
                             <label class="col-form-label">Identificador:</label>
-                            <input type="text" name="Campo0" value="0" class="form-control-sm enabled" placeholder=""/>
+                            <input type="text" id="Identificador" name="Campo0" value="" class="form-control-sm enabled" placeholder=""/>
                             <label class="col-form-label">Equivalencia:</label>
                             <input type="text" id="Equivalencia" name="Campo1" value="Client1" placeholder="Equivalencia"/>
                         </div>
@@ -111,8 +111,8 @@ pero si hace uso de una clase al presionar submit -->
             </button>
         </span>
         <div id="tabletemplate" class="tabletemplate container my-4">
-            <div class="d-flex flex-column align-items-lg-center content-secondary">
-                    <table id="Table1" class="overflow-auto flex-fill mt-3 table table-dark">
+            <div class="divtabla d-flex flex-column align-items-lg-center content-secondary">
+                    <table class="Table1 overflow-auto flex-fill mt-3 table table-dark">
                            <thead>
                                 <tr>
                                     <th scope="col">Acciones</th>
@@ -130,7 +130,7 @@ pero si hace uso de una clase al presionar submit -->
                                     <th scope="col">Estado</th>
                                 </tr>
                            </thead>
-                            <tbody id="tbody-content">
+                            <tbody id="tbody-content" class="tbody-content">
                                 <?php  
                                     require_once ("../../Negocio/Cliente/Proceso.php");                                    
                                     if(isset($_SESSION['Tarjeta']) ){
@@ -145,17 +145,15 @@ pero si hace uso de una clase al presionar submit -->
                                     <tr>
                                         <td>
                                             <span>
-                                                <a href="#" class="btn btn bg-primary" id="edit-register"
-                                                    role="button">
-                                                    <i class="fas fa-edit"></i>
-                                                </a><br/><br/>
-                                                <a href="#" class="btn btn bg-primary" id="rid-register"
-                                                    role="button">
-                                                    <i class="fas fa-trash-alt"></i>
-                                                </a>
+                                                <button class="btn btn bg-primary edit-register" id="edit-register">
+                                                    Editar <i class="fas fa-edit"></i>
+                                                </button><br/><br/>
+                                                <button class="btn btn bg-primary rid-register" id="rid-register">
+                                                    Eliminar <i class="fas fa-trash-alt"></i>
+                                                </button>
                                             </span>
                                         </td>
-                                        <td><?php echo $Cliente[$key1]["Persona"]; ?></td>
+                                        <td data-id="<?php echo $Cliente[$key1]["Persona"]; ?>"><?php echo $Cliente[$key1]["Persona"]; ?></td>
                                         <td><?php echo $Cliente[$key1]["Codigo"]; ?></td>
                                         <td><?php echo $Cliente[$key1]["Nombres"]; ?></td>
                                         <td><?php echo $Cliente[$key1]["ApellidoPaterno"]; ?></td>
