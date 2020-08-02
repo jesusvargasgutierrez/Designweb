@@ -21,25 +21,15 @@ pero si hace uso de una clase al presionar submit -->
     </style>
 </head>
 <body class="">
-    <div class="container mt-3" id="tabscontrol">
-        <ul class="nav row nav-pills mb-3" id="pills-tab" role="tablist">
-            <li class="col-lg-3 nav-item col-12 text-center">
-              <a class="nav-link active" id="pills-General-Section" data-toggle="pill" href="#General-Section" 
-              role="tab" aria-controls="General-Section" aria-selected="true">Informacion General</a>
-            </li>
-            <li class="col-lg-3 nav-item col-12 text-center">
-              <a class="nav-link" id="pills-Address-Section" data-toggle="pill" href="#Address-Section" 
-              role="tab" aria-controls="Address-Section" aria-selected="false">Direccion</a>
-            </li>
-        </ul>
-    </div>
-
-    <div id="firstview" class="container">
+    <div class="container firstview">
             <button class="Nuevo btn">
                 <i class="fas fa-file"></i></span>&nbsp;Nuevo
             </button>
             <button class="Guardar btn">
                 <i class="fas fa-save"></i></span>&nbsp;Guardar
+            </button>
+            <button type="button" class="Buscar btn btn">
+                <i class="fas fa-search"></i>&nbsp;Buscar
             </button>
             <form id="formulario" name="formulario" class="tab-content">
                 <section class="selectores tab-pane fade show active" role="tabpanel" aria-labelledby="pills-home-tab" id="General-Section">
@@ -100,36 +90,39 @@ pero si hace uso de una clase al presionar submit -->
                         </div>
                     </div>
                 </section>
-
-                <section class="tab-pane fade" role="tabpanel" aria-labelledby="pills-home-tab" id="Address-Section">
-                    <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
-                        <div class="flex-fill my-1 mx-1">
-                            <input type="text" class="form-control" value="Direccion" placeholder="Direccion" name="Direccion" id="Direccion" />
-                        </div>
-                        <div class="flex-fill my-1 mx-1">
-                            <input type="text" class="form-control" value="262" placeholder="NumeroInterno" name="NumeroInterno" id="NumeroInterno" />
-                        </div>
-                        <div class="flex-fill my-1 mx-1">
-                            <input type="text" class="form-control" placeholder="NumeroExterno" name="NumeroExterno" id="NumeroExterno" />
-                        </div>
-                        <div class="flex-fill my-1 mx-1">
-                            <input type="text" class="form-control" value="colonia" placeholder="colonia" name="colonia" id="colonia" />
-                        </div>
-                    </div>
-                    <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
-                        <div class="flex-fill my-1 mx-1">
-                            <input type="text" class="form-control" value="ciudad" placeholder="ciudad" name="ciudad" id="ciudad" />
-                        </div>
-                        <div class="flex-fill my-1 mx-1">
-                            <select class="form-control" id="estado" name="idestado">
-                                <option selected>Selection State</option>
-                                <option>Chihuahua</option>
-                                <option>Durango</option>
-                            </select>
-                        </div>
-                    </div>
-                </section>
             </form>
+    </div>
+    <div id="Secondview" class="d-none container Secondview">
+        <span>
+            <button type="button"class="Regresar btn btn">
+                <i class="fas fa-undo"></i>&nbsp;Regresar
+            </button>
+        </span>
+        <div id="tabletemplate" class="tabletemplate container my-4">
+            <div class="divtabla d-flex flex-column align-items-lg-center content-secondary">
+                    <table class="Table1 overflow-auto flex-fill mt-3 table table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">Acciones</th>
+                                <th scope="col">Persona</th>
+                                <th scope="col">Codigo</th>
+                                <th scope="col">Nombres</th>
+                                <th scope="col">Apellido Paterno</th>
+                                <th scope="col">Apellido Materno</th>
+                                <th scope="col">Nombre Completo</th>
+                                <th scope="col">Fecha Nacimiento</th>
+                                <th scope="col">Genero</th>
+                                <th scope="col">EstadoCivil</th>
+                                <th scope="col">RFC</th>
+                                <th scope="col">CURP</th>
+                                <th scope="col">Correo</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody-content" class="tbody-content">
+                        </tbody>
+                    </table>
+            </div>
+        </div>
     </div>
 </body>
     <script src="../Negocio/Cliente/Script_Cliente.js" type="text/javascript"></script>

@@ -113,22 +113,23 @@ pero si hace uso de una clase al presionar submit -->
         <div id="tabletemplate" class="tabletemplate container my-4">
             <div class="d-flex flex-column align-items-lg-center content-secondary">
                     <table id="Table1" class="overflow-auto flex-fill mt-3 table table-dark">
-                        <thead>
-                            <tr>
-                                <th scope="col">Acciones</th>
-                                <th scope="col">Persona</th>
-                                <th scope="col">Codigo</th>
-                                <th scope="col">Nombres</th>
-                                <th scope="col">Apellido Paterno</th>
-                                <th scope="col">Apellido Materno</th>
-                                <th scope="col">Nombre Completo</th>
-                                <th scope="col">Fecha Nacimiento</th>
-                                <th scope="col">Genero</th>
-                                <th scope="col">EstadoCivil</th>
-                                <th scope="col">Correo</th>
-                                <th scope="col">Telefono</th>
-                                <th scope="col">Estado</th>
-                            </tr>
+                           <thead>
+                                <tr>
+                                    <th scope="col">Acciones</th>
+                                    <th scope="col">Persona</th>
+                                    <th scope="col">Codigo</th>
+                                    <th scope="col">Nombres</th>
+                                    <th scope="col">Apellido Paterno</th>
+                                    <th scope="col">Apellido Materno</th>
+                                    <th scope="col">Nombre Completo</th>
+                                    <th scope="col">Fecha Nacimiento</th>
+                                    <th scope="col">Genero</th>
+                                    <th scope="col">EstadoCivil</th>
+                                    <th scope="col">Correo</th>
+                                    <th scope="col">Telefono</th>
+                                    <th scope="col">Estado</th>
+                                </tr>
+                           </thead>
                             <tbody id="tbody-content">
                                 <?php  
                                     require_once ("../../Negocio/Cliente/Proceso.php");                                    
@@ -176,7 +177,6 @@ pero si hace uso de una clase al presionar submit -->
                                   }
                                 ?>
                             </tbody>
-                        </thead>
                     </table> 
             </div>
         </div>
