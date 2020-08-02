@@ -1,21 +1,25 @@
 $(document).ready(function () {
 
     $('.Guardar').on('click', function () {
-        Guardar();
-        Message("Operacion completa!",1);
-
-        Listar();
-        /*var validado = validar();
+        var validado = validar();
 
         console.log(validado);
         if(validado)
         {
             Message("Los campos marcados son obligatorios!",2);
         }else{
-            Guardar();
+            if($('#HdAction').val() == "1")
+            {
+                Guardar();
+            }else if($('#HdAction').val() == "2")
+            {
+                Modificar($('#Codigo').val());
+            }
             Message("Operacion completa!",1);
-            Limpiar();
-        }*/
+        }
+
+        Listar();
+        Limpiar();
     });
 
     $('.Nuevo').on('click', function () {
@@ -172,6 +176,8 @@ function Limpiar()
             $('#'+identificadores[index]).val('');
         }
     });
+
+    $("HdAction").val('1');
 }
 
 function validarexpresion(valor,expresion)
@@ -181,20 +187,20 @@ function validarexpresion(valor,expresion)
 let persona_array = [];
 function Guardar()
 {
+    var date = new Date($('#Nacimiento').val());
     var objetopersona = {
-        identificador : $('#Nombres').val(),
         codigo : $('#Codigo').val(),
         nombre : $('#Nombres').val(),
         Primerapellido : $('#PrimerApellido').val(),
         Segundopellido : $('#SegundoApellido').val(),
         NombreCompleto : $('#NombreCompleto').val(),
-        Nacimiento : "01/01/1900",
-        Edad : "26",
+        Nacimiento : $('#Nacimiento').val(),
+        Edad : CalcularEdad(date.getFullYear()),
         Genero : $('#select-genero').val(),
         EstadoCivil : $('#select-estadocivil').val(),
         RFC : $('#RFC').val(),
         CURP : $('#CURP').val(),
-        Correo : $('#Correo').val(),
+        Correo : $('#Correo').val()
     };
 
     persona_array.push(objetopersona);
@@ -241,7 +247,6 @@ function Listar()
 
         $('.Secondview .divtabla .Table1 .tbody-content').append(Ccontenidotabla);
     }
-    console.log(DatosStorage);
 }
 
 function Eliminar(codigo)
@@ -262,6 +267,20 @@ function Eliminar(codigo)
     Listar();
 }
 
+function editar(codigo)
+{
+    var indice = 0;
+
+    persona_array.forEach((elemento,index) => {
+        if(elemento.codigo == codigo)
+        {
+            indice = index;
+        }
+    });
+
+    AsignarValores(indice);
+}
+
 function Modificar(codigo)
 {
     var indice = 0;
@@ -273,11 +292,50 @@ function Modificar(codigo)
         }
     });
 
-    persona_array[indice].NombreCompleto = "sss";
+    console.log(codigo);
+    console.log(indice);
+    persona_array[indice].nombre = $('#Nombres').val();
+    persona_array[indice].Primerapellido = $('#PrimerApellido').val();
+    persona_array[indice].Segundopellido = $('#SegundoApellido').val();
+    persona_array[indice].NombreCompleto = $('#NombreCompleto').val();
+    persona_array[indice].Nacimiento = $('#Nacimiento').val();
+    var date = new Date($('#Nacimiento').val());
+    persona_array[indice].Edad = CalcularEdad(date.getFullYear());
+    persona_array[indice].Genero = $('#select-genero').val();
+    persona_array[indice].EstadoCivil = $('#select-estadocivil').val();
+    persona_array[indice].RFC = $('#RFC').val();
+    persona_array[indice].CURP = $('#CURP').val();
+    persona_array[indice].Correo = $('#Correo').val();
 
     localStorage.setItem('Persona', JSON.stringify(persona_array));
 
     Listar();
+}
+
+function AsignarValores(indice){
+    console.log(indice);
+    $('#Nombres').val(persona_array[indice].NombreCompleto);
+    $('#Codigo').val(persona_array[indice].codigo);
+    $('#Nombres').val(persona_array[indice].nombre);
+    $('#PrimerApellido').val(persona_array[indice].Primerapellido);
+    $('#SegundoApellido').val(persona_array[indice].Segundopellido);
+    $('#NombreCompleto').val(persona_array[indice].NombreCompleto);
+    $('#Nacimiento').val(persona_array[indice].Nacimiento);
+    var date = new Date(persona_array[indice].Nacimiento);
+    $('#edad').val(CalcularEdad(date.getFullYear()));
+    $('#select-genero').val(persona_array[indice].Genero);
+    $('#select-estadocivil').val(persona_array[indice].EstadoCivil);
+    $('#RFC').val(persona_array[indice].RFC);
+    $('#CURP').val(persona_array[indice].CURP);
+    $('#Correo').val(persona_array[indice].Correo);
+
+    $('#HdAction').val("2");
+
+    $(".Secondview").addClass("d-none");
+    $('.Secondview').removeClass("d-block");
+
+    $('.firstview').removeClass("d-none");
+    $(".firstview").addClass("d-block");
 }
 
 $('.Secondview .divtabla .Table1 .tbody-content').on("click","tr",function(e) {
@@ -305,7 +363,7 @@ $('.Secondview .divtabla .Table1 .tbody-content').on("click","tr",function(e) {
         }
         else if(click == "edit-register")
         {
-            Modificar(data.id);
+            editar(data.id);
         }
     }
 });
