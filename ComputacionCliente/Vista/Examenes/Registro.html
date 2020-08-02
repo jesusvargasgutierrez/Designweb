@@ -50,21 +50,21 @@
                        <div class="flex-fill">
                            <span>
                               <button type="button" name="BtAdd" id="BtAdd" class="btn btn">
-                                 <i class="fas fa-plus-circle"></i>&nbsp;Add
+                                 <i class="fas fa-plus-circle"></i>&nbsp;Agregar
                               </button>
                            </span>
                        </div>
                        <div class="flex-fill">
                           <span>
                              <button type="button" name="Search" id="Search" class="btn btn">
-                               <i class="fas fa-search"></i>&nbsp;Preliminar view
+                               <i class="fas fa-search"></i>&nbsp;Visualizar
                              </button>
                           </span>
                        </div>
                        <div class="flex-fill">
                         <span>
                             <button type="button" id="Save" name="Save" class="btn">
-                              <i class="fas fa-save"></i></span>&nbsp;Save
+                              <i class="fas fa-save"></i></span>&nbsp;Guardar
                             </button>
                         </span>
                        </div>
@@ -78,23 +78,23 @@
                 <section class="tab-pane fade show active" role="tabpanel" aria-labelledby="pseills-home-tab" id="General-Section">
                         <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
                             <div class="flex-fill my-1 mx-1">
-                                <label for="QuestionArea">Instructions:</label>
+                                <label for="QuestionArea">Texto:</label>
                                 <textarea class="form-control" id="QuestionArea" rows="1"></textarea>
                             </div>
                             <div class="flex-fill my-1 mx-1">
                               <div class="form-group">
-                                <label for="DDQuestionType">Question Type:</label>
+                                <label for="DDQuestionType">Tipo Pregunta:</label>
                                 <select class="form-control" id="DDQuestionType">
-                                  <option selected value="0">Selection</option>
-                                  <option value="1">Multiple Option</option>
-                                  <option value="2">Field Fill</option>
-                                  <option value="3">Write Text</option>
+                                  <option selected value="0">Seleccione</option>
+                                  <option value="1">Opcion Multiple</option>
+                                  <option value="2">Completar campos</option>
+                                  <option value="3">Texto</option>
                                 </select>
                               </div>  
                             </div>
                             <div class="flex-fill my-1 mx-1">
                               <div class="form-group">
-                                <label for="TBNumberOption">Number Options:</label>
+                                <label for="TBNumberOption">Numero Opciones:</label>
                                 <div class=" my-1 mx-1">
                                     <input type="text" class="form-control" width="12px" id="TBNumberOption" placeholder="Number Option"/>
                                 </div>
@@ -103,7 +103,7 @@
                         </div>
                         
                         <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
-                            <label for="TBAnswer">Answer:</label>
+                            <label for="TBAnswer">Respuesta:</label>
                             <div class="flex-fill my-1 mx-1">
                                 <input type="text" class="form-control" id="TBAnswer" placeholder="Answer"/>
                             </div>
@@ -115,7 +115,7 @@
       <div id="secondview" class="secondview container">
         <div id="Viewmultipleoption" class="Viewmultipleoption d-none">
             <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
-                <label for="TBQuestion">Question:</label>
+                <label for="TBQuestion">Pregunta:</label>
                 <div class="flex-fill my-1 mx-1">
                     <input type="text" class="form-control" id="TBQuestion" name="TBQuestion" placeholder="Question"/>
                 </div>
@@ -136,12 +136,12 @@
                 <table id="Table1" class="flex-fill mt-3 table table-dark">
                     <thead>
                         <tr>
-                            <th scope="col">Selection</th>
-                            <th scope="col">Question #</th>
-                            <th scope="col">Instructions</th>
-                            <th scope="col">Question Type</th>
-                            <th scope="col">Answer</th>
-                            <th scope="col">idQuestiomType</th>
+                            <th scope="col">Seleccione</th>
+                            <th scope="col">Pregunta #</th>
+                            <th scope="col">Instrucciones</th>
+                            <th scope="col">Tipo Pregunta</th>
+                            <th scope="col">Respuesta</th>
+                            <th scope="col">idTipoPregunta</th>
                             <th scope="col">Numero Opciones</th>
                         </tr>
                         <tbody id="tbody-content">
