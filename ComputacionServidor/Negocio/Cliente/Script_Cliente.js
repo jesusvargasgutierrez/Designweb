@@ -16,9 +16,9 @@ $(document).ready(function () {
         $(".firstview").addClass("d-block");
     });
 
-    /*$('.Nuevo').on('click', function () {
+    $('.Nuevo').on('click', function () {
         Limpiar();
-    })*/
+    })
 });
 
 $('.Secondview .divtabla .Table1 .tbody-content').on("click","tr",function(e) {
@@ -53,15 +53,10 @@ $('.Secondview .divtabla .Table1 .tbody-content').on("click","tr",function(e) {
 
 function Eliminar(codigo)
 {
-
-}
-
-function editar(codigo)
-{
     var url1 = "../Negocio/Cliente/Acciones.php";
-    var jsonPersona = JSON.stringify(codigo);
 
-    console.log(jsonPersona);
+    let arregloeliminar = {Persona: codigo, Accion:'2'};
+    var jsonPersona = JSON.stringify(arregloeliminar);
     $.ajax({
         type: "POST",
         url: url1,
@@ -69,6 +64,31 @@ function editar(codigo)
         data:"Persona="+jsonPersona,
         success: function(response) {
           //alert(response);
+          respuestax = response;
+        }
+    })
+    .done(function(){
+        alert("Se elimino un registro!");
+    })
+    .fail(function(){
+    })
+    .always(function(){
+    });
+}
+
+function editar(codigo)
+{
+    var url1 = "../Negocio/Cliente/Acciones.php";
+
+    let arregloupdate = {Persona: codigo, Accion:'1'};
+    var jsonPersona = JSON.stringify(arregloupdate);
+
+    $.ajax({
+        type: "POST",
+        url: url1,
+        datatype:"json",
+        data:"Persona="+jsonPersona,
+        success: function(response) {
           respuestax = response;
         }
     })
@@ -87,19 +107,19 @@ function Asignacion(Respuesta)
     console.log(DatosStorage);
     DatosStorage.forEach(elemento => {
         $('#Identificador').val(elemento.Persona);
-        $('#Codigo').val(elemento.codigo);
-        $('#Nombres').val(elemento.nombres);
-        $('#PrimerApellido').val(elemento.ApellidoMaterno);
-        $('#SegundoApellido').val(elemento.SegundoPaterno);
+        $('#Codigo').val(elemento.Codigo);
+        $('#Nombres').val(elemento.Nombres);
+        $('#PrimerApellido').val(elemento.ApellidoPaterno);
+        $('#SegundoApellido').val(elemento.ApellidoMaterno);
         $('#NombreCompleto').val(elemento.NombreCompleto);
-        $('#Nacimiento').val(elemento.FechaNacimiento);
+        $('#DateBird').val(elemento.FechaNacimiento);
         var date = new Date(elemento.FechaNacimiento);
-        $('#edad').val(CalcularEdad(date.getFullYear()));
+        $('#age').val(CalcularEdad(date.getFullYear()));
         $('#select-genero').val(elemento.Genero);
         $('#select-estadocivil').val(elemento.EstadoCivil);
         $('#Correo').val(elemento.Correo);
         $('#Telefono').val(elemento.Telefono);
-    })
+    });
 
     $('#HdAction').val("2");
 

@@ -11,11 +11,19 @@
       
       $Persona = json_decode($json, true);
 
-      $BD = $_SESSION['Tarjeta']["Conexion"];
+      if($Persona["Accion"] == "1")
+      {
+        $BD = $_SESSION['Tarjeta']["Conexion"];
 
-      $DatosPersona = $Proceso->ConsultarPersona($BD,$Persona);
-  
-      print_r(json_encode($DatosPersona));
+        $DatosPersona = $Proceso->ConsultarPersona($BD,$Persona["Persona"]);
+
+        print_r(json_encode($DatosPersona));
+      }
+      else if($Persona["Accion"] == "2"){
+        $BD = $_SESSION['Tarjeta']["Conexion"];
+
+        $DatosPersona = $Proceso->EliminarPersona($BD,$Persona["Persona"]);
+      }
     }
     else
     {

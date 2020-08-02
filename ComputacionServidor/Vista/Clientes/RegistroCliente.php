@@ -21,18 +21,12 @@ pero si hace uso de una clase al presionar submit -->
     <script src="../Negocio/Cliente/Script_Cliente.js" type="text/javascript"></script>
 </head>
 <body class="">
-    <div class="container mt-3" id="tabscontrol">
-        <ul class="nav row nav-pills mb-3" id="pills-tab" role="tablist">
-            <li class="col-lg-3 nav-item col-12 text-center">
-              <a class="nav-link active" id="pills-General-Section" data-toggle="pill" href="#General-Section" 
-              role="tab" aria-controls="General-Section" aria-selected="true">Informacion General</a>
-            </li>
-        </ul>
-    </div>
-
     <div class="container firstview">
             <form action="../Negocio/Cliente/Agregarcliente.php" id="formulario" name="formulario" class="tab-content" method="POST" enctype="multipart/form-data">
                 <span>
+                    <button type="button" class="Nuevo btn">
+                        <i class="fas fa-file"></i></span>&nbsp;Nuevo
+                    </button>
                    <button type="submit" class="btn">
                       <i class="fas fa-save"></i></span>&nbsp;Guardar
                     </button>
@@ -40,7 +34,7 @@ pero si hace uso de una clase al presionar submit -->
                        <i class="fas fa-search"></i>&nbsp;Buscar
                     </button>
                 </span>
-                <section class="tab-pane fade show active" role="tabpanel" aria-labelledby="pseills-home-tab" id="General-Section">
+                <section class="selectores tab-pane fade show active" role="tabpanel" aria-labelledby="pseills-home-tab" id="General-Section">
                     <div class="d-flex flex-column my-1 flex-lg-row align-items-lg-center">
                         <div class="flex-fill">
                             <label class="col-form-label">Identificador:</label>
@@ -68,7 +62,7 @@ pero si hace uso de una clase al presionar submit -->
                             <input class="form-control" id="DateBird" name="Campo6" type="date">
                         </div>
                         <div class="flex-fill my-1 mx-1">
-                            <input type="text" class="form-control" id="age" name="edad" value="27" disabled placeholder="Age" />
+                            <input type="text" class="form-control" id="age" name="edad" value="0" disabled placeholder="Age" />
                         </div>
                         <div class="flex-fill my-1 mx-1">
                             <select class="form-control" id="select-genero" name="Campo7">
@@ -101,7 +95,7 @@ pero si hace uso de una clase al presionar submit -->
                     </div>
                 </section>
 
-                <input type="hidden" name="HdAction" value="1">
+                <input type="hidden" id="HdAction" name="HdAction" value="1">
             </form>
     </div>
     <div id="Secondview" class="d-none container Secondview">

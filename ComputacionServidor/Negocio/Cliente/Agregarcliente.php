@@ -27,7 +27,7 @@
             $indice = $indice+1;
           }
 
-          $insert = "(".trim($ValoresInsersion,",").")";
+          $insert = "(0,".trim($ValoresInsersion,",").")";
 
           $Persona= array (
             'BaseDatos' => $_SESSION['Tarjeta']["Conexion"],
@@ -45,6 +45,7 @@
             'Endpoint' => $ArrayEndpoint["InsertarCliente"]
           );
 
+          //print_r($Valores);
           $Cliente = $NegocioPeticion->RealizarPeticion($Valores);
         }
         else if($_POST["HdAction"] == 2){
