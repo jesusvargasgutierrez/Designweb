@@ -215,9 +215,10 @@ function Asignacion(Respuesta)
      */
     var DatosStorage = JSON.parse(Respuesta);
     console.log(DatosStorage);
+    console.log($('#Equivalencia').val());
     DatosStorage.forEach(elemento => {
         $('#Identificador').val(elemento.Persona);
-        $('#Codigo').val(elemento.Codigo);
+        $('#Equivalencia').val(elemento.Codigo);
         $('#Nombres').val(elemento.Nombres);
         $('#PrimerApellido').val(elemento.ApellidoPaterno);
         $('#SegundoApellido').val(elemento.ApellidoMaterno);
