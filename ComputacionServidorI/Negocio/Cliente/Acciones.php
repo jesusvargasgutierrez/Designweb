@@ -8,10 +8,10 @@
     /**
      * se agrega la clase proceso
      */
-    require_once ("../../Negocio/Cliente/Proceso.php");
+    require_once ("../../Datos/Clientes/Clientes.php");
 
     if(isset($_POST["Persona"]) && isset($_SESSION['Tarjeta'])){
-      $Proceso = new Procesar();
+      $DatosCliente = new Cliente();
 
       /**
        * se recibe el JSON de AJAX
@@ -31,10 +31,15 @@
        */
         $BD = $_SESSION['Tarjeta']["Conexion"];
 
+        $Valores = array (
+          'BaseDatos' => $BD,
+          "Valores" => 'Persona, Codigo, Nombres, ApellidoPaterno, ApellidoMaterno, NombreCompleto, FechaNacimiento, Genero, EstadoCivil, Correo, Telefono, Estado',
+          'Persona' => $Persona["Persona"]
+        );
         /**
          * se envian los datos para consultar el registro
          */
-        $DatosPersona = $Proceso->ConsultarPersona($BD,$Persona["Persona"]);
+        $DatosPersona = $DatosCliente->ConsultarCliente($Valores);
 
         /**
          * se requiere para devolver el resultado
@@ -47,10 +52,14 @@
          */
         $BD = $_SESSION['Tarjeta']["Conexion"];
 
+        $Valores = array (
+          'BaseDatos' => $BD,
+          'Persona' => $Persona["Persona"]
+        );
         /**
          * se rescata el identificador y se envia la peticion
          */
-        $DatosPersona = $Proceso->EliminarPersona($BD,$Persona["Persona"]);
+        $DatosPersona = $DatosCliente->EliminarCliente($Valores);
       }
     }
     else

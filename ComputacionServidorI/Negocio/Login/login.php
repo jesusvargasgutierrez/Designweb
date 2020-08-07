@@ -1,7 +1,5 @@
 <?php
-    require_once ("../Comun/OperacionLogin.php");
-    require_once ("../Comun/PeticionLogin.php");
-    require_once ("../../nusoap/lib/nusoap.php");
+    require_once ("../../Datos/Login/Login.php");
     
     if(isset($_POST["Codigo"]))
     {
@@ -11,25 +9,17 @@
             $$variable = $valor;
         }
 
-        $NegocioPeticion = new Peticion();
-        $NegocioOperacion = new Operacion();
-
-        $ArrayURL = $NegocioOperacion->ObtenerUrl();
-        $ArrayValParametro = $NegocioOperacion->ObtenerValorParametro();
-        $ArrayEndpoint = $NegocioOperacion->ObtenerValorEndpoint();
+        $DatosLogin = new Login();
 
         $Valores = array(
-            'Url' => $ArrayURL["Sesion"],
-            'Parametro' => $ArrayValParametro["Sesion"],
-            'Valor' => sha1($array["Codigo"]),
-            'Endpoint' => $ArrayEndpoint["SesionBD"]
+            'Valor' => sha1($array["Codigo"])
         );
         
-        $Sesion = $NegocioPeticion->RealizarPeticion($Valores);
+        $Sesion = $DatosLogin->ObtenerBaseDatos($Valores);
 
         if(!isset($Sesion))
         {
-            header('Location: ../../index.php');
+            //header('Location: ../../index.php');
         }
 
         $AccesoUsuario = array(
@@ -38,18 +28,11 @@
             'Contrasenia' => sha1($array["contrasenia"])
         );
 
-        $Valores = array(
-            'Url' => $ArrayURL["Usuario"],
-            'Parametro' => $ArrayValParametro["Usuario"],
-            'Valor' => $AccesoUsuario,
-            'Endpoint' => $ArrayEndpoint["Usuario"]
-        );
-
-        $User = $NegocioPeticion->RealizarPeticion($Valores);
+        $User = $DatosLogin->ObtenerUsuario($AccesoUsuario);
         
         if(!isset($User))
         {
-            header('Location: ../../index.php');
+            //header('Location: ../../index.php');
         }
 
         if(count($User) > 0)
@@ -67,7 +50,8 @@
             }
         }
     }else{
-        header('Location: ../../index.php');
+        echo "n";
+        //header('Location: ../../index.php');
     }
 
 ?>

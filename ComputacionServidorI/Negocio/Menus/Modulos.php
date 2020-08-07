@@ -3,41 +3,39 @@
      * importacion de la clase operacion y peticion
      * importacion de la libreria nusoap
      */
-    require_once ("../Negocio/Comun/Operacion.php");
-    require_once ("../Negocio/Comun/Peticion.php");
-    require_once ("../nusoap/lib/nusoap.php");
-class Modulos
-{
-    function ObtenerModulos()
+    require_once ("../Datos/Menus/Modulos.php");
+    /**
+     * se debe tener una session iniciada
+     */
+    class Modulos
     {
-        /**
-         * objetos para realizar la peticion
-         */
-        $NegocioPeticion = new Peticion();
-        $NegocioOperacion = new Operacion();
-        
-        /**
-         * se obtiene la URL, parametros y endpoints registrados
-         */
-        $ArrayURL = $NegocioOperacion->ObtenerUrl();
-        $ArrayValParametro = $NegocioOperacion->ObtenerValorParametro();
-        $ArrayEndpoint = $NegocioOperacion->ObtenerValorEndpoint();
+        function ObtenerModulos()
+        {
+            /**
+             * objeto para acceso a modelos
+             */
+            $DatosModulos = new ModulosDatos();
 
-        /**
-         * se construye el arreglo
-         * para realizar la peticion
-         */
-        $Valores = array(
-            'BaseDatos' => 'pwebservidor',
-            'Url' => 'http://localhost/Desarrollos/Designweb/ComputacionServidor/Controller/Negocio/Menus/Modulos.php',
-            'Parametro' => "EntidadModulo",
-            'Valor' => "pwebservidor",
-            'Endpoint' => 'ObtenerModulos'
-        );
+            /**
+             * verificamos si se inicio sesion
+             */
+            if(isset($_SESSION['Tarjeta']))
+            {
+                /**
+                 * se construye el arreglo
+                 * para realizar la peticion
+                 */
+                $Valores = array(
+                    'BaseDatos' => 'pwebservidor'
+                );
 
-        $Modulos = $NegocioPeticion->RealizarPeticion($Valores);
+                /**
+                 * utilizamos el objeto
+                 */
+                $Modulos = $DatosModulos->ObtenerModulos($Valores);
 
-        return $Modulos;
+                return $Modulos;
+            }
+        }
     }
-}
 ?>

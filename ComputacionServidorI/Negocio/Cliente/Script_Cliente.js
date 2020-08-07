@@ -179,6 +179,8 @@ function editar(codigo)
      */
     var jsonPersona = JSON.stringify(arregloupdate);
 
+    console.log(jsonPersona);
+
         /**
      * peticion post pasando el JSON generado
      * en la variable Persona
