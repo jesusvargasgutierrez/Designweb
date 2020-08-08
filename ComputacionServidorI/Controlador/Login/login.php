@@ -19,7 +19,7 @@
 
         if(!isset($Sesion))
         {
-            //header('Location: ../../index.php');
+            header('Location: ../../index.php');
         }
 
         $AccesoUsuario = array(
@@ -32,7 +32,7 @@
         
         if(!isset($User))
         {
-            //header('Location: ../../index.php');
+            header('Location: ../../index.php');
         }
 
         if(count($User) > 0)
@@ -50,8 +50,7 @@
             }
         }
     }else{
-        echo "n";
-        //header('Location: ../../index.php');
+        header('Location: ../../index.php');
     }
 
 ?>

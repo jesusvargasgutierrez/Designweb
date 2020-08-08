@@ -15,7 +15,7 @@ class Procesar
            */
         $Valores = array (
             'BaseDatos' => $Datos,
-            'Valores' => 'Persona, Codigo, Nombres, ApellidoPaterno, ApellidoMaterno, NombreCompleto, FechaNacimiento, Genero, EstadoCivil, Correo, Telefono, Estado'
+            'Valores' => 'Persona, Codigo, Nombres, ApellidoPaterno, ApellidoMaterno, NombreCompleto, FechaNacimiento, d.Descripcion as Genero, c.Descripcion as EstadoCivil, Correo, Telefono, b.Descripcion as Estado'
         );
   
           /**

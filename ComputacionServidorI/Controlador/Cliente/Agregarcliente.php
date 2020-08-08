@@ -125,8 +125,6 @@
              * realizar peticion de UPDATE
              */
             $Cliente = $DatosCliente->ActualizarCliente($Valores);
-
-            echo $ValoresUpdate;
         }
         else if($_POST["HdAction"] == 3){
 
@@ -143,7 +141,74 @@
            * peticion de eliminar
            */
           $Cliente = $DatosCliente->EliminarCliente($Valores);
-      }
+        }
+
+        /**
+         * se construira una tabla solamente 
+         * cuando se inserte o modifique un registro
+         */
+        if($_POST["HdAction"] != 3)
+        {
+            $accion = $_POST["HdAction"];
+            /**
+             * Realizamos una tabla con la modificacion
+             * de la persona
+             */
+            $indice = 0;
+            ?>
+                <style>
+                  table, th, td {
+                    border: 1px solid black;
+                    text-align: center;
+                  }
+                  table {
+                    border-collapse: collapse;
+                  }
+                </style>
+                <table>
+                    <thead>
+                        <tr>
+                          <!-- el if ternario hace una condicion para colocar un titulo en la tabla especificando 
+                          que accion se realizo -->
+                          <td colspan="11"><?php echo ($accion == 1 ? "Insersion de la persona: ".$array["Campo5"] :"Actualizacion de la persona No:")." ".$array["Campo".$indice]; ?></td>
+                        </tr>
+                        <tr>
+                          <th scope="col">Codigo</th>
+                          <th scope="col">Nombres</th>
+                          <th scope="col">Apellido Paterno</th>
+                          <th scope="col">Apellido Materno</th>
+                          <th scope="col">Nombre Completo</th>
+                          <th scope="col">Fecha Nacimiento</th>
+                          <th scope="col">Genero</th>
+                          <th scope="col">EstadoCivil</th>
+                          <th scope="col">Correo</th>
+                          <th scope="col">Telefono</th>
+                          <th scope="col">Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                          <!-- 
+                            * se asigna cada campo a un td
+                            * el if ternario funciona para determinar
+                            * el valor del catalogo y no desplegar numeros
+                           -->
+                          <td><?php echo $array["Campo1"]; ?></td>
+                          <td><?php echo $array["Campo2"]; ?></td>
+                          <td><?php echo $array["Campo3"]; ?></td>
+                          <td><?php echo $array["Campo4"]; ?></td>
+                          <td><?php echo $array["Campo5"]; ?></td>
+                          <td><?php echo $array["Campo6"]; ?></td>
+                          <td><?php echo ($array["Campo7"] == 1 ? "Hombre":"Mujer"); ?></td>
+                          <td><?php echo ($array["Campo8"] == 1 ? "Soltero":"Casado"); ?></td>
+                          <td><?php echo $array["Campo9"]; ?></td>
+                          <td><?php echo $array["Campo10"]; ?></td>
+                          <td><?php echo ($array["Campo11"] == 1 ? "Activo":"Inactivo"); ?></td>
+                        </tr>
+                    <tbody>
+                </table>
+          <?php
+        }
     }else {
      echo "Inicie sesion para ver esta interfaz.";
     }

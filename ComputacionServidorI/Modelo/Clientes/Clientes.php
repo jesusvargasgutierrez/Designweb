@@ -82,7 +82,7 @@
              * los campos a consultar son de forma
              * dinamica
              */
-            $result = $DatosConexion->query("SELECT ". $EntidadCliente['Valores'] ." FROM sis_persona where Estado=1");
+            $result = $DatosConexion->query("SELECT ". $EntidadCliente['Valores'] ." FROM sis_persona a,sis_estado b,sis_estado_civil c,sis_genero d where a.Estado = b.Estado and c.EstadoCivil = a.EstadoCivil and a.Genero = d.Genero and a.Estado=1");
 
             if($result)
             {  
