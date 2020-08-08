@@ -27,26 +27,40 @@
                  * */    
                 $result = $DatosConexion->query("SELECT Nombre,Conexion FROM operacion_conexiones where Codigo='".$CodigoSesion["Valor"]."' and idEstado=1");
 
+
+                $posts = array();
+
+                /**
+                * asigna los datos consultados
+                */
+                while($row = $result->fetch_array(MYSQLI_ASSOC))
+                {
+                    $posts[] = $row;
+                }
+
                 /**
                  * evalua si devolvio 
                  * datos
                  */
-                if($result)
+                if(!empty($posts))
                 {  
                     /**
                      * asigna los datos consultados
                      */
-                $Resultado = $result->fetch_array(MYSQLI_ASSOC);
+                    $Resultado = array (
+                        'Response' => $posts
+                    );
+                    //$Resultado = $result->fetch_array(MYSQLI_ASSOC);
                 }
                 else{
                     /**
                      * retorna si no se encuentra un
                      * registro
                      */
+                    array_push($posts, array("Mensaje" => "No existe el codigo"));
+
                     $Resultado = array (
-                        'Codigo' => '',
-                        'Usuario' => '',
-                        'Response' => 'No hay datos'
+                        'Response' => $posts
                     );
                 }
             }
@@ -99,22 +113,39 @@
                 */
                 $result = $DatosConexion->query("SELECT * FROM operacion_usuarios where Usuario='".$EntidadUsuario['Usuario']."' AND Contrasenia='".$EntidadUsuario['Contrasenia']."' AND Estado=1");
 
+                $posts = array();
+
                 /**
-                 * si retorno resultadose se asignan
-                 * los valores
+                * asigna los datos consultados
+                */
+                while($row = $result->fetch_array(MYSQLI_ASSOC))
+                {
+                    $posts[] = $row;
+                }
+
+                /**
+                 * evalua si devolvio 
+                 * datos
                  */
-                if($result)
+                if(!empty($posts))
                 {  
-                $Resultado = $result->fetch_array(MYSQLI_ASSOC);
+                    /**
+                     * asigna los datos consultados
+                     */
+                    $Resultado = array (
+                        'Response' => $posts
+                    );
+                    //$Resultado = $result->fetch_array(MYSQLI_ASSOC);
                 }
                 else{
                     /**
-                     * en caso contrario se
-                     * retorna el siguiente mensaje
+                     * retorna si no se encuentra un
+                     * registro
                      */
+                    array_push($posts, array("Mensaje" => "Credenciales invalidas"));
+
                     $Resultado = array (
-                        'TipoRespuesta' => '2',
-                        'TextoRespuesta' => 'Usuario o Contraseña invalidas'
+                        'Response' => $posts
                     );
                 }
             }

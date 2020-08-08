@@ -20,93 +20,97 @@ para la construccion del menu
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
+    <script src="../../Controlador/Login/Script_Login.js" type="text/javascript"></script>
+
     <style type="text/css">
         .LC{
             background: #fff;
             border-radius: 3px;
             padding: 30px;
-            max-width: 420px;
+            max-width: 100%;
         }
+        .user_card {
+			height: 100%;
+			width: 350px;
+			margin-top: auto;
+			margin-bottom: auto;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			padding: 10px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			border-radius: 5px;
 
-        .main1{
-            min-height: 100%;
-padding-bottom: 35px;
-position: relative;
-        }
+		}
 
-        body{
-            color: #333;
-            font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
-            font-size: 13px;
-            letter-spacing: .01em;
-            line-height: 20px;
-            font-weight: 400;
-        }
     </style>
 </head>
 <body class="">
-    <div id="viewlogin" class="main1" style="">
-            <form id="formulario" action="../../Controlador/Login/login.php" name="formulario" method="POST">
-                <div class="LC">
-                    <div class="d-flex flex-md-row my-1 align-items-lg-center">
-                        <div class="flex-fill text-center">
-                        <img src="../image/user.png" width="100" height="200"
-                            class="rounded-circle img-thumbnail img-fluid" alt="User wrapper"/>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-md-row my-1 align-items-lg-center">
-                        <div class="flex-fill text-center">
-                            <h3>Iniciar Sesion</h3>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-md-row my-1 align-items-lg-center">
-                        <div class="">
-                            <span><i class="fas fa-building"></i></span>&nbsp;
-                        </div>
-                        <div class="flex-fill">
-                            <input type="text" class="form-control" name="Codigo" placeholder="Codigo" />
-                        </div>
-                    </div>
+    <div class="container h-100">
+		<div class="d-flex justify-content-center h-100">
+			<div class="LC">
+				<div class="d-flex justify-content-center form_container">
+                    <form id="formulario" class="" name="formulario" method="POST">
+                        <div class="user_card">
+                            <div class="d-flex flex-md-row my-1 align-items-lg-center">
+                                <div class="flex-fill text-center">
+                                <img src="../image/user.png" width="100" height="200"
+                                    class="rounded-circle img-thumbnail img-fluid" alt="User wrapper"/>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-md-row my-1 align-items-lg-center">
+                                <div class="flex-fill text-center">
+                                    <h3>Iniciar Sesion</h3>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-md-row my-1 align-items-lg-center">
+                                <div class="">
+                                    <span><i class="fas fa-building"></i></span>&nbsp;
+                                </div>
+                                <div class="flex-fill">
+                                    <input type="text" class="form-control" id="Codigo" name="Codigo" placeholder="Codigo" />
+                                </div>
+                            </div>
 
-                    <div class="d-flex flex-md-row my-3 align-items-lg-center">
-                        <div class="">
-                            <span><i class="fas fa-user"></i></span>&nbsp;
-                        </div>
-                        <div class="flex-fill">
-                            <input type="text" class="form-control" name="Usuario" placeholder="Usuario" />
-                        </div>
-                    </div>
+                            <div class="d-flex flex-md-row my-3 align-items-lg-center">
+                                <div class="">
+                                    <span><i class="fas fa-user"></i></span>&nbsp;
+                                </div>
+                                <div class="flex-fill">
+                                    <input type="text" class="form-control" id="Usuario" name="Usuario" placeholder="Usuario" />
+                                </div>
+                            </div>
 
-                    <div class="d-flex flex-md-row my-3 align-items-lg-center">
-                        <div class="">
-                            <span><i class="fas fa-key"></i></span>&nbsp;
-                        </div>
-                        <div class="flex-fill">
-                            <input type="Password" class="form-control" name="contrasenia" placeholder="contraseña" />
-                        </div>
-                    </div>
+                            <div class="d-flex flex-md-row my-3 align-items-lg-center">
+                                <div class="">
+                                    <span><i class="fas fa-key"></i></span>&nbsp;
+                                </div>
+                                <div class="flex-fill">
+                                    <input type="Password" class="form-control" id="contrasenia" name="contrasenia" placeholder="Contraseña" />
+                                </div>
+                            </div>
 
-                    <div class="d-flex flex-md-row my-3">
-                        <div class="flex-fill">
-                            <input type="submit" name="inicio" class="form-control btn btn-primary" value="Iniciar sesion" />
+                            <div class="d-flex flex-column my-3">
+                                <div class="flex-fill">
+                                    <input type="button" id="inicio" name="inicio" class="form-control btn btn-primary" value="Iniciar sesion" />
+                                </div>
+                                <div class="flex-fill text-center border-0">
+                                    <a href="#" role="button" class="form-control border-0">
+                                        Crear Usuario
+                                    </a>
+                                </div>
+                                <div class="flex-fill text-center border-0">
+                                    <label id="mensaje" class="font-weight-bold text-danger"></label>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="d-flex flex-md-row my-3 align-items-center">
-                        <div class="flex-fill text-center border-0">
-                            <a href="#" role="button" class="form-control border-0">
-                                Olvide mi contrase&ntilde;a
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="d-flex flex-md-row my-3 align-items-center">
-                        <div class="flex-fill text-center border-0">
-                            <label class="d-none font-weight-bold text-danger"></label>
-                        </div>
-                    </div>
+                    </form>
                 </div>
-            </form>
+            </div>
+        </div>
     </div>
 
     <script type="text/javascript" src="../style/bootstrap/js/bootstrap.min.js"></script>

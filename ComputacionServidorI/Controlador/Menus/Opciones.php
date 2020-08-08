@@ -35,28 +35,6 @@ class OptionsBussines
     function ObtenerCliente()
     {
         $array = array(
-            "Catalogo" => array(
-                "identificador" => "Catalogocl",
-                "icono" => "fas fa-th-large",
-                "url" => "",
-                "Subopciones" => array(
-                    "Paises" => array(
-                        "identificador" => "CatalogoPaises",
-                        "icono" => "",
-                        "url" => ""
-                    ),
-                    "Estados" => array(
-                        "identificador" => "CatalogoEstados",
-                        "icono" => "",
-                        "url" => ""
-                    ),
-                    "Ciudades" => array(
-                        "identificador" => "CatalogoCiudades",
-                        "icono" => "",
-                        "url" => ""
-                    )
-                )
-            ),
             "Proceso" => array(
                 "identificador" => "Procesocl",
                 "icono" => "fas fa-th-large",
@@ -66,33 +44,6 @@ class OptionsBussines
                         "identificador" => "Clientes",
                         "icono" => "fas fa-globe",
                         "url" => "../Vista/Clientes/RegistroCliente.php"
-                    ),
-                    "Prospecto" => array(
-                        "identificador" => "Prospecto",
-                        "icono" => "",
-                        "url" => ""
-                    ),
-                    "Buscar persona" => array(
-                        "identificador" => "Acerca",
-                        "icono" => "fas fa-question-circle",
-                        "url" => "../Vista/Clientes/Buscar.php"
-                    )
-                )
-            ),
-            "Reportes" => array(
-                "identificador" => "ReportesCl",
-                "icono" => "fas fa-th-large",
-                "url" => "",
-                "Subopciones" => array(
-                    "Clientes" => array(
-                        "identificador" => "RepClientes",
-                        "icono" => "fas fa-globe",
-                        "url" => ""
-                    ),
-                    "Prospecto" => array(
-                        "identificador" => "RepProspecto",
-                        "icono" => "fas fa-shield-alt",
-                        "url" => ""
                     )
                 )
             )
