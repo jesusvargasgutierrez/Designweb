@@ -73,10 +73,31 @@
                                 </a>
                             </div>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Descargar
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <button class="Descargar btn">
+                                    <i class="fas fa-cloud-download-alt"></i></span>&nbsp;Descargar
+                                </button>
+                            </div>
+                        </li>
                     </ul>
                 </div>  
             </div>
         </nav>
     </section>    
+
+
+    <script type="text/javascript">
+        /**
+         * evento click del boton para descargar 
+         * un documento explicativo de la aplicacion
+        */
+        $('.Descargar').on('click', function () {
+            window.open ('../laboratorio Creación de una aplicación web en el cliente.docx','_blank');
+        });
+    </script>
 </body>
 </html>
