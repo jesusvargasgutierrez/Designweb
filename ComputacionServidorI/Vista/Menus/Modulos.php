@@ -11,12 +11,15 @@
 </head>
 <body>
     <!-- clase nav principal para el menu -->
-    <nav class="page-header navbar navbar-light bg-lignt navbar-expand-md">
+    <nav class="container page-header navbar navbar-light bg-lignt navbar-expand-md">
         <a class="navbar-brand" href="#">
             <span class="h4">
                 Proyecto web
             </span>
         </a>
+        <span>
+            Bienvenido <strong><?php echo $_SESSION['Tarjeta']["Nombre"]; ?></strong>
+        </span>
         <button type="button" class="navbar-toggler" data-toggle="collapse"
         data-target="#menu-principal" aria-controls="menu-principal" aria-expanded="false"
         aria-label="Ver mas">

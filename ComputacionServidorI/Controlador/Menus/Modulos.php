@@ -26,7 +26,7 @@
                  * para realizar la peticion
                  */
                 $Valores = array(
-                    'BaseDatos' => 'pwebservidor'
+                    'BaseDatos' => $_SESSION['Tarjeta']["Conexion"]
                 );
 
                 /**
