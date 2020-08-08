@@ -46,6 +46,18 @@ class OptionsBussines
                         "url" => "../Vista/Clientes/RegistroCliente.php"
                     )
                 )
+            ),
+            "Escuela" => array(
+                "identificador" => "Escuela",
+                "icono" => "fas fa-school",
+                "url" => "",
+                "Subopciones" => array(
+                    "Registro" => array(
+                        "identificador" => "Registro",
+                        "icono" => "fas fa-book-open",
+                        "url" => "../Vista/Escuela/RegistroEscuela.php"
+                    )
+                )
             )
         );
 
