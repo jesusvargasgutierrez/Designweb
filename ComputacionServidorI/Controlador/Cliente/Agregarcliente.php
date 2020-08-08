@@ -3,7 +3,7 @@
      * importacion de la clase operacion,proceso y negocio de la peticion
      * importacion de datos
      */
-    require_once ("../../Datos/Clientes/Clientes.php");
+    require_once ("../../Modelo/Clientes/Clientes.php");
 
     /**
      * se debe tener una session iniciada
@@ -125,6 +125,8 @@
              * realizar peticion de UPDATE
              */
             $Cliente = $DatosCliente->ActualizarCliente($Valores);
+
+            echo $ValoresUpdate;
         }
         else if($_POST["HdAction"] == 3){
 

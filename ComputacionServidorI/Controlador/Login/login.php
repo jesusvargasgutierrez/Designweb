@@ -1,5 +1,5 @@
 <?php
-    require_once ("../../Datos/Login/Login.php");
+    require_once ("../../Modelo/Login/Login.php");
     
     if(isset($_POST["Codigo"]))
     {

@@ -3,7 +3,7 @@
      * importacion de la clase operacion y peticion
      * importacion de la libreria nusoap
      */
-    require_once ("../Datos/Menus/Modulos.php");
+    require_once ("../Modelo/Menus/Modulos.php");
     /**
      * se debe tener una session iniciada
      */

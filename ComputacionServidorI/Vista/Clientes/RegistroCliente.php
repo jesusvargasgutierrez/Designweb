@@ -18,11 +18,11 @@ pero si hace uso de una clase al presionar submit -->
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-    <script src="../Negocio/Cliente/Script_Cliente.js" type="text/javascript"></script>
+    <script src="../Controlador/Cliente/Script_Cliente.js" type="text/javascript"></script>
 </head>
 <body class="">
     <div class="container firstview">
-            <form action="../Negocio/Cliente/Agregarcliente.php" id="formulario" name="formulario" class="tab-content" method="POST" enctype="multipart/form-data">
+            <form action="../Controlador/Cliente/Agregarcliente.php" id="formulario" name="formulario" class="tab-content" method="POST" enctype="multipart/form-data">
                 <span>
                     <button type="button" class="Nuevo btn">
                         <i class="fas fa-file"></i></span>&nbsp;Nuevo
@@ -126,7 +126,7 @@ pero si hace uso de una clase al presionar submit -->
                            </thead>
                             <tbody id="tbody-content" class="tbody-content">
                                 <?php  
-                                    require_once ("../../Negocio/Cliente/Proceso.php");                                    
+                                    require_once ("../../Controlador/Cliente/Proceso.php");                                    
                                     if(isset($_SESSION['Tarjeta']) ){
                                         $Busqueda = new Procesar();
                                         $BD = $_SESSION['Tarjeta']["Conexion"];

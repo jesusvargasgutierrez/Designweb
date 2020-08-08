@@ -8,7 +8,7 @@
     /**
      * se agrega la clase proceso
      */
-    require_once ("../../Datos/Clientes/Clientes.php");
+    require_once ("../../Modelo/Clientes/Clientes.php");
 
     if(isset($_POST["Persona"]) && isset($_SESSION['Tarjeta'])){
       $DatosCliente = new Cliente();

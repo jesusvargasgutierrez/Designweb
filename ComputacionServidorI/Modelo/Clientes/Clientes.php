@@ -3,7 +3,7 @@
      * importacion de la clase conexion
      *
      */
-    require_once ("../../Datos/Conexion.php");
+    require_once ("../../Modelo/Conexion.php");
     class Cliente
     {   
         /**

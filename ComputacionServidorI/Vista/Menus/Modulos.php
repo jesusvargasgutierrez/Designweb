@@ -3,7 +3,7 @@
  * incluimos el menu general y realiza el
  * procesamiento de la matriz correspondiente
  */
-    include_once('../Negocio/Menus/Modulos.php');
+    include_once('../Controlador/Menus/Modulos.php');
 ?>
 <html>
 <head>

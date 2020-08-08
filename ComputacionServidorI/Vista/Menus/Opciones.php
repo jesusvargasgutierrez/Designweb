@@ -4,7 +4,7 @@
      * en caso de existir se mostrara el html completo
      */
     if(isset($_POST["Identificador"])){
-        include_once('../../Negocio/Menus/Opciones.php');
+        include_once('../../Controlador/Menus/Opciones.php');
 ?>
 <html>
 <head>

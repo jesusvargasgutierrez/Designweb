@@ -32,7 +32,7 @@
         
     </div>
 
-    <script src="../Negocio/Menus/ScriptInicio.js" type="text/javascript"></script>
+    <script src="../Controlador/Menus/ScriptInicio.js" type="text/javascript"></script>
 </body>
 </html>
 

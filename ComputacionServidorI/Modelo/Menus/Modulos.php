@@ -3,7 +3,7 @@
      * importacion de la clase conexion
      * importacion de la libreria nusoap
      */
-    require_once ("../Datos/Conexion.php");
+    require_once ("../Modelo/Conexion.php");
     class ModulosDatos
     {
         function ObtenerModulos($EntidadModulo){

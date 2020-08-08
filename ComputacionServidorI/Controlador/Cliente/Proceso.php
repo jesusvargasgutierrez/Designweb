@@ -1,5 +1,5 @@
 <?php  
-  require_once ("../../Datos/Clientes/Clientes.php");
+  require_once ("../../Modelo/Clientes/Clientes.php");
 class Procesar
 {
   /**

@@ -21,69 +21,89 @@ para la construccion del menu
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     <style type="text/css">
-        *{
-            background:#e0e0e0;
+        .LC{
+            background: #fff;
+            border-radius: 3px;
+            padding: 30px;
+            max-width: 420px;
+        }
+
+        .main1{
+            min-height: 100%;
+padding-bottom: 35px;
+position: relative;
+        }
+
+        body{
+            color: #333;
+            font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-size: 13px;
+            letter-spacing: .01em;
+            line-height: 20px;
+            font-weight: 400;
         }
     </style>
 </head>
-<body>
-    <div id="viewlogin" class="d-flex justify-content-center align-items-center" style="height:100%">
-            <form id="formulario" action="../../Negocio/Login/login.php" name="formulario" method="POST" class="" style="width: 35%; height: 40%;">
-                <div class="d-flex flex-md-row my-1 align-items-lg-center">
-                    <div class="flex-fill text-center">
-                    <img src="../image/user.png" width="100" height="200"
-                        class="rounded-circle img-thumbnail img-fluid" alt="User wrapper"/>
+<body class="">
+    <div id="viewlogin" class="main1" style="">
+            <form id="formulario" action="../../Controlador/Login/login.php" name="formulario" method="POST">
+                <div class="LC">
+                    <div class="d-flex flex-md-row my-1 align-items-lg-center">
+                        <div class="flex-fill text-center">
+                        <img src="../image/user.png" width="100" height="200"
+                            class="rounded-circle img-thumbnail img-fluid" alt="User wrapper"/>
+                        </div>
                     </div>
-                </div>
-                <div class="d-flex flex-md-row my-1 align-items-lg-center">
-                    <div class="flex-fill text-center">
-                        <h3>Iniciar Sesion</h3>
+                    <div class="d-flex flex-md-row my-1 align-items-lg-center">
+                        <div class="flex-fill text-center">
+                            <h3>Iniciar Sesion</h3>
+                        </div>
                     </div>
-                </div>
-                <div class="d-flex flex-md-row my-1 align-items-lg-center">
-                    <div class="">
-                        <span><i class="fas fa-building"></i></span>&nbsp;
+                    <div class="d-flex flex-md-row my-1 align-items-lg-center">
+                        <div class="">
+                            <span><i class="fas fa-building"></i></span>&nbsp;
+                        </div>
+                        <div class="flex-fill">
+                            <input type="text" class="form-control" name="Codigo" placeholder="Codigo" />
+                        </div>
                     </div>
-                    <div class="flex-fill">
-                        <input type="text" class="form-control" name="Codigo" placeholder="Codigo" />
-                    </div>
-                </div>
 
-                <div class="d-flex flex-md-row my-3 align-items-lg-center">
-                    <div class="">
-                        <span><i class="fas fa-user"></i></span>&nbsp;
+                    <div class="d-flex flex-md-row my-3 align-items-lg-center">
+                        <div class="">
+                            <span><i class="fas fa-user"></i></span>&nbsp;
+                        </div>
+                        <div class="flex-fill">
+                            <input type="text" class="form-control" name="Usuario" placeholder="Usuario" />
+                        </div>
                     </div>
-                    <div class="flex-fill">
-                        <input type="text" class="form-control" name="Usuario" placeholder="Usuario" />
-                    </div>
-                </div>
 
-                <div class="d-flex flex-md-row my-3 align-items-lg-center">
-                    <div class="">
-                        <span><i class="fas fa-key"></i></span>&nbsp;
+                    <div class="d-flex flex-md-row my-3 align-items-lg-center">
+                        <div class="">
+                            <span><i class="fas fa-key"></i></span>&nbsp;
+                        </div>
+                        <div class="flex-fill">
+                            <input type="Password" class="form-control" name="contrasenia" placeholder="contraseña" />
+                        </div>
                     </div>
-                    <div class="flex-fill">
-                        <input type="Password" class="form-control" name="contrasenia" placeholder="contraseña" />
-                    </div>
-                </div>
 
-                <div class="d-flex flex-md-row my-3">
-                    <div class="flex-fill">
-                        <input type="submit" name="inicio" class="form-control btn btn-primary" value="Iniciar sesion" />
+                    <div class="d-flex flex-md-row my-3">
+                        <div class="flex-fill">
+                            <input type="submit" name="inicio" class="form-control btn btn-primary" value="Iniciar sesion" />
+                        </div>
                     </div>
-                </div>
 
-                <div class="d-flex flex-md-row my-3 align-items-center">
-                    <div class="flex-fill text-center border-0">
-                        <a href="#" role="button" class="form-control border-0">
-                            Olvide mi contrase&ntilde;a
-                        </a>
+                    <div class="d-flex flex-md-row my-3 align-items-center">
+                        <div class="flex-fill text-center border-0">
+                            <a href="#" role="button" class="form-control border-0">
+                                Olvide mi contrase&ntilde;a
+                            </a>
+                        </div>
                     </div>
-                </div>
 
-                <div class="d-flex flex-md-row my-3 align-items-center">
-                    <div class="flex-fill text-center border-0">
-                        <label class="d-none font-weight-bold text-danger"></label>
+                    <div class="d-flex flex-md-row my-3 align-items-center">
+                        <div class="flex-fill text-center border-0">
+                            <label class="d-none font-weight-bold text-danger"></label>
+                        </div>
                     </div>
                 </div>
             </form>

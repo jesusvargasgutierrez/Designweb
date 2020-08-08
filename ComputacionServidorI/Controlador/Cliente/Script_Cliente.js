@@ -120,7 +120,7 @@ function Eliminar(codigo)
     /**
      * URL a la cual se hara la peticion
      */
-    var url1 = "../Negocio/Cliente/Acciones.php";
+    var url1 = "../Controlador/Cliente/Acciones.php";
 
     /**
      * arreglo propiedad valor
@@ -165,7 +165,7 @@ function editar(codigo)
         /**
      * URL a la cual se hara la peticion
      */
-    var url1 = "../Negocio/Cliente/Acciones.php";
+    var url1 = "../Controlador/Cliente/Acciones.php";
 
         /**
      * arreglo propiedad valor
