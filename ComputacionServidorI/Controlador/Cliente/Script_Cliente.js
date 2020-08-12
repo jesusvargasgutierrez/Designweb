@@ -20,6 +20,26 @@ $(document).ready(function () {
         $(".Secondview").addClass("d-block");
     });
 
+    /**
+     * el vento change del campo de fecha de nacimiento
+     * determinara la edad de la persona enviando el año
+     * de la fecha seleccionada
+     */
+    $('#DateBird').change(function() {
+        /**
+         * el valor del campo se convierte en 
+         * fecha
+         */
+        var date = new Date($(this).val());
+
+        /**
+         * se asigna el valor al campo edad que retorno
+         * el metodo calcular edad con solo pasarle
+         * el año.
+         */
+        $('#age').val(CalcularEdad(date.getFullYear()));
+    });
+
     $('.Regresar').on('click', function () {
         /**
          * el boton de regresar 

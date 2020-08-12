@@ -40,7 +40,7 @@ pero si hace uso de una clase al presionar submit -->
                             <label class="col-form-label">Identificador:</label>
                             <input type="text" id="Identificador" name="Campo0" value="" class="form-control-sm enabled" placeholder=""/>
                             <label class="col-form-label">Codigo:</label>
-                            <input type="text" id="Equivalencia" name="Campo1" value="" required placeholder="Equivalencia"/>
+                            <input type="text" id="Equivalencia" name="Campo1" value="" placeholder="Equivalencia"/>
                         </div>
                     </div>
                     <div class="d-flex flex-column mt-3 flex-lg-row align-items-lg-center">
@@ -62,7 +62,7 @@ pero si hace uso de una clase al presionar submit -->
                             <input class="form-control" id="DateBird" name="Campo6" type="date">
                         </div>
                         <div class="flex-fill my-1 mx-1">
-                            <input type="text" class="form-control" id="age" name="edad" value="0" disabled placeholder="Age" />
+                            <input type="text" class="form-control" id="age" name="edad" value="" disabled placeholder="Age" />
                         </div>
                         <div class="flex-fill my-1 mx-1">
                             <select class="form-control" id="select-genero" name="Campo7">
