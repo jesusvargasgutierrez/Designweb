@@ -1,0 +1,116 @@
+<html lang="en">
+<head>
+    <title></title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <style type="text/css">
+        input[type=text],input[type=date],#firstview select{
+            border-color: black;
+        }
+
+        .informacion .row{
+            margin-top: 5%;
+        }
+    </style>
+</head>
+<body class="">
+    <div class="container firstview">
+        <div class="row">
+            <div class="col-lg-1 align-items-lg-center">
+                <label for="Titulo">Titulo</label>
+            </div>
+            <div class="col-lg-7 mt-lg-0 mt-sm-3">
+                <input type="text" id="input-titulo" class="form-control"/>
+            </div>
+            <div class="col-lg-4 mt-lg-0 mt-sm-3">
+                <button type="button" id="btn-buscar" class="btn btn-success">
+                    <i class="fas fa-search"></i>&nbsp;Buscar
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="Secondview" class="d-none mt-2 container Secondview">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12 text-center">
+                <img alt="Poster" id="Poster" class="text-center">
+            </div>
+            <div class="informacion col-lg-6 col-sm-12 align-items-lg-center">
+                <div class="row">
+                    <div class="col-2 font-weight-bold">
+                        Titulo:
+                    </div>
+                    <div class="col-10 titulo">
+                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2 font-weight-bold">
+                        A&ntilde;o:
+                    </div>
+                    <div class="col-10 anio">
+                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 col-sm-4 font-weight-bold">
+                        Lanzamiento:
+                    </div>
+                    <div class="col-lg-10 col-sm-8 lanzamiento">
+                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2 font-weight-bold">
+                        Autores:
+                    </div>
+                    <div class="col-10 autores">
+                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 font-weight-bold">
+                        Director:
+                    </div>
+                    <div class="col-lg-10 director">
+                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2 font-weight-bold">
+                        Genero:
+                    </div>
+                    <div class="col-10 genero">
+                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 font-weight-bold">
+                        Lenguaje:
+                    </div>
+                    <div class="col-lg-10 lenguaje">
+                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 font-weight-bold">
+                        Rese&ntilde;a
+                    </div>
+                    <div class="col-12 resenia">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+    <script src="../Negocio/Ejemplos/Peliculas.js" type="text/javascript"></script>
+</html>
