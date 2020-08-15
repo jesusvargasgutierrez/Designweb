@@ -78,13 +78,13 @@ pero si hace uso de una clase al presionar submit -->
                     <div class="d-flex flex-column mt-3 mt-md-2 flex-lg-row align-items-lg-center">
                         <div class="flex-fill my-1 mx-1">
                             <!--se manda a llamar a funcion para validr el valor-->
-                            <input type="text" class="form-control" id="RFC" name="RFC" onchange="validarexpresion(this.value,/^[0-9]+$/);" placeholder="RFC"/>
+                            <input type="text" class="form-control" id="RFC" name="RFC" onchange="changeexpresion(this.value,1)" placeholder="RFC"/>
                         </div>
                         <div class="flex-fill my-1 mx-1">
-                            <input type="text" class="form-control" id="CURP" name="CURP" placeholder="CURP"/>
+                            <input type="text" class="form-control" id="CURP" name="CURP" onchange="changeexpresion(this.value,2)" placeholder="CURP"/>
                         </div>
                         <div class="flex-fill my-1 mx-1">
-                            <input type="text" class="form-control" id="Correo" name="Correo" placeholder="Correo electronico"/>
+                            <input type="text" class="form-control" id="Correo" name="Correo" onchange="changeexpresion(this.value,3)" placeholder="Correo electronico"/>
                         </div>
                     </div>
                 </section>

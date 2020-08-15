@@ -455,3 +455,66 @@
             return bandera;
         }
     </pre>
+    <pre class="Peticion">
+        <h3>Peticion con AJAX en API publica</h3>
+        function Peticion(nombre){
+            /**
+             * objeto de peticion 
+             */
+            var request = new XMLHttpRequest();
+            /**
+             * direccion de consumo
+             * se concatena el nombre del titulo que 
+             * el usuario ingreso en el campo
+             */
+            var direccion = "http://www.omdbapi.com/?apikey=6c645c70&t="+nombre;
+            /**
+             * variable vacia
+             */
+            var Datos = {};
+    
+            request.onreadystatechange = function(){
+                /**
+                 * se realiza la peticion y se evalua
+                 * si la respuesta es un 4 o un 200
+                 */
+                if(this.readyState == 4 && this.status == 200){
+                    /**
+                     * se convierte la respuesta en JSON
+                     */
+                    Datos = JSON.parse(this.responseText);
+    
+                    /**
+                     * primero se deben limpiar los datos 
+                     * para evitar que se mezclen dos consultas
+                     */
+                    Limpiar();
+    
+                    /**
+                     * se pasa cada valor a sus respectivos campos
+                     */
+                    $("#Poster").attr({
+                        src: Datos.Poster
+                    });
+                    $(".titulo").append(Datos.Title);
+                    $(".anio").append(Datos.Year);
+                    $(".lanzamiento").append(Datos.Released);
+                    $(".autores").append(Datos.Actors);
+                    $(".director").append(Datos.Director);
+                    $(".genero").append(Datos.Genre);
+                    $(".lenguaje").append(Datos.Language);
+                    $(".resenia").append(Datos.Plot);
+                }
+            }
+    
+            /**
+             * en este caso la peticion sera de tipo GET
+             */
+            request.open("GET",direccion);
+    
+            /**
+             * se envia la peticion
+             */
+            request.send();
+        }
+    </pre>

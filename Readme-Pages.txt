@@ -87,3 +87,7 @@ https://www.youtube.com/watch?v=JINHNhFD-kA
 /*
 https://www.youtube.com/watch?v=JINHNhFD-kA
 https://www.youtube.com/watch?v=zeb5PsxWijY
+
+http://www.omdbapi.com/
+https://www.youtube.com/watch?v=xOsqjAyIWwI
+https://www.youtube.com/watch?v=w8q0C2Fb-Gg

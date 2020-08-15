@@ -93,25 +93,6 @@ $(document).ready(function () {
          */
         request.send();
     }
-
-    function Peticiontest(){
-        let url = "../Negocio/Ejemplos/json1.txt";
-        Limpiar();
-        $.get(url, function(contenido){
-            var Datos = JSON.parse(contenido);
-            $("#Poster").attr({
-                src: Datos.Poster
-            });
-            $(".titulo").append(Datos.Title);
-            $(".anio").append(Datos.Year);
-            $(".lanzamiento").append(Datos.Released);
-            $(".autores").append(Datos.Actors);
-            $(".director").append(Datos.Director);
-            $(".genero").append(Datos.Genre);
-            $(".lenguaje").append(Datos.Language);
-            $(".resenia").append(Datos.Plot);
-        });
-    }
 });
 
 function Limpiar(){

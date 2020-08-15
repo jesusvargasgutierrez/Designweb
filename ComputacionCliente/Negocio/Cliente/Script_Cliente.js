@@ -471,6 +471,23 @@ function validarexpresion(valor,expresion)
      }
 }
 
+function changeexpresion(valor,tipo)
+{
+    switch(tipo)
+    {
+        case 1:
+            validarexpresion(valor,/^[A-zñÑ]{4}[0-9]{2}([0][1-9]|[1][0-2])([0][1-9]|[1-2][0-9]|[3][0-1])([A-z0-9][A-z0-9][A-z0-9])?$/);
+        break;
+        
+        case 2:
+            validarexpresion(valor,/[A-z][AEIOUXaeioux][A-z]{2}[0-9]{2}[0-1][0-9][0-3][0-9][MHmh][Az]{2}([^AEIOUaeiou]){3}[0-9A-z][0-9]/);
+        break;
+        case 3:
+            validarexpresion(valor,/^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w.-]+\.)+))([a-zA-Z]{2,}|[0-9]{1,3})(\]?)$/);
+        break;
+    }
+}
+
 /**
  * los siguientes metodos son referentes
  * al almacenamiento de localstorage
