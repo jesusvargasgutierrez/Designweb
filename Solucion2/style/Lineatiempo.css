@@ -1,0 +1,42 @@
+
+  .outer{
+    width:300px;
+    height:300px;
+    position:absolute;
+    left:50%;
+    top:50%;
+  }
+  .hand1, .hand2{
+    font-size:120px;
+    position:absolute;
+  }
+  .hand1{
+    transform:rotate(90deg);
+    top:-20px;
+    left:0;
+    color:#e66767;
+    text-shadow:0px 0px 15px #000;
+    z-index:-1;
+    animation:animate1 2s linear infinite;
+  }
+  .hand2{
+    transform:rotate(90deg);
+    top:10px;
+    left:-30 px;
+    color:#ea8685;
+    text-shadow:0px 0px 15px #000;
+    z-index:1;
+    animation:animate2 2s linear infinite;
+  }
+  .soap{
+    position:absolute;
+    width:100px;
+    height:70px;
+    top:30px;
+    border-radius:20px;
+    box-shadow:0px 0px 20px #16a085;
+    background:#16a085;
+    border:5px solid #000;
+    box-sizing:border-box;
+  }
+  

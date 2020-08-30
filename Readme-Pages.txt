@@ -91,3 +91,9 @@ https://www.youtube.com/watch?v=zeb5PsxWijY
 http://www.omdbapi.com/
 https://www.youtube.com/watch?v=xOsqjAyIWwI
 https://www.youtube.com/watch?v=w8q0C2Fb-Gg
+
+https://cdnjs.com/libraries/font-awesome
+
+https://codepen.io/csPoint/pen/eYJpOvb
+
+https://mdbootstrap.com/snippets/jquery/pjoter-2-0/743991#html-tab-view
