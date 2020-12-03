@@ -1,0 +1,31 @@
+<!-- 	<div id="watermark" [% IF withbackground == 1 %]style="display:none;"[% END %]>
+	  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+	    <tr><td><img src="[% formatimg %]" height="1052" width="815"></td></tr>
+	  </table>
+	</div>
+	<div id="watermark-no-validated" [% IF params.interpreted %]style="display:none;"[% END %]>
+	  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+	    <tr><td><img src="[% watermark_no_validated %]" height="1052" width="815"></td></tr>
+	  </table>
+	</div> 
+
+	<div id="watermark">
+	  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+	    <tr><td><img src="fondo1.jpg" height="1052" width="815"></td></tr>
+	  </table>
+	</div>
+-->
+
+  @media print {
+    body {
+     content:url(../formats/24_c380805cf2.png);
+    }
+  }
+
+        .hojaA4 {
+                width: 279mm;
+                padding-left: 1.25em;
+                font-size: 8pt;
+                font-family: Calibri;
+                font-style: normal;
+      }

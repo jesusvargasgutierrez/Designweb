@@ -1,0 +1,112 @@
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+    <title></title>
+</head>
+<body class="hojaA4">
+<div id="patientname">
+  <table width="100%">
+    <tr>
+      <td width="70%"><p>Nombre:xxx</p><p>Medico referente:xxx</p></td>
+      <td width="30%">
+          <p>Fecha de nacimiento: 1112</p>
+          <p>Edad: 10 a&ntilde;os</p>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div id="infopatient">
+  <table width="100%">
+    <tr>
+      <td width="70%"><b style="width:12%;">Estudio:</b> <u style="width:80%;">ggg</u></td>
+      <td width="30%"><b style="width:20%;">Fecha:</b> <u style="width:75%;">[% params.fecha %] [% params.hora %]</u></td>
+    </tr>
+    <tr>
+      <td colspan="4">
+        <strong>Tel1:</strong> [% params.tel_patient %]&nbsp;&nbsp;
+        <strong>Tel2:</strong> [% params.tel_patient_2 %]&nbsp;&nbsp;
+        [% IF params.email %]<strong>Correo:</strong> [% params.email %][% END %]
+      </td>
+    </tr>
+  </table>
+  [% IF params.user_patient.user %]
+  <p style="text-align: left;padding-left: 7px;">
+    <i>Para ver sus radiografias e interpretaciones visite: <br>
+    www.serviciosespeciales.com.mx -- usuario: [% params.user_patient.user %] contrase&ntilde;a: [% params.user_patient.password %]</i>
+  </p>
+  [% END %]
+</div>
+<br />
+<div id="interpretation">
+  [% IF  params.interpretation_section =='' %]
+    <p><b>Interpretacion:</b><br /><u>[% params.interpretation %]</u></p>
+  [% ELSE %]
+    <p><b>[%params.interpretation_section%]:</b><br /><u>[% params.interpretation %]</u></p>
+  [% END %]
+
+</div>
+<div id="conclusion">
+  [% IF  params.conclucion_section =='' %]
+    <p><b>Conclusion:</b><br /><u>[% params.conclusion %]</u></p>
+    [% ELSE %]
+      <p><b> [% params.conclucion_section %]:</b><br /><u>[% params.conclusion %]</u></p>
+    [% END %]
+</div>
+<br />
+<div id="doctor">
+  <table width="100%">
+    <tr>
+      <td width="100%">
+        <div class="doctor-signature">
+          	<img src="firma1.jpg" height="90">
+      		<p>Firmado electr&oacute;nicamente por:</p>
+            <p>[% params.medic %]</p>
+            <p style="margin-left:25%;margin-right:25%;">[% params.cedula %]</p>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="extra_text">
+  [% params.extra_text %]
+</div> 
+<style>
+  @page {margin:150px 0 150px 0 !important;}
+  @media print {
+	body {
+	   content:url(fondo1.jpg);
+	  }
+  }
+  .hojaA4 {
+            width: 279mm;
+            padding-left: 1.25em;
+            font-size: 8pt;
+            font-family: Calibri;
+            font-style: normal;
+  }
+  * {font-family:arial, sans-serif;font-size:13px;}
+  p {margin:0;}
+  /*body { background: url(fondo1.jpg) repeat 0 0; }*/
+  /*#watermark { position: fixed; top: -150px; left: 0px; width: 725px; height: 945px; z-index:0;}*/
+  #watermark-no-validated { position: fixed; top: -150px; left: 0px; width: 725px; height: 945px; z-index:0;}
+  #patientname {margin-top:20px;margin-bottom:5px;margin-left:20px;margin-right:20px;padding:5px 20px;position:relative;z-index:1;}
+  #patientname p {font-weight:bold;margin:0;}
+  #infopatient {padding:0px 20px 10px 20px;margin-left:20px;margin-right:20px;position:relative;z-index:1;}
+  #infopatient b {display:inline-block;width:10%;}
+  #infopatient u {border-bottom:1px solid #ccc;display:inline-block;text-decoration:none;width:100%;}
+  #interpretation, #conclusion, #extra_text {margin:0 0 5px;padding:10px 20px;margin-left:20px;margin-right:20px;position:relative;z-index:1;}
+  #conclusion {border-radius:5px;}
+  #interpretation b, #conclusion b {display:inline-block;width:100%;}
+  #interpretation u, #conclusion u {display:inline-block;text-decoration:none;width:100%;}
+  #doctor {margin:0 80px;text-align:center;position:relative;z-index:99;}
+  .doctor-signature {display:inline-block;width:100%;text-align:center;}
+  .doctor-info {float:left;width:550px;text-align:left;}
+  br {
+    line-height: 8px;
+  }
+</style>
+</body>
+</html>
