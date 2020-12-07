@@ -52,6 +52,18 @@
 </head>
 <body>
     <div class="container">
+        <table class="table table-bordered">
+          <tr class="bg-info">
+            <th>Asginatura</th>
+            <th>Alumno</th>
+            <th>Fecha Publicacion</th>
+          </tr>
+          <tr>
+            <td>Administracion de servidores</td>
+            <td>Vargas Gutierrez Jesus</td>
+            <td>14/Diciembre/2020</td>
+          </tr>
+        </table>
         <div class="row">
             <div id="accordion" class="col-lg-4 col-md-12">
                 <div class="list-group" id="list-tab" role="tablist">
@@ -75,6 +87,31 @@
                                           Instalar Caracteristicas
                                       </button>
                                   </li>
+                                  <li>
+                                      <button type="button" data-id="Peticion" value="certificado.html" class="btn accion1">
+                                          Instalar certificado SSL
+                                      </button>
+                                  </li>
+                              </ul>
+                           </li>
+                           <li>
+                              <span class="btn">
+                                Anexos
+                              </span>
+                              <ul class="list-group-item-text">
+                                  <li>
+                                      <button type="button" data-id="Peticion" value="anexos.html" class="btn accion1">
+                                          Accesos
+                                      </button>
+                                  </li>
+                              </ul>
+                              <ul class="list-group-item-text">
+                                  <li>
+                                     <button class="Descargar btn">
+                                              <i class="fas fa-cloud-download-alt"></i></span>
+                                              Descargar desde FTP
+                                     </button>
+                                  </li>
                               </ul>
                            </li>
                         </ul>
@@ -88,5 +125,14 @@
     </div>
 
     <script src="Codigo.js"></script>
+    <script type="text/javascript">
+        /**
+         * evento click del boton para descargar 
+         * un documento explicativo de la aplicacion
+        */
+        $('.Descargar').on('click', function () {
+            window.open ('AdminServer.rdp','_blank');
+        });
+    </script>
 </body>
 </html>

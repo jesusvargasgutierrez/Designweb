@@ -52,20 +52,6 @@
 </head>
 <body>
     <div class="container">
-        <table class="table">
-          <tr>
-            <td>
-                <strong>Alumno:</strong>
-            </td>
-            <td>Jesus Vargas Gutierrez</td>
-          </tr>
-          <tr>
-            <td>
-                <strong>Asignatura:</strong>
-            </td>
-            <td>Administracion de servidores web</td>
-          </tr>
-        </table>
         <div>
               <p class="text-justify">
                   La presente pagina es con la finalidad de comprobar el funcionamiento de un servidor web
@@ -74,10 +60,25 @@
                   que se realizaron en la practica <strong>Realización de una práctica guiada de instalación 
                   y configuración de IIS 7</strong> <br/><br/>
 
-                  Ademas en la opcion <a href="#">Descargar documento<a> es posible realizar la descarga de un documento
+                  Ademas en la opcion <button class="Descargar btn">Descargar Documento</button> es posible 
+                  realizar la descarga de un documento
                   como lo marcan las instrucciones de la practica.
+              </p>
+              <p>
+                En la seccion de anexos, en la opcion de descargar desde FTP se encontrara el archivo <strong>.rpd</strong>
+                para acceder a la maquina virtual
               </p>
           </div>
     </div>
+
+    <script type="text/javascript">
+        /**
+         * evento click del boton para descargar 
+         * un documento explicativo de la aplicacion
+        */
+        $('.Descargar').on('click', function () {
+            window.open ('vistas/AdmonServer.docx','_blank');
+        });
+    </script>
 </body>
 </html>
