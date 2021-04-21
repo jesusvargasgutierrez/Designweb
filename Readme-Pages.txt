@@ -1,10 +1,10 @@
 Main page: https://coders-web.000webhostapp.com/
 
-    press "i"
-    write your merge message
-    press "esc"
-    write ":wq"
-    then press enter
+    > Press "i"
+    > Write your merge message
+    > Press "esc"
+    > Write ":wq"
+    > Then press enter
 
 https://hackerthemes.com/bootstrap-cheatsheet/
 
