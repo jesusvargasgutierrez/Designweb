@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    hello world    
+    <div id="imagediv"></div>    
 </body>
 <script src="es6-shim.js"></script>
 <script src="websdk.client.bundle.min.js"></script>
@@ -35,5 +35,7 @@
             console.log(error.message);
         });
     }
+    downloadURI("data:application/octet-stream;base64,"+localStorage.getItem("raw"), "rawImage.raw", "application/octet-stream");
+
 </script>
 </html>
