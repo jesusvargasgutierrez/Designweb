@@ -19,6 +19,8 @@
                 <div id="status"></div>
                 <button class="btn btn-primary" id="start" onclick="Javascript:onStart()">start</button>
                 <button class="btn btn-success" id="save">save</button>
+                <a href="convertimage.php" class="btn btn-warning" id="view">view</a>
+                <a href="CompareImage/example.php" class="btn btn-warning">compare</a>
             </div>
         </div>
     </div>     
@@ -27,6 +29,7 @@
 <script src="websdk.client.bundle.min.js"></script>
 <script src="fingerprint.sdk.min.js"></script>
 <script src="app.js"></script>
+<script src="axios.js"></script>
 <script>
     //https://127.0.0.1:9001/connect
     // this.sdk = new Fingerprint.WebApi;

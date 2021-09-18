@@ -94,13 +94,89 @@ function onStart() {
 });*/
 
 function sampleAcquired(s){   
-    localStorage.setItem("raw", "");
-    var samples = JSON.parse(s.samples);
-    console.log(samples);
-    var sampleData = Fingerprint.b64UrlTo64(samples[0].Data);
-    var decodedData = JSON.parse(Fingerprint.b64UrlToUtf8(sampleData));
-    localStorage.setItem("raw", Fingerprint.b64UrlTo64(decodedData.Data));
+    // localStorage.setItem("raw", "");
+    // var samples = JSON.parse(s.samples);
+    // var sampleData = Fingerprint.b64UrlTo64(samples[0].Data);
+    // var decodedData = JSON.parse(Fingerprint.b64UrlToUtf8(sampleData));
+    // localStorage.setItem("raw", Fingerprint.b64UrlTo64(decodedData.Data));
+
+    localStorage.setItem("imageSrc", "");                
+    var samples = JSON.parse(s.samples);            
+    localStorage.setItem("imageSrc", "data:image/png;base64," + Fingerprint.b64UrlTo64(samples[0]));
+
+    // $.get('convertimage.php',{'image':localStorage.getItem("imageSrc")},function(e){
+    // });
+    //data = getDataObjectByForm(localStorage.getItem("imageSrc"));
+
+    var blob = dataURItoBlob(localStorage.getItem("imageSrc"),'image/png');
+   
+    // let a = document.createElement('a');
+    // a.href = "data:application/octet-stream,"+encodeURIComponent(localStorage.getItem("imageSrc"));
+    // a.download = 'abc.txt';
+    // a.click();
+
+    //window.navigator.msSaveOrOpenBlob(blob, 'test.png');
+    // $.ajax({
+    //     type:"GET",
+    //     url:"converimage.php?image="+localStorage.getItem("imageSrc"),
+    //     data:FormData,
+    //     datatype:"json",
+    //     success:function(data){
+    //         for(var i in data){
+    //             var entry = data[i];
+    //             var success = entry.results.success;
+    //             var message = entry.results.message;
+    //         }
+    //     }
+    // })
+
+    //  axios
+    //     .get('convertimage.php',{params:{
+    //         'image':samples[0]
+    //     }})
+    //     .then((response)=>{
+            
+    //     }).catch(response=>alert(response))
+
+    var save = document.createElement('a');
+    save.href = localStorage.getItem("imageSrc");
+    save.download = 'test';
+    var event = document.createEvent("MouseEvents");
+        event.initMouseEvent(
+                "click", true, false, window, 0, 0, 0, 0, 0
+                , false, false, false, false, 0, null
+        );
+    save.dispatchEvent(event);
 }
+
+dataURItoBlob = function(dataURI, dataURIType) {
+    var binary = atob(dataURI.split(',')[1]);
+    var array = [];
+    for(var i = 0; i < binary.length; i++) {
+        array.push(binary.charCodeAt(i));
+    }
+    return new Blob([new Uint8Array(array)], {type: dataURIType});
+}
+
+function IeVersionInfo() {
+    var sAgent = window.navigator.userAgent;
+    var IEVersion = sAgent.indexOf("MSIE");
+  
+    // If IE, return version number.
+    if (IEVersion > 0) 
+      return parseInt(sAgent.substring(IEVersion+ 5, sAgent.indexOf(".", IEVersion)));
+  
+    // If IE 11 then look for Updated user agent string.
+    else if (!!navigator.userAgent.match(/Trident\/7\./)) 
+      return 11;
+  
+    // Quick and dirty test for Microsoft Edge
+    else if (document.documentMode || /Edge/.test(navigator.userAgent))
+      return 12;
+  
+    else
+      return 0; //If not IE return 0
+  }
 
 function downloadURI(uri, name, dataURIType) {
 
