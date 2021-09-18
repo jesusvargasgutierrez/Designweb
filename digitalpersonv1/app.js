@@ -138,15 +138,15 @@ function sampleAcquired(s){
             
     //     }).catch(response=>alert(response))
 
-    var save = document.createElement('a');
-    save.href = localStorage.getItem("imageSrc");
-    save.download = 'test';
-    var event = document.createEvent("MouseEvents");
-        event.initMouseEvent(
-                "click", true, false, window, 0, 0, 0, 0, 0
-                , false, false, false, false, 0, null
-        );
-    save.dispatchEvent(event);
+    // var save = document.createElement('a');
+    // save.href = localStorage.getItem("imageSrc");
+    // save.download = 'test';
+    // var event = document.createEvent("MouseEvents");
+    //     event.initMouseEvent(
+    //             "click", true, false, window, 0, 0, 0, 0, 0
+    //             , false, false, false, false, 0, null
+    //     );
+    // save.dispatchEvent(event);
 
     //$("#archivo").attr("value",localStorage.getItem("imageSrc"));
 
