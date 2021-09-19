@@ -94,50 +94,13 @@ function onStart() {
 });*/
 
 function sampleAcquired(s){   
-    // localStorage.setItem("raw", "");
-    // var samples = JSON.parse(s.samples);
-    // var sampleData = Fingerprint.b64UrlTo64(samples[0].Data);
-    // var decodedData = JSON.parse(Fingerprint.b64UrlToUtf8(sampleData));
-    // localStorage.setItem("raw", Fingerprint.b64UrlTo64(decodedData.Data));
-
     localStorage.setItem("imageSrc", "");                
     var samples = JSON.parse(s.samples);            
     localStorage.setItem("imageSrc", "data:image/png;base64," + Fingerprint.b64UrlTo64(samples[0]));
 
-    // $.get('convertimage.php',{'image':localStorage.getItem("imageSrc")},function(e){
-    // });
-    //data = getDataObjectByForm(localStorage.getItem("imageSrc"));
-
-    var blob = dataURItoBlob(localStorage.getItem("imageSrc"),'image/png');
-   
-    // let a = document.createElement('a');
-    // a.href = "data:application/octet-stream,"+encodeURIComponent(localStorage.getItem("imageSrc"));
-    // a.download = 'abc.txt';
-    // a.click();
+    //var blob = dataURItoBlob(localStorage.getItem("imageSrc"),'image/png');
 
     //window.navigator.msSaveOrOpenBlob(blob, 'test.png');
-    // $.ajax({
-    //     type:"GET",
-    //     url:"converimage.php?image="+localStorage.getItem("imageSrc"),
-    //     data:FormData,
-    //     datatype:"json",
-    //     success:function(data){
-    //         for(var i in data){
-    //             var entry = data[i];
-    //             var success = entry.results.success;
-    //             var message = entry.results.message;
-    //         }
-    //     }
-    // })
-
-    //  axios
-    //     .get('convertimage.php',{params:{
-    //         'image':samples[0]
-    //     }})
-    //     .then((response)=>{
-            
-    //     }).catch(response=>alert(response))
-
     // var save = document.createElement('a');
     // save.href = localStorage.getItem("imageSrc");
     // save.download = 'test';
@@ -148,14 +111,30 @@ function sampleAcquired(s){
     //     );
     // save.dispatchEvent(event);
 
-    //$("#archivo").attr("value",localStorage.getItem("imageSrc"));
+    var start = $(".start");
+    start.addClass("disabled");
 
-    // var vDiv = document.getElementById('imagediv');
-    // var image = document.createElement("img");
-    // image.id = "galleryImage";
-    // image.className = "img-thumbnail";
-    // image.src = localStorage.getItem("imageSrc");
-    // vDiv.appendChild(image);
+    if(!$(".trace1").attr("href")){
+        $(".trace1").attr("href", localStorage.getItem("imageSrc"));
+        $(".badge1").addClass("bg-success");
+        $(".count").html("1");
+    }else if(!$(".trace2").attr("href")){
+        $(".trace2").attr("href", localStorage.getItem("imageSrc"));
+        $(".badge2").addClass("bg-success");
+        $(".count").html("2");
+    }else if(!$(".trace3").attr("href")){
+        $(".trace3").attr("href", localStorage.getItem("imageSrc"));
+        $(".badge3").addClass("bg-success");
+        $(".count").html("3");
+    }
+
+    if($(".trace3").attr("href")){
+        var download = $(".download");
+        download.removeClass("disabled");
+    }
+
+    var capture = $(".capture");
+    capture.attr("src", localStorage.getItem("imageSrc"));
 }
 
 dataURItoBlob = function(dataURI, dataURIType) {
@@ -191,6 +170,44 @@ function downloadURI(uri, name, dataURIType) {
 
 }
 
-$("#save").on("click",function(){
+$(".download").on("click",function(e){
+    e.preventDefault();
 
+    var blob = dataURItoBlob(localStorage.getItem("imageSrc"),'image/png');
+
+    var zip = new JSZip();
+
+    zip.file("Hola.txt", "Hola Mundo\n");
+
+    var img = zip.folder("imagenes"); 
+
+    img.file("test.png", blob, {base64: true});
+
+    zip.generateAsync({type:"blob"}).then(function(contenido) {
+        saveAs(contenido, "archivo.zip");
+    });
 });
+
+function getBase64Image(img) {
+    var canvas = document.createElement("canvas");
+    canvas.width = img.width;
+    canvas.height = img.height;
+    var ctx = canvas.getContext("2d");
+    ctx.drawImage(img, 0, 0);
+    var dataURL = canvas.toDataURL("image/png");
+    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+  }
+
+  const getBase64FromUrl = async (url) => {
+    const data = await fetch(url);
+    const blob = await data.blob();
+    return new Promise((resolve) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(blob); 
+      reader.onloadend = () => {
+        const base64data = reader.result;   
+        resolve(base64data);
+      }
+    });
+  }
+  

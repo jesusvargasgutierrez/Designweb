@@ -7,10 +7,48 @@
     <title>FingerPrint</title>
     <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css" type="text/css" />
+    <link href='https://use.fontawesome.com/releases/v5.7.2/css/all.css' rel='stylesheet'>
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 </head>
 <body>
-    <div class="container mt-3">
+    <div class="container border border-danger">
+        <div class="row border border-warning">
+            <div class="col border border-success">
+                <div class="text-center border border-secondary img-dactilar">
+                    <img class="capture border border-secondary card-img-top" src="" alt="huella dactilar">
+                    <a download="trace1.png" class="trace1" target="_blank">download</a>
+                    <a download="trace2" class="trace2" target="_blank">download</a>
+                    <a download="trace3" class="trace3" target="_blank">download</a>
+                 </div>
+                <div class="mt-3 text-center border border-secondary">
+                    <a class="btn btn-success start" id="start" onclick="Javascript:onStart()">
+                        <i class="fas fa-play text-white"></i>
+                    </a>
+                    <a href="#" class="btn btn-primary download">
+                        <i class="fas fa-download" rel="tooltip" title="Descarga la imagen"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col border border-primary">
+                <div class="text-center border border-secondary">
+                    Huellas capturadas
+                    <span class="badge badge-primary badge-pill count">0</span>
+                </div>
+                <div class="mt-3 text-center badge1 border border-secondary">
+                    <span class="badge badge-primary badge-pill">1</span>
+                </div>
+                <div class="mt-3 text-center badge2 border border-secondary">
+                    <span class="badge badge-primary badge-pill">2</span>
+                </div>
+                <div class="mt-3 text-center badge3 border border-secondary">
+                    <span class="badge badge-primary badge-pill">3</span>
+                </div>
+            </div>
+
+            <canvas id="imgCanvas" />
+        </div>
+    </div>
+    <div class="container mt-3 d-none">
         <div class="row">
             <div class="col">
                 <div id="imagediv"></div>
@@ -35,35 +73,13 @@
                 </canvas>
             </div>
         </div>
-    </div>     
+    </div> 
 </body>
 <script src="es6-shim.js"></script>
 <script src="websdk.client.bundle.min.js"></script>
 <script src="fingerprint.sdk.min.js"></script>
 <script src="app.js"></script>
 <script src="axios.js"></script>
-<script>
-    //https://127.0.0.1:9001/connect
-    // this.sdk = new Fingerprint.WebApi;
-    // var FingerprintSdkTest = (function () {
-    // function FingerprintSdkTest() {
-    //     this.sdk = new Fingerprint.WebApi;
-    // }
-    // FingerprintSdkTest.prototype.getDeviceList = function () {
-    //         return this.sdk.enumerateDevices();
-    //     };
-    //     return FingerprintSdkTest;
-    // })();
-    // window.onload = function () {
-    //     test = new FingerprintSdkTest();
-    //     var allReaders = test.getDeviceList();    
-    //     allReaders.then(function (sucessObj) {
-    //         for (i=0;i<sucessObj.length;i++){
-    //             console.log(sucessObj[i]);
-    //         }
-    //     }, function (error){
-    //         console.log(error.message);
-    //     });
-    // }
-</script>
+<script src="js/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.js" integrity="sha512-UNbeFrHORGTzMn3HTt00fvdojBYHLPxJbLChmtoyDwB6P9hX5mah3kMKm0HHNx/EvSPJt14b+SlD8xhuZ4w9Lg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </html>
