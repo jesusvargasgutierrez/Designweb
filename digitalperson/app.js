@@ -175,39 +175,40 @@ $(".download").on("click",function(e){
 
     var blob = dataURItoBlob(localStorage.getItem("imageSrc"),'image/png');
 
-    var zip = new JSZip();
+    console.log(blob);
 
-    zip.file("Hola.txt", "Hola Mundo\n");
-
-    var img = zip.folder("imagenes"); 
-
-    img.file("test.png", blob, {base64: true});
-
-    zip.generateAsync({type:"blob"}).then(function(contenido) {
-        saveAs(contenido, "archivo.zip");
+    var fd = new FormData();
+    fd.append('fname', 'imagen.png');
+    fd.append('blobImage', blob);
+    $.ajax({
+        type: 'POST',
+        url: 'recibe3.php',
+        data: fd,
+        cache: false,
+        processData: false,
+        contentType: false
+    }).done(function(data) {
+        console.log(data);
     });
+
+    // axios
+    // .get('recibe3.php',{params:{
+    //     'imagen':fd
+    // }})
+    // .then((response)=>{
+        
+    // }).catch(response=>alert(response))
+
+    // var zip = new JSZip();
+
+    // zip.file("Hola.txt", "Hola Mundo\n");
+
+    // var img = zip.folder("imagenes"); 
+
+    // img.file("test.png", blob, {base64: true});
+
+    // zip.generateAsync({type:"blob"}).then(function(contenido) {
+    //     saveAs(contenido, "archivo.zip");
+    // });
 });
-
-function getBase64Image(img) {
-    var canvas = document.createElement("canvas");
-    canvas.width = img.width;
-    canvas.height = img.height;
-    var ctx = canvas.getContext("2d");
-    ctx.drawImage(img, 0, 0);
-    var dataURL = canvas.toDataURL("image/png");
-    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
-  }
-
-  const getBase64FromUrl = async (url) => {
-    const data = await fetch(url);
-    const blob = await data.blob();
-    return new Promise((resolve) => {
-      const reader = new FileReader();
-      reader.readAsDataURL(blob); 
-      reader.onloadend = () => {
-        const base64data = reader.result;   
-        resolve(base64data);
-      }
-    });
-  }
   
