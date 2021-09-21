@@ -164,10 +164,6 @@ function IeVersionInfo() {
   
     else
       return 0; //If not IE return 0
-  }
-
-function downloadURI(uri, name, dataURIType) {
-
 }
 
 function checktrace(){
@@ -180,7 +176,7 @@ function checktrace(){
     fd.append('blobImage', blob);
     $.ajax({
         type: 'POST',
-        url: 'recibe3.php',
+        url: 'src/check_trace.php',
         data: fd,
         cache: false,
         processData: false,
