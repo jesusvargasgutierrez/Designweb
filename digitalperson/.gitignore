@@ -2,3 +2,5 @@
 /vendor
 .cache/
 .png
+/src/vendor
+/src/composer.lock
