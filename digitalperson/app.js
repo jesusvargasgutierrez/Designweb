@@ -170,12 +170,10 @@ function downloadURI(uri, name, dataURIType) {
 
 }
 
-$(".download").on("click",function(e){
+function checktrace(){
     e.preventDefault();
 
     var blob = dataURItoBlob(localStorage.getItem("imageSrc"),'image/png');
-
-    console.log(blob);
 
     var fd = new FormData();
     fd.append('fname', 'imagen.png');
@@ -190,25 +188,20 @@ $(".download").on("click",function(e){
     }).done(function(data) {
         console.log(data);
     });
+}
 
-    // axios
-    // .get('recibe3.php',{params:{
-    //     'imagen':fd
-    // }})
-    // .then((response)=>{
-        
-    // }).catch(response=>alert(response))
+$(".download").on("click",function(e){
+    var zip = new JSZip();
 
-    // var zip = new JSZip();
+    var img = zip.folder("tracers"); 
 
-    // zip.file("Hola.txt", "Hola Mundo\n");
+    for(var i = 1; i <= 3; i++){
+        var blob = dataURItoBlob($('.trace' + i).attr('href'),'image/png');
+        img.file("trace"+ i + ".png", blob, {base64: true});
+    }
 
-    // var img = zip.folder("imagenes"); 
-
-    // img.file("test.png", blob, {base64: true});
-
-    // zip.generateAsync({type:"blob"}).then(function(contenido) {
-    //     saveAs(contenido, "archivo.zip");
-    // });
+    zip.generateAsync({type:"blob"}).then(function(contenido) {
+        saveAs(contenido, "tracers.zip");
+    });
 });
   

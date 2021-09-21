@@ -16,15 +16,15 @@
             <div class="col border border-success">
                 <div class="text-center border border-secondary img-dactilar">
                     <img class="capture border border-secondary card-img-top" src="" alt="huella dactilar">
-                    <a download="trace1.png" class="trace1" target="_blank">download</a>
-                    <a download="trace2" class="trace2" target="_blank">download</a>
-                    <a download="trace3" class="trace3" target="_blank">download</a>
+                    <a download="trace1.png" class="trace1 d-none" target="_blank">download</a>
+                    <a download="trace2.png" class="trace2 d-none" target="_blank">download</a>
+                    <a download="trace3.png" class="trace3 d-none" target="_blank">download</a>
                  </div>
                 <div class="mt-3 text-center border border-secondary">
                     <a class="btn btn-success start" id="start" onclick="Javascript:onStart()">
                         <i class="fas fa-play text-white"></i>
                     </a>
-                    <a href="#" class="btn btn-primary download">
+                    <a href="#" class="btn btn-primary download disabled">
                         <i class="fas fa-download" rel="tooltip" title="Descarga la imagen"></i>
                     </a>
                 </div>
