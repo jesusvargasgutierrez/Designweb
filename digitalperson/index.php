@@ -28,6 +28,18 @@
                         <i class="fas fa-download" rel="tooltip" title="Descarga la imagen"></i>
                     </a>
                 </div>
+                <div class="mt-3 text-center border border-secondary">
+                    <a href="src/check_member.php" target="_blank">
+                        check member
+                    </a>
+                    <form action="src/set_hash.php" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="uploadzip">Carga Zip</label>
+                            <input type="file" class="form-control-file" name="uploadzip">
+                            <button type="submit" class="btn btn-primary mb-2">Enviar</button>
+                        </div>
+                    </form>
+                </div>
             </div>
             <div class="col border border-primary">
                 <div class="text-center border border-secondary">

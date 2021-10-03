@@ -81,6 +81,7 @@ window.onload = function () {
     localStorage.clear();
     //localStorage.setItem("raw", "");
     test = new FingerprintSdkTest();
+    onStart();
 };
 
 function onStart() {
@@ -111,28 +112,7 @@ function sampleAcquired(s){
     //     );
     // save.dispatchEvent(event);
 
-    var start = $(".start");
-    start.addClass("disabled");
-
-    if(!$(".trace1").attr("href")){
-        $(".trace1").attr("href", localStorage.getItem("imageSrc"));
-        $(".badge1").addClass("bg-success");
-        $(".count").html("1");
-        //checktrace();
-    }else if(!$(".trace2").attr("href")){
-        $(".trace2").attr("href", localStorage.getItem("imageSrc"));
-        $(".badge2").addClass("bg-success");
-        $(".count").html("2");
-    }else if(!$(".trace3").attr("href")){
-        $(".trace3").attr("href", localStorage.getItem("imageSrc"));
-        $(".badge3").addClass("bg-success");
-        $(".count").html("3");
-    }
-
-    if($(".trace3").attr("href")){
-        var download = $(".download");
-        download.removeClass("disabled");
-    }
+    checktrace();
 
     var capture = $(".capture");
     capture.attr("src", localStorage.getItem("imageSrc"));
@@ -177,12 +157,13 @@ function checktrace(){
     fd.append('blobImage', blob);
     $.ajax({
         type: 'POST',
-        url: 'src/check_trace.php',
+        url: '../src/check_trace.php',
         data: fd,
         cache: false,
         processData: false,
         contentType: false
     }).done(function(data) {
+        $('#hash').val(data);
         console.log(data);
     });
 }
