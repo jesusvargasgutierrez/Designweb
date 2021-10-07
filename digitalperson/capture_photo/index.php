@@ -23,9 +23,9 @@
                         <input type="hidden" class="capture_name" />
                     </div>
                     <div class="card-footer">
-                        <button id="boton" class="btn btn-primary mt-3 camera"><i class="fas fa-camera"></i></button>
+                        <button id="boton" class="btn btn-primary mt-3 camera" disabled><i class="fas fa-camera"></i></button>
                         <button class="btn btn-success mt-3 save" disabled><i style="font-size:15pt" class="far fa-save"></i></button>
-                        <button class="btn btn-danger mt-3 trash" disabled><i class="far fa-trash-alt"></i></button>
+                        <button class="btn btn-danger mt-3 trash"><i class="far fa-trash-alt"></i></button>
                     </div>
                 </div>
             </div>

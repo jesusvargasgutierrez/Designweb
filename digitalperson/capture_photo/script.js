@@ -72,10 +72,10 @@ $(".trash").on("click",function(e){
 		var capture = $('.capture_name').val();
 		
 		axios
-		.post('guardar_foto.php', {params:{
+		.post(`guardar_foto.php`, {
 			action: 1,
 			capture
-		}})
+		})
 		.then(res => console.log(this.data));
 
 		clean();
