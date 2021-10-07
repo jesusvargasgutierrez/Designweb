@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css' rel='stylesheet'>
     <link href='https://use.fontawesome.com/releases/v5.7.2/css/all.css' rel='stylesheet'>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -23,11 +23,14 @@
                         <input type="hidden" class="capture_name" />
                     </div>
                     <div class="card-footer">
-                        <button id="boton" class="btn btn-primary mt-3 camera" disabled><i class="fas fa-camera"></i></button>
-                        <button class="btn btn-success mt-3 save" disabled><i style="font-size:15pt" class="far fa-save"></i></button>
-                        <button class="btn btn-danger mt-3 trash"><i class="far fa-trash-alt"></i></button>
+                        <button id="boton" class="btn btn-primary mt-3 camera"><i class="fas fa-camera"></i></button>
+                        <button class="btn btn-success mt-3 save"><i style="font-size:15pt" class="far fa-save"></i></button>
+                        <button class="btn btn-danger mt-3 trash" disabled><i class="far fa-trash-alt"></i></button>
                     </div>
                 </div>
+            </div>
+            <div class="col-md-8 col-12">
+                <img class="testimg" />
             </div>
         </div>
     </div>

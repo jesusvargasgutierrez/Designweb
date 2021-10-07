@@ -15,7 +15,7 @@ if (tieneSoporteUserMedia()) {
     _getUserMedia(
         {video: true},
         function (stream) {
-            console.log("Permiso concedido");
+            //console.log("Permiso concedido");
             $video.srcObject = stream;
 			//$video.src = window.URL.createObjectURL(stream);
 			$video.play();
@@ -41,8 +41,8 @@ if (tieneSoporteUserMedia()) {
 
 				xhr.onreadystatechange = function() {
 				    if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
-				        console.log("La foto fue enviada correctamente");
-				        console.log(xhr);
+				        //console.log("La foto fue enviada correctamente");
+				        //console.log(xhr);
 						$estado.innerHTML = " Se ha tomado la captura, por favor presione guardar ";
 						$('.video').addClass('d-none');
 						$('.capture').removeClass('d-none');
@@ -108,5 +108,56 @@ function dissablecontrols(action){
 		$(".save").removeAttr("disabled");
 		$(".trash").removeAttr("disabled");
 	}
+}
 
+function imageToUri(url, callback) {
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+
+    base_image = new Image();
+    base_image.src = url;
+    base_image.onload = function() {
+        canvas.width = base_image.width;
+        canvas.height = base_image.height;
+
+        ctx.drawImage(base_image, 0, 0);
+    
+        callback(canvas.toDataURL('image/png'));
+
+        canvas.remove();
+    }
+}
+
+$(".save").on("click",function(e){
+	var capture = $('.capture_name').val();
+	imageToUri(capture, function(uri) {
+		var blob = dataURItoBlob(uri,'image/png');
+
+		var fd = new FormData();
+		fd.append('fname', 'imagen.png');
+		fd.append('blobImage', blob);
+		fd.append('action', 2);
+		$.ajax({
+			type: 'POST',
+			url: 'guardar_foto.php',
+			data: fd,
+			cache: false,
+			processData: false,
+			contentType: false
+		}).done(function(data) {
+			console.log(data);
+			$('.testimg').attr("src" , data);
+		});
+
+		console.log(blob);
+	});
+});
+
+dataURItoBlob = function(dataURI, dataURIType) {
+    var binary = atob(dataURI.split(',')[1]);
+    var array = [];
+    for(var i = 0; i < binary.length; i++) {
+        array.push(binary.charCodeAt(i));
+    }
+    return new Blob([new Uint8Array(array)], {type: dataURIType});
 }
