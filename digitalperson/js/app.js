@@ -177,7 +177,7 @@ function checktrace(){
     fd.append('blobImage', blob);
     $.ajax({
         type: 'POST',
-        url: 'src/check_trace.php',
+        url: '../src/controllers/trace/checktracecontroller.php',
         data: fd,
         cache: false,
         processData: false,

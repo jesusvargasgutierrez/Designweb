@@ -12,6 +12,7 @@
 </head>
 <body>
     <div class="container">
+        <div class="bg-danger text-white d-none message"></div>
         <div class="row mt-3">
             <div class="col-md-4 col-12">
                 <div class="card" style="max-width: 18rem;">
@@ -36,6 +37,6 @@
     </div>
 	<canvas id="canvas" style="display: none;"></canvas>
 </body>
-    <script src="script.js"></script>
-    <script src="../js/axios.js"></script>
+    <script src="../../../js/script-photo.js"></script>
+    <script src="../../../js/axios.js"></script>
 </html>

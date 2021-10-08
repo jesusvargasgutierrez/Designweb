@@ -35,7 +35,7 @@ if (tieneSoporteUserMedia()) {
 				var foto = $canvas.toDataURL(); //Esta es la foto, en base 64
 				$estado.innerHTML = "Enviando foto. Por favor, espera...";
 				var xhr = new XMLHttpRequest();
-				xhr.open("POST", "./guardar_foto.php", true);
+				xhr.open("POST", "../../controllers/photo/savephotocontroller.php", true);
 				xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 				xhr.send(encodeURIComponent(foto)); //Codificar y enviar
 
@@ -46,7 +46,7 @@ if (tieneSoporteUserMedia()) {
 						$estado.innerHTML = " Se ha tomado la captura, por favor presione guardar ";
 						$('.video').addClass('d-none');
 						$('.capture').removeClass('d-none');
-						$('.capture').attr("src" , xhr.responseText);
+						$('.capture').attr("src" ,"../../tmp/src/" + xhr.responseText);
 						$('.capture_name').val(xhr.responseText);
 				        //$estado.innerHTML = btn_close + " Foto guardada con éxito. Puedes verla <a target='_blank' href='./" + xhr.responseText + "'> aquí</a>";
 				    }
@@ -59,7 +59,8 @@ if (tieneSoporteUserMedia()) {
 				$video.play();
 			});
         }, function (error) {
-            console.log("Permiso denegado o error: ", error);
+			$('.message').html("<strong>Permiso denegado o error: "+ error.message+"</strong>");
+			$('.message').removeClass('d-none');
             $estado.innerHTML = "No se puede acceder a la cámara, o no diste permiso.";
         });
 } else {
@@ -72,7 +73,7 @@ $(".trash").on("click",function(e){
 		var capture = $('.capture_name').val();
 		
 		axios
-		.post(`guardar_foto.php`, {
+		.post(`../../controllers/photo/savephotocontroller.php`, {
 			action: 1,
 			capture
 		})
@@ -139,7 +140,7 @@ $(".save").on("click",function(e){
 		fd.append('action', 2);
 		$.ajax({
 			type: 'POST',
-			url: 'guardar_foto.php',
+			url: '../../controllers/photo/savephotocontroller.php',
 			data: fd,
 			cache: false,
 			processData: false,

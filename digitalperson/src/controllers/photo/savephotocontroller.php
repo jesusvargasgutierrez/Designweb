@@ -5,7 +5,7 @@
 
     if(isset($data['action']) && $data['action'] == 1){
         
-        unlink($data['capture']);
+        unlink("../../tmp/src/".$data['capture']);
 
         exit('imagen eliminada!');
     }
@@ -31,7 +31,7 @@
         
         $imagenDecodificada = base64_decode($imagenCodificadaLimpia);
         
-        $nombreImagenGuardada = "foto_" . uniqid() . ".png";
+        $nombreImagenGuardada = "../../tmp/foto_" . uniqid() . ".png";
         
         file_put_contents($nombreImagenGuardada, $imagenDecodificada);
         
