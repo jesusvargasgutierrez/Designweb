@@ -1,4 +1,8 @@
 <?php
+require_once('../../vendor/autoload.php');
+require_once('../../conexion.php');
+require_once('../../models/photosmember.php');
+
     $request_body = file_get_contents('php://input');
 
     $data = json_decode($request_body, true);
@@ -19,6 +23,11 @@
         $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
 
         unlink('image.png');
+
+        photosmember::create([
+            'id_member' => 1,
+            'image_code' => $base64 
+         ]); 
 
         echo $base64;
     }

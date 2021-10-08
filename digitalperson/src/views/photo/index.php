@@ -25,14 +25,14 @@
                     </div>
                     <div class="card-footer">
                         <button id="boton" class="btn btn-primary mt-3 camera"><i class="fas fa-camera"></i></button>
-                        <button class="btn btn-success mt-3 save"><i style="font-size:15pt" class="far fa-save"></i></button>
+                        <button class="btn btn-success mt-3 save" disabled><i style="font-size:15pt" class="far fa-save"></i></button>
                         <button class="btn btn-danger mt-3 trash" disabled><i class="far fa-trash-alt"></i></button>
                     </div>
                 </div>
             </div>
-            <div class="col-md-8 col-12">
+            <!-- <div class="col-md-8 col-12">
                 <img class="testimg" />
-            </div>
+            </div> -->
         </div>
     </div>
 	<canvas id="canvas" style="display: none;"></canvas>

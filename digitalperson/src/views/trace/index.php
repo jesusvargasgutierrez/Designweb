@@ -11,16 +11,16 @@
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 </head>
 <body>
-    <div class="container border border-danger">
-        <div class="row border border-warning">
-            <div class="col border border-success">
-                <div class="text-center border border-secondary img-dactilar">
-                    <img class="capture border border-secondary card-img-top" src="" alt="huella dactilar">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="text-center img-dactilar">
+                    <img class="capture card-img-top" src="" alt="huella dactilar">
                     <a download="trace1.png" class="trace1 d-none" target="_blank">download</a>
                     <a download="trace2.png" class="trace2 d-none" target="_blank">download</a>
                     <a download="trace3.png" class="trace3 d-none" target="_blank">download</a>
                  </div>
-                <div class="mt-3 text-center border border-secondary">
+                <div class="mt-3 text-center">
                     <a class="btn btn-success start" id="start" onclick="Javascript:onStart()">
                         <i class="fas fa-play text-white"></i>
                     </a>
@@ -29,9 +29,6 @@
                     </a>
                 </div>
                 <div class="mt-3 text-center border border-secondary">
-                    <a href="../information/index.php" target="_blank">
-                        check member
-                    </a>
                     <form action="../../controllers/trace/sethashtracecontroller.php" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="uploadzip">Carga Zip</label>
@@ -41,7 +38,7 @@
                     </form>
                 </div>
             </div>
-            <div class="col border border-primary">
+            <div class="col">
                 <div class="text-center border border-secondary">
                     Huellas capturadas
                     <span class="badge badge-primary badge-pill count">0</span>

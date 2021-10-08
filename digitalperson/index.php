@@ -12,11 +12,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 </head>
 <body>
-    <?php include('./components/header.php') ?>
+    <?php include('src/views/components/header.php') ?>
     <!-- MultiStep Form -->
     <div class="container-fluid">
         <div class="row justify-content-center mt-0">
-            <div class="col-11 col-sm-9 col-md-7 col-lg-6 text-center p-0 mt-3 mb-2">
+            <div class="col">
                 <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
                     <h2><strong>Informacion</strong></h2>
                     <p>Complete los pasos del registro</p>
@@ -34,12 +34,14 @@
                                     <input type="button" name="next" class="next action-button" value="Next Step" />
                                 </fieldset>
                                 <fieldset>
-                                    <iframe style="width:100%; height:300px" src='./capture_photo/index.php' frameborder="0"></iframe>
-                                    <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> <input type="button" name="next" class="next action-button" value="Next Step" />
+                                    <iframe style="width:100%; height:300px" src='src/views/photo/index.php' frameborder="0"></iframe>
+                                    <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> 
+                                    <input type="button" name="next" class="next action-button" value="Next Step" />
                                 </fieldset>
                                 <fieldset>
-                                    <iframe style="width:100%; height:300px" src='index.php' frameborder="0"></iframe>
-                                    <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> <input type="button" name="make_payment" class="next action-button" value="Confirm" />
+                                    <iframe style="width:100%; height:300px" src='src/views/trace/index.php' frameborder="0"></iframe>
+                                    <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> 
+                                    <input type="button" name="make_payment" class="next action-button" value="Confirm" />
                                 </fieldset>
                                 <fieldset>
                                     <div class="form-card">
@@ -50,6 +52,7 @@
                                         <div class="row justify-content-center">
                                             <div class="col-7 text-center">
                                                 <h5>Registro exitoso!</h5>
+                                                <a href="/DesignWeb/digitalperson">Crear nuevo</a>
                                             </div>
                                         </div>
                                     </div>

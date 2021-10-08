@@ -78,6 +78,8 @@ $(".trash").on("click",function(e){
 			capture
 		})
 		.then(res => console.log(this.data));
+		
+		alert("Fotografia eliminada correctamente");
 
 		clean();
 		enablecontrols(0);
@@ -146,12 +148,15 @@ $(".save").on("click",function(e){
 			processData: false,
 			contentType: false
 		}).done(function(data) {
-			console.log(data);
-			$('.testimg').attr("src" , data);
+			alert("Fotografia guardada correctamente");
+			//console.log(data);
+			//$('.testimg').attr("src" , data);
 		});
-
-		console.log(blob);
 	});
+
+	clean();
+	enablecontrols(0);
+	dissablecontrols(1);
 });
 
 dataURItoBlob = function(dataURI, dataURIType) {

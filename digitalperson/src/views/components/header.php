@@ -32,7 +32,7 @@
                         <a class="nav-link" href="about.php">Manual</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.php">Acerca de</a>
+                        <a class="nav-link" href="src/views/components/about.php">Acerca de</a>
                     </li>
                 </ul>
             </div>
