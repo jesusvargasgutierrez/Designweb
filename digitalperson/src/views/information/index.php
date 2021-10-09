@@ -11,20 +11,17 @@
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 </head>
 <body>
-    <div class="container border border-danger">
+    <?php include('../components/header.php') ?>
+    <div class="container border border-danger mt-3">
         <div class="row border border-warning">
-            <div class="col border border-success">
-                <div class="text-center border border-secondary img-dactilar">
-                    <img class="capture border border-secondary card-img-top" src="" alt="huella dactilar">
-                 </div>
+            <div class="col">
+                <div class="text-center img-dactilar border border-danger">
+                    <img class="capture" src="" alt="Fotografia">
+                </div>
             </div>
             <div class="col border border-primary">
-                <div class="text-center border border-secondary">
-                    Informacion miembro
-                </div>
-                <div class="mt-3 text-center badge1 border border-secondary">
-                    <input type="text" name="hash" id="hash" class="form-control">
-                </div>
+                <h4 class="text-center">Informaci&oacute;n</h4>
+                <input type="text" name="hash" id="hash" class="form-control">
             </div>
         </div>
     </div>

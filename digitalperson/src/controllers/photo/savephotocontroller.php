@@ -24,6 +24,8 @@ require_once('../../models/photosmember.php');
 
         unlink('image.png');
 
+        array_map('unlink', glob("../../tmp/*.*"));
+
         photosmember::create([
             'id_member' => 1,
             'image_code' => $base64 
@@ -43,7 +45,7 @@ require_once('../../models/photosmember.php');
         $nombreImagenGuardada = "../../tmp/foto_" . uniqid() . ".png";
         
         file_put_contents($nombreImagenGuardada, $imagenDecodificada);
-        
+
         exit($nombreImagenGuardada);
     }
 ?>

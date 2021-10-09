@@ -22,7 +22,7 @@
                     <p>Complete los pasos del registro</p>
                     <div class="row">
                         <div class="col-md-12 mx-0">
-                            <form id="msform">
+                            <div id="msform">
                                 <!-- progressbar -->
                                 <ul id="progressbar">
                                     <li class="active" id="account"><strong>General</strong></li>
@@ -31,10 +31,38 @@
                                     <li id="confirm"><strong>Finish</strong></li>
                                 </ul> <!-- fieldsets -->
                                 <fieldset>
-                                    <input type="button" name="next" class="next action-button" value="Next Step" />
+                                    <form>
+                                        <div class="form-group row">
+                                            <label for="fullname" class="col-sm-2 col-form-label">Nombre completo</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control-plaintext fullname" id="fullname">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="birthday" class="col-sm-2 col-form-label">Cumplea&ntilde;os</label>
+                                            <div class="col-sm-10">
+                                                <input type="date" class="form-control birthday" id="birthday">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="position" class="col-sm-2 col-form-label">Puesto</label>
+                                            <div class="col-sm-10">
+                                                <select class="form-control position" name="" id="position">
+                                                    <option value="0">==========Selecciona una opcion==========</option>
+                                                    <option value="1">Compras</option>
+                                                    <option value="2">Recepcion</option>
+                                                    <option value="3">RH</option>
+                                                    <option value="4">Administracion</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <input type="button" name="next" class="next action-button saveinfo" value="Next Step" />
                                 </fieldset>
                                 <fieldset>
-                                    <iframe style="width:100%; height:300px" src='src/views/photo/index.php' frameborder="0"></iframe>
+                                    <div class="variable"></div>
+                                    <iframe class="frame-step2" style="width:100%; height:300px" src='src/views/photo/index.php' frameborder="0">
+                                    </iframe>
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> 
                                     <input type="button" name="next" class="next action-button" value="Next Step" />
                                 </fieldset>
@@ -57,7 +85,7 @@
                                         </div>
                                     </div>
                                 </fieldset>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -65,5 +93,6 @@
         </div>
     </div>
 </body>
+<script src="js/axios.js"></script>
 <script src="js/scriptstep.js"></script>
 </html>

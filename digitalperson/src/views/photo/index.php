@@ -18,6 +18,12 @@
                 <div class="card" style="max-width: 18rem;">
                     <div class="card-header alert alert-success alert-dismissible d-none" id="estado">
                     </div>
+                    <span>
+                            Miembro 
+                            <?php
+                               echo $_GET['id_member']
+                            ?>
+                    </span>
                     <div>
                         <video id="video" class="card-img-top video"></video>
                         <img class="capture card-img-top d-none" />
