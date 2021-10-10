@@ -82,8 +82,14 @@ $(".saveinfo").on("click",function(e){
     .then(function(res){
         var div = JSON.parse(JSON.stringify(res.data));
         $('.frame-step2').attr("src" ,"src/views/photo/index.php?id_member=" + div['id_member']);
+        $('.id_member').val(div['id_member']);
         console.log(div['id_member'])
     });
     
+    //alert("informacion guardada");
+});
+
+$(".take-photo").on("click",function(e){
+    $('.frame-step3').attr("src" ,"src/views/trace/index.php?id_member=" + $('.id_member').val());
     //alert("informacion guardada");
 });

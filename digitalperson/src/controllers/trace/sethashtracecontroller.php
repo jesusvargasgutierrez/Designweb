@@ -15,7 +15,7 @@ include('../compareImage/compareimages.php');
 
     for($i = 1; $i <= 3; $i++){
         TracerMembers::create([
-           'id_member' => 1,
+           'id_member' => $_GET['id_member'],
            'tracer_hash' => $compareMachine->hasStringImage("../../tmp/tracers/trace".$i.".png") 
         ]); 
     }

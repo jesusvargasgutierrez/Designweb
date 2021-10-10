@@ -29,16 +29,17 @@
                     </a>
                 </div>
                 <div class="mt-3 text-center border border-secondary">
-                    <form action="../../controllers/trace/sethashtracecontroller.php" method="post" enctype="multipart/form-data">
+                    <form action="<?php echo '../../controllers/trace/sethashtracecontroller.php?id_member='. $_GET['id_member'] ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="uploadzip">Carga Zip</label>
                             <input type="file" class="form-control-file" name="uploadzip">
-                            <button type="submit" class="btn btn-primary mb-2">Enviar</button>
+                            <button type="submit" class="btn btn-primary mb-2 send-trace">Enviar</button>
                         </div>
                     </form>
                 </div>
             </div>
             <div class="col">
+                <input type="hidden" class="id_member" value="<?php echo $_GET['id_member'] ?>" />
                 <div class="text-center border border-secondary">
                     Huellas capturadas
                     <span class="badge badge-primary badge-pill count">0</span>

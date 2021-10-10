@@ -133,6 +133,7 @@ function imageToUri(url, callback) {
 
 $(".save").on("click",function(e){
 	var capture = $('.capture_name').val();
+	var id_member = $('.id_member').val();
 	imageToUri(capture, function(uri) {
 		var blob = dataURItoBlob(uri,'image/png');
 
@@ -140,6 +141,7 @@ $(".save").on("click",function(e){
 		fd.append('fname', 'imagen.png');
 		fd.append('blobImage', blob);
 		fd.append('action', 2);
+		fd.append('id_member', id_member);
 		$.ajax({
 			type: 'POST',
 			url: '../../controllers/photo/savephotocontroller.php',

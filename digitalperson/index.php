@@ -57,17 +57,18 @@
                                             </div>
                                         </div>
                                     </form>
+                                    <input type="hidden" class="id_member">
                                     <input type="button" name="next" class="next action-button saveinfo" value="Next Step" />
                                 </fieldset>
                                 <fieldset>
                                     <div class="variable"></div>
-                                    <iframe class="frame-step2" style="width:100%; height:300px" src='src/views/photo/index.php' frameborder="0">
+                                    <iframe class="frame-step2" style="width:100%; height:300px" frameborder="0">
                                     </iframe>
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> 
-                                    <input type="button" name="next" class="next action-button" value="Next Step" />
+                                    <input type="button" name="next" class="next action-button take-photo" value="Next Step" />
                                 </fieldset>
                                 <fieldset>
-                                    <iframe style="width:100%; height:300px" src='src/views/trace/index.php' frameborder="0"></iframe>
+                                    <iframe class="frame-step3" style="width:100%; height:300px" frameborder="0"></iframe>
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> 
                                     <input type="button" name="make_payment" class="next action-button" value="Confirm" />
                                 </fieldset>

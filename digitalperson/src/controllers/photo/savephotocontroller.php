@@ -27,7 +27,7 @@ require_once('../../models/photosmember.php');
         array_map('unlink', glob("../../tmp/*.*"));
 
         photosmember::create([
-            'id_member' => 1,
+            'id_member' => $_POST['id_member'],
             'image_code' => $base64 
          ]); 
 

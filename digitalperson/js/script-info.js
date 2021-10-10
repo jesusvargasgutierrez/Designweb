@@ -164,7 +164,7 @@ function checktrace(){
         contentType: false
     }).done(function(data) {
         $('#hash').val(data);
-        console.log(data);
+        //console.log(data);
     });
 }
 
@@ -182,4 +182,17 @@ $(".download").on("click",function(e){
         saveAs(contenido, "tracers.zip");
     });
 });
-  
+
+$(".send").on("click",function(e){
+    e.preventDefault();
+    var id_member = $('#hash').val();
+
+    axios
+    .post(`../../controllers/information/informationcontroller.php`, {
+        action: 2,
+        id_member
+    })
+    .then(response => {
+        console.log(response);
+    });
+});

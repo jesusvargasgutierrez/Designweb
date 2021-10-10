@@ -18,16 +18,11 @@
                 <div class="card" style="max-width: 18rem;">
                     <div class="card-header alert alert-success alert-dismissible d-none" id="estado">
                     </div>
-                    <span>
-                            Miembro 
-                            <?php
-                               echo $_GET['id_member']
-                            ?>
-                    </span>
                     <div>
                         <video id="video" class="card-img-top video"></video>
                         <img class="capture card-img-top d-none" />
                         <input type="hidden" class="capture_name" />
+                        <input type="hidden" class="id_member" value="<?php echo $_GET['id_member'] ?>" />
                     </div>
                     <div class="card-footer">
                         <button id="boton" class="btn btn-primary mt-3 camera"><i class="fas fa-camera"></i></button>
