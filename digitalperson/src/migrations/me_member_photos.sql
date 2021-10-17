@@ -5,5 +5,5 @@ CREATE TABLE me_member_photos
 	image_code text,
 	created_at DATETIME NOT NULL DEFAULT NOW(),
 	updated_at DATETIME NOT NULL DEFAULT NOW(),
-	PRIMARY KEY (id_tracer)
+	PRIMARY KEY (id_photo)
 )

@@ -163,8 +163,27 @@ function checktrace(){
         processData: false,
         contentType: false
     }).done(function(data) {
-        $('#hash').val(data);
-        //console.log(data);
+        var id_member = $('#hash').val();
+        console.log(id_member);
+
+        axios
+        .post(`../../controllers/information/informationcontroller.php`, {
+            action: 2,
+            id_member
+        })
+        .then(response => {
+            var mydate = new Date(response.data.birthday);
+            $('.fullname').val(response.data.fullname);
+            $('.birthday').val(moment(mydate).format('yyyy-MM-DD'));
+            $('.position').val(response.data.position);
+            $('.capture').attr('src', response.data.image_code);
+    
+            //var jsonformater = JSON.parse(JSON.stringify(response.data));
+            //console.log(response.data);
+            // if(jsonformater.length){
+            //     $('.capture').attr('src',jsonformater[0].image_code);
+            // }
+        });
     });
 }
 
@@ -193,6 +212,24 @@ $(".send").on("click",function(e){
         id_member
     })
     .then(response => {
-        console.log(response);
+        var mydate = new Date(response.data.birthday);
+        $('.fullname').val(response.data.fullname);
+        $('.birthday').val(moment(mydate).format('yyyy-MM-DD'));
+        $('.position').val(response.data.position);
+        $('.capture').attr('src', response.data.image_code);
+
+        //var jsonformater = JSON.parse(JSON.stringify(response.data));
+        //console.log(response.data);
+        // if(jsonformater.length){
+        //     $('.capture').attr('src',jsonformater[0].image_code);
+        // }
     });
+});
+
+$(".clean").on("click",function(e){
+    e.preventDefault();
+    $('.fullname').val('');
+    $('.birthday').val('');
+    $('.position').val(0);
+    $('.capture').attr('src', '');
 });

@@ -24,8 +24,16 @@ require_once('../../models/information.php');
                                 ,me_member_photos.image_code')
                         ->join('me_member_photos', 'me_member_info.id_member', 'me_member_photos.id_member')
                         ->where('me_member_info.id_member', $data['id_member'])
-                        ->get();
+                        ->first();
 
+        $data = $information->image_code;
+        // $imagen = str_replace('data:image/png;base64,', '', $data);
+        // $imagen = str_replace(' ', '+', $imagen);
+        // $imagenDecodificada = base64_decode($imagen);
+        //$nombreImagenGuardada = "../../tmp/foto_" . uniqid() . ".png";
+        //file_put_contents($nombreImagenGuardada, $imagenDecodificada);
+
+        //exit('data:image/png;base64,' . base64_encode($imagenDecodificada));
         exit($information);
     }
 ?>
