@@ -58,19 +58,19 @@
                                         </div>
                                     </form>
                                     <input type="hidden" class="id_member">
-                                    <input type="button" name="next" class="next action-button saveinfo" value="Next Step" />
+                                    <input type="button" name="next" class="next action-button saveinfo" value="Siguiente" />
                                 </fieldset>
                                 <fieldset>
                                     <div class="variable"></div>
                                     <iframe class="frame-step2" style="width:100%; height:300px" frameborder="0">
                                     </iframe>
-                                    <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> 
-                                    <input type="button" name="next" class="next action-button take-photo" value="Next Step" />
+                                    <input type="button" name="previous" class="previous action-button-previous" value="Atras" /> 
+                                    <input type="button" name="next" class="next action-button take-photo" value="Siguiente" />
                                 </fieldset>
                                 <fieldset>
                                     <iframe class="frame-step3" style="width:100%; height:300px" frameborder="0"></iframe>
-                                    <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> 
-                                    <input type="button" name="make_payment" class="next action-button" value="Confirm" />
+                                    <input type="button" name="previous" class="previous action-button-previous" value="Atras" /> 
+                                    <input type="button" name="make_payment" class="next action-button" value="Confirmar" />
                                 </fieldset>
                                 <fieldset>
                                     <div class="form-card">
