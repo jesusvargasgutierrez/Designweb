@@ -28,7 +28,7 @@
                             Importar
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Productos</a>
+                            <a class="dropdown-item" href="src/views/products/index.php">Productos</a>
                         </div>
                     </li>
                     <li class="nav-item">

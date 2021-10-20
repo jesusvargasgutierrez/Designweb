@@ -13,6 +13,7 @@
     ],
     "require": {
         "illuminate/database": "*",
-        "illuminate/events": "^8.61"
+        "illuminate/events": "^8.61",
+        "phpoffice/phpspreadsheet": "^1.18"
     }
 }
