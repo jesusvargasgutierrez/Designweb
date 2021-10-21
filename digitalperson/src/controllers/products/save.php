@@ -3,6 +3,8 @@ require_once('../../vendor/autoload.php');
 require_once('../../conexion.php');
 require_once('../../models/products.php');
 
+require_once('../../vendor/phpoffice/SpreadsheetReader.php');
+
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
@@ -19,20 +21,21 @@ if (isset($_POST["import"]))
     if(in_array($_FILES["file"]["type"],$allowedFileType)){
         $targetPath = $_FILES['file']['name'];
 
-        move_uploaded_file($_FILES['file']['tmp_name'], $targetPath);
+        return $targetPath;
+        // move_uploaded_file($_FILES['file']['tmp_name'], $targetPath);
         
-        $Reader = new SpreadsheetReader($targetPath);
+        // $Reader = new SpreadsheetReader($targetPath);
         
-        $sheetCount = count($Reader->sheets());
+        // $sheetCount = count($Reader->sheets());
         
-        for($i=0;$i<$sheetCount;$i++)
-        {
-            $Reader->ChangeSheet($i);
+        // for($i=0;$i<$sheetCount;$i++)
+        // {
+        //     $Reader->ChangeSheet($i);
             
-            foreach ($Reader as $Row)
-            {
-                echo $row;
-            }
-        }
+        //     foreach ($Reader as $Row)
+        //     {
+        //         echo $row;
+        //     }
+        // }
     }
 }
