@@ -17,7 +17,7 @@
             <form action="../../controllers/products/save.php" method="post" name="frmExcelImport" id="frmExcelImport" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="exampleFormControlFile1">Importar productos</label>
-                    <input type="file" name="file" class="form-control-file mt-3" id="exampleFormControlFile1">
+                    <input type="file" require name="file" class="form-control-file mt-3" id="exampleFormControlFile1">
                     <input type="submit" name="import" class="form-control btn btn-primary mt-3" value="Enviar" />
                 </div>
             </form>
