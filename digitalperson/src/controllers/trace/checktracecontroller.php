@@ -2,7 +2,7 @@
 require_once('../../vendor/autoload.php');
 require_once('../../conexion.php');
 require_once('../../models/TracerMembers.php');
-include('../compareimage/compareimages.php');
+include('../compareimage/compareImages.php');
 
     move_uploaded_file($_FILES['blobImage']['tmp_name'], 'image.png');
 
