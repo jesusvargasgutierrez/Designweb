@@ -1,0 +1,22 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 499" width="1300" height="499">
+	<title>wave-hero-background-svg</title>
+	<defs>
+		<radialGradient id="grd1" gradientUnits="userSpaceOnUse"  cx="151837.863" cy="51284.261" r="192287.189">
+			<stop offset="0" stop-color="#ff0000" stop-opacity="0" />
+			<stop offset="1" stop-color="#ff0000"  />
+		</radialGradient>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { opacity: 0.149;fill: #c4c4c4 } 
+		.shp1 { fill: url(#grd1) } 
+	</style>
+	<g id="Ressource">
+		<g id="wave_background">
+			<g id="Group-4">
+				<path id="Wave" fill-rule="evenodd" class="shp0" d="M0 0L1300 0C1299.84 99.07 1299.84 259.05 1300 479.94C939.38 522.29 978.89 439.69 650 450.95C321.11 462.21 306.59 511.2 0 450.95C1 327.51 1 177.19 0 0Z" />
+				<path id="Wave" fill-rule="evenodd" class="shp1" d="M1302 0L377.3 0L1 0C1 223.96 1 366.85 1 428.67C81.4 416.74 155.19 399.33 344.72 416.74C534.25 434.15 601.18 503.79 876.68 437.77C1060.35 393.76 1202.12 397 1302 447.49L1302 0Z" />
+			</g>
+		</g>
+	</g>
+</svg>

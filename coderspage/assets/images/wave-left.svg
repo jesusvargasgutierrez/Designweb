@@ -1,0 +1,26 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 368" width="129" height="368">
+	<title>wave-left-svg</title>
+	<defs>
+		<linearGradient id="grd1" gradientUnits="userSpaceOnUse"  x1="7333.451" y1="56.857" x2="7333.451" y2="95922.233">
+			<stop offset="0" stop-color="#ff0000"  />
+			<stop offset="1" stop-color="#000000"  />
+		</linearGradient>
+		<linearGradient id="grd2" gradientUnits="userSpaceOnUse"  x1="640.42" y1="1.074" x2="640.42" y2="21402.958">
+			<stop offset="0" stop-color="#ff0000"  />
+			<stop offset="1" stop-color="#000000"  />
+		</linearGradient>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: url(#grd1) } 
+		.shp1 { opacity: 0.227;fill: url(#grd2) } 
+	</style>
+	<g id="Ressources">
+		<g id="moutain/element/wave/wave-left">
+			<g id="Wave">
+				<path id="wave" fill-rule="evenodd" class="shp0" d="M-5.03 56.86C44.69 86.83 88.01 116.41 103.72 136.51C135.16 176.75 109.48 240.5 -4.18 366.48C-4.5 244.5 -4 151.5 -5.03 56.86Z" />
+				<path id="wave" fill-rule="evenodd" class="shp1" d="M-4.81 1.07C5.49 9.36 13.58 16.94 18.72 23.51C39.74 50.42 35.23 87.85 -4.07 147.37C-5 102.5 -4 50.5 -4.81 1.07Z" />
+			</g>
+		</g>
+	</g>
+</svg>

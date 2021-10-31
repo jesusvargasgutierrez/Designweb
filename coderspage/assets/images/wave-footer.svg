@@ -1,0 +1,18 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1294 216" width="1294" height="216">
+	<title>wave-footer-svg</title>
+	<defs>
+		<radialGradient id="grd1" gradientUnits="userSpaceOnUse"  cx="151019.997" cy="23788.769" r="191252.706">
+			<stop offset="0" stop-color="#000000"  />
+			<stop offset="1" stop-color="#ff0000"  />
+		</radialGradient>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: url(#grd1) } 
+	</style>
+	<g id="Ressource">
+		<g id="wave_footer">
+			<path id="Image-Hero-Copy" fill-rule="evenodd" class="shp0" d="M0 216L1294 216L1294 0C1078.48 9.95 862.98 14.93 647.5 14.93C432.02 14.93 216.19 9.95 0 0L0 216Z" />
+		</g>
+	</g>
+</svg>
