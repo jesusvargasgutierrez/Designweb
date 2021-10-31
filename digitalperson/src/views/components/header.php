@@ -11,25 +11,25 @@
 </head>
 <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="https://coders-web.com/countryimportacion/">Test</a>
+            <a class="navbar-brand" href="http://localhost/DesignWeb/digitalperson/">Test</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="https://coders-web.com/countryimportacion/">Inicio</a>
+                        <a class="nav-link" href="http://localhost/DesignWeb/digitalperson/">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="src/views/information/index.php">Verificar</a>
+                        <a class="nav-link" href="http://localhost/DesignWeb/digitalperson/src/views/information/index.php">Verificar</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="https://coders-web.com/countryimportacion/" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="http://localhost/DesignWeb/digitalperson/" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Importar
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="https://coders-web.com/countryimportacion/src/views/products/index.php">Productos</a>
-                            <a class="dropdown-item" href="https://coders-web.com/countryimportacion/src/views/products/codes.php">Codigos</a>
+                            <a class="dropdown-item" href="http://localhost/DesignWeb/digitalperson/src/views/products/index.php">Productos</a>
+                            <a class="dropdown-item" href="http://localhost/DesignWeb/digitalperson/src/views/products/codes.php">Codigos</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -38,14 +38,14 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <!-- <a class="dropdown-item" href="src/views/products/list.php">Productos</a> -->
-                            <a class="dropdown-item" href="https://coders-web.com/countryimportacion/src/controllers/products/list.php">Productos</a>
+                            <a class="dropdown-item" href="http://localhost/DesignWeb/digitalperson/src/controllers/products/list.php">Productos</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://coders-web.com/countryimportacion/src/views/components/codigo.html">Manual</a>
+                        <a class="nav-link" href="http://localhost/DesignWeb/digitalperson/src/views/components/codigo.html">Manual</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://coders-web.com/countryimportacion/src/views/components/about.php">Acerca de</a>
+                        <a class="nav-link" href="http://localhost/DesignWeb/digitalperson/src/views/components/about.php">Acerca de</a>
                     </li>
                 </ul>
             </div>
