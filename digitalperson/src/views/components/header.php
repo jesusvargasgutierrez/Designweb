@@ -44,7 +44,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="http://localhost/DesignWeb/digitalperson/src/views/components/codigo.html">Manual</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item d-none">
                         <a class="nav-link" href="http://localhost/DesignWeb/digitalperson/src/views/components/about.php">Acerca de</a>
                     </li>
                 </ul>
