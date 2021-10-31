@@ -1,0 +1,45 @@
+@extends(config('app.layout'))
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<ul class="list-tab navbar-nav">
+	  <li data-section="content-[controller]" class="[controller] nav-item active">
+        <a onclick="show_content_tab('list-tab','[controller]');" class="btn nav-link">
+			<i class="fas fa-cubes"></i>
+        	[controller]
+        </a>
+      </li>	
+	</ul>
+</nav>
+@section('content')
+<form action="{{ route('[controller].index') }}" class="ml-5">
+	<div class="mt-3 container">
+		<div class="row">
+			<div class="col-8 col-lg-6">
+				<input type="text" name="q" value="{{ Request::get('q') }}" class="form-control" placeholder="Buscar...">
+			</div>
+			<div class="col-4 col-lg-6 text-center @if($can_write == 0) d-none @endif">
+				<a href="{{ route('[controller].create') }}" class="text-center btn btn-secondary">
+					<i class="fas fa-plus"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+</form>
+
+<div id="content-[controller]" class="container">
+	<div class="container table-responsive">
+		<table class="table table-hover">
+			<thead>
+				<th></th>
+			</thead>
+			<tbody>
+				@foreach($modules as $module)
+					<tr class="clickable-row" data-href="[module]/{{ $module->id_module }}">
+						<td></td>
+					</tr>
+            	@endforeach
+			</tbody>
+		</table>
+	</div>
+	{{ $modules->appends(['q' => Request::get('q') ])->links('vendor.pagination.bootstrap-4') }}
+</div>
+@endsection

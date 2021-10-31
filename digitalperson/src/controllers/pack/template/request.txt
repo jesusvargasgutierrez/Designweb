@@ -1,0 +1,16 @@
+<?php
+
+namespace App\Http\Requests;
+
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Request;
+
+class [request]Request extends FormRequest
+{
+    public function rules(Request $req)
+    {
+        return [
+            [fields]
+        ];
+    }
+}

@@ -1,0 +1,34 @@
+@extends(config('app.layout'))
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<ul class="list-tab navbar-nav">
+	  <li>
+	  	<a href="{{ route('[controller].index') }}" class="nav-link">
+		<i class="fas fa-arrow-circle-left"></i> Volver </a>
+      </li>
+	  <li data-section="content-customer" class="customer nav-item active">
+        <a onclick="show_content_tab('list-tab','customer');" class="btn nav-link">
+			<i class="fas fa-cubes"></i>
+        	[controller]
+        </a>
+      </li>	
+	</ul>
+</nav>
+@section('content')
+<x-messages />
+<div id="content-[controller]" class="container">
+	<form method="post" action="{{ route("[controller].update", ["module" => $module->id_module]) }}">
+	  <input name="_method" type="hidden" value="PUT">
+	  <input name="id" type="hidden" value="{{ $module->id_module }}">
+	  @csrf
+		<div class="form-group mb-3 mt-3 @if($can_write == 0) d-none @endif">
+	      <button type="submit" class="text-center btn btn-primary">
+	      	<i class="far fa-save"></i>
+	      </button>
+		</div>
+	 	<div class="form-group">
+		  <label>Modulo</label>
+	      <input type="text" name="module" class="form-control" placeholder="Modulo" value="{{ $module->module }}">
+	    </div>
+	</form>		
+</div>
+@endsection

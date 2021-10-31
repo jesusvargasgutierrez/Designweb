@@ -1,0 +1,27 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use App\Http\Requests\[Model]Request;
+use App\Models\{ [Model] };
+
+class [Controller]Controller extends Controller
+{
+	function index(Request $req){
+    }
+
+    function create(){
+    	
+    }
+
+    function show(Request $req, [Model] $module){
+    }
+
+    function update([Request]Request $req, [Model] $module){
+    }
+
+    function store([Request]Request $req){
+    }
+}

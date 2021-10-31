@@ -1,0 +1,35 @@
+@extends(config('app.layout'))
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<ul class="list-tab navbar-nav">
+	  <li>
+	  	<a href="{{ route('[controller].index') }}" class="nav-link">
+		<i class="fas fa-arrow-circle-left"></i> Volver </a>
+      </li>
+	  <li data-section="content-[controller]" class="[controller] nav-item active">
+        <a onclick="show_content_tab('list-tab','[controller]');" class="btn nav-link">
+			<i class="fas fa-cubes"></i>
+        	[controller]
+        </a>
+      </li>	
+	</ul>
+</nav>
+@section('content')
+<x-messages />
+<div id="content-[controller]" class="container">
+	<form method="post" action="{{ route('[controller].store') }}">
+	  @csrf
+		<div class="form-group mb-3 mt-3">
+	  		<button type="submit" class="btn btn-primary">
+	      		<i class="far fa-save"></i>
+	      	</button>&nbsp;
+	      	<button onclick="clean_fields('content-[controller]');" type="button" class="btn btn-success">
+	      		<i class="fas fa-file"></i>
+	      	</button>
+		</div>
+	  	<div class="form-group">
+		   <label></label>
+	       <input type="text" name="module" class="form-control">
+	    </div>
+	</form>		
+</div>
+@endsection
