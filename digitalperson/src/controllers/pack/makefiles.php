@@ -7,10 +7,10 @@
     $model = $data["model"];;
     $request = $data["request"];
 
-    $fileds =  array($data["fields"]);
+    $fileds =  explode(',',$data["fields"]);
     $fields_string = "";
 
-    mkdir("pack".$controller, 775);
+    mkdir("pack".$controller, 0775);
     // $file = fopen('controller.txt',"r");
     // while(! feof($file))
     // {   
@@ -43,7 +43,7 @@
     file_put_contents("pack".$controller."/".$request.'Request.php', $str);
 
     //Make scope
-    mkdir("pack".$controller."/".$model, 775);
+    mkdir("pack".$controller."/".$model, 0775);
 
     $str = file_get_contents('template/scope.txt');
 
@@ -59,7 +59,7 @@
     file_put_contents("pack".$controller."/".$model.'/Methods.php', $str);
 
     //Make index
-    mkdir("pack".$controller."/".$controller, 775);
+    mkdir("pack".$controller."/".$controller, 0775);
 
     $str = file_get_contents('template/index.txt');
 
