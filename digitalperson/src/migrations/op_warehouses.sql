@@ -1,0 +1,12 @@
+CREATE TABLE op_warehouse
+(
+	id_warehouse INT NOT NULL AUTO_INCREMENT,
+	description VARCHAR(200) NOT NULL DEFAULT '',
+	equivalence VARCHAR(200) NOT NULL DEFAULT '',
+	status INT NOT NULL DEFAULT 1,
+	created_by INT NOT NULL DEFAULT 0,
+	updated_by INT NOT NULL DEFAULT 0,
+	created_at DATETIME NOT NULL DEFAULT NOW(),
+	updated_at DATETIME NOT NULL DEFAULT NOW(),
+	PRIMARY KEY (id_warehouse)
+)

@@ -1,7 +1,7 @@
 <?php
 require_once('../../vendor/autoload.php');
 require_once('../../conexion.php');
-require_once('../../models/products.php');
+require_once('../../models/warehouses.php');
 
 // $spreadsheet = new Spreadsheet();
 // $sheet = $spreadsheet->getActiveSheet();
@@ -20,15 +20,9 @@ if(isset($_FILES["file"]["type"])){
 
         foreach($row as $i => $r){
             if($i != 0){
-                products::create([
+                warehouses::create([
                     'description'   => $r[0],
-                    'quick_code'   => $r[1],
-                    'id_category'   => $r[2],
-                    'id_unity'   => $r[3],
-                    'id_warehouse'   => $r[4],
-                    'sales_price'   => $r[5],
-                    'employed_price'   => $r[6],
-                    'shop_price'   => $r[7]
+                    'equivalence' => $r[1]
                 ]);
             }
         }

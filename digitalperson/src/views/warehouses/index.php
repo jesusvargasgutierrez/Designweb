@@ -14,7 +14,7 @@
     <?php include('../components/header.php') ?>
     <div class="container mt-3">
         <div class="row">
-            <form action="../../controllers/categories/save.php" method="post" name="frmExcelImport" id="frmExcelImport" enctype="multipart/form-data">
+            <form action="../../controllers/warehouses/save.php" method="post" name="frmExcelImport" id="frmExcelImport" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="exampleFormControlFile1">
                         Importar almacenes

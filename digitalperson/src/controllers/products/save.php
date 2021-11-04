@@ -23,12 +23,13 @@ if(isset($_FILES["file"]["type"])){
                 products::create([
                     'description'   => $r[0],
                     'quick_code'   => $r[1],
-                    'id_category'   => $r[2],
-                    'id_unity'   => $r[3],
-                    'id_warehouse'   => $r[4],
-                    'sales_price'   => $r[5],
-                    'employed_price'   => $r[6],
-                    'shop_price'   => $r[7]
+                    'id_provider'   => $r[2],
+                    'id_category'   => $r[3],
+                    'id_unity'   => $r[4],
+                    'id_warehouse'   => $r[5],
+                    'sales_price'   => $r[6],
+                    'employed_price'   => $r[7],
+                    'shop_price'   => $r[8]
                 ]);
             }
         }
