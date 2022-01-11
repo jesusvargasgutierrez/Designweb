@@ -32,14 +32,9 @@
 				<th></th>
 			</thead>
 			<tbody>
-				@foreach($modules as $module)
-					<tr class="clickable-row" data-href="[module]/{{ $module->id_module }}">
-						<td></td>
-					</tr>
-            	@endforeach
 			</tbody>
 		</table>
 	</div>
-	{{ $modules->appends(['q' => Request::get('q') ])->links('vendor.pagination.bootstrap-4') }}
+	{{-- {{ $modules->appends(['q' => Request::get('q') ])->links('vendor.pagination.bootstrap-4') }} --}}
 </div>
 @endsection
