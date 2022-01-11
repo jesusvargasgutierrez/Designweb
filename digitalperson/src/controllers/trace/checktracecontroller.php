@@ -24,15 +24,15 @@ include('../compareimage/compareImages.php');
         $diff = $compareMachine->compareHash($rt->tracer_hash);
             
         // if($diff > 11){
-        //     echo "No hay coincidencias";
-        // }else{
-        //     echo "Coincide con ". $tracer['id_tracer'];
+        //      echo "No hay coincidencias";
+        //  }else{
+        //      echo "Coincide con ". $rt->id_tracer;
         // }
 
         $temp = $rt->id_member;
 
         if($indice == 0){
-            if($diff <= 11){
+            if($diff < 11){
                 $count = $count + 1;
                 //echo "Hay coincidencias";
             }

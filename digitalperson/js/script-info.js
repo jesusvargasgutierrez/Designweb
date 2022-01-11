@@ -164,7 +164,7 @@ function checktrace(){
         contentType: false
     }).done(function(data) {
         var id_member = $('#hash').val();
-        console.log(id_member);
+        console.log(data);
 
         axios
         .post(`../../controllers/information/informationcontroller.php`, {

@@ -34,6 +34,6 @@ require_once('../../models/information.php');
         //file_put_contents($nombreImagenGuardada, $imagenDecodificada);
 
         //exit('data:image/png;base64,' . base64_encode($imagenDecodificada));
-        exit($information);
+        exit($data);
     }
 ?>
