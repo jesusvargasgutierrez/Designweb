@@ -1,0 +1,19 @@
+{
+    "name": "jesus/apireadfiles",
+    "autoload": {
+        "psr-4": {
+            "Jesus\\Apireadfiles\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "jesusvargasgutierrez",
+            "email": "jesvargtz_infc@hotmail.com"
+        }
+    ],
+    "require": {
+        "aws/aws-sdk-php": "^3.200",
+        "illuminate/database": "*",
+        "illuminate/events": "^8.61"
+    }
+}
