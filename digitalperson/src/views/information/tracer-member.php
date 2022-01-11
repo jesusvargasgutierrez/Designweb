@@ -11,7 +11,6 @@
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 </head>
 <body>
-    <?php include('../components/header.php') ?>
     <div class="container mt-3">
         <div class="row">
             <div class="col">
