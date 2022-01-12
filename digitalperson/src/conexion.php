@@ -6,9 +6,9 @@ use Illuminate\Database\Capsule\Manager as Database;
     $database->addConnection([
         'driver' => 'mysql',
         'host' => 'localhost',
-        'database' => 'comprascountry',
+        'database' => 'country',
         'username' => 'root',
-        'password' => '',
+        'password' => '12345678',
         'charset' => 'utf8',
         'collation' => 'utf8_unicode_ci',
         'prefix' => '',
