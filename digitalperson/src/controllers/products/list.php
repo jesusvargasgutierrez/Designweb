@@ -5,5 +5,5 @@ require_once('../../models/products.php');
 
     $products = products::all();
 
-    header("Location: ../../views/products/list.php?products=".$products);
+    header("Location: ../../views/products/list.php");
 ?>

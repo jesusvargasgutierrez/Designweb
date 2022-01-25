@@ -21,15 +21,19 @@ if(isset($_FILES["file"]["type"])){
         foreach($row as $i => $r){
             if($i != 0){
                 products::create([
-                    'description'   => $r[0],
-                    'quick_code'   => $r[1],
-                    'id_provider'   => $r[2],
-                    'id_category'   => $r[3],
-                    'id_unity'   => $r[4],
-                    'id_warehouse'   => $r[5],
-                    'sales_price'   => $r[6],
-                    'employed_price'   => $r[7],
-                    'shop_price'   => $r[8]
+                    'description' => $r[0]
+                    ,'quick_code' => $r[1]
+                    ,'id_provider' => $r[2]
+                    ,'id_category' => $r[3]
+                    ,'id_unity' => $r[4]
+                    ,'id_unity_purcharse' => $r[5]
+                    ,'sales_price' => $r[6]
+                    ,'shop_price' => $r[7]
+                    ,'factor' => $r[8]
+                    ,'price_purcharse_without_tax' => $r[9]
+                    ,'price_purcharse_without_tax_unity' => $r[10]
+                    ,'utility' => $r[11]
+                    ,'pricesalewithouttax' => $r[12]
                 ]);
             }
         }

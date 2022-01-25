@@ -22,6 +22,22 @@
                 </div>
             </form>
         </div>
+        <div class="row">
+            <strong>Notas:</strong>
+            <ul class="text-danger">
+                <li>
+                    Favor de no retirar ninguna columna del archivo
+                </li>
+                <li>
+                    El id producto se obtendra de la pestaña productos
+                    en la seccion <strong>Ver > producto</strong>
+                </li>
+                <li>
+                    Para agregar mas de 1 codigo al producto
+                    es necesario hacer otra fila con el mismo id
+                </li>
+            </ul>
+        </div>
     </div>
 </body>
     <script src="../../../js/axios.js"></script>
