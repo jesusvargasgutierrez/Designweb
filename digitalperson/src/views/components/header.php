@@ -43,6 +43,15 @@
                             <a class="dropdown-item" href="http://localhost/DesignWeb/digitalperson/src/controllers/products/list.php">Productos</a>
                         </div>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownfinger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Fingerprint
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownfinger">
+                            <!-- <a class="dropdown-item" href="src/views/products/list.php">Productos</a> -->
+                            <a class="dropdown-item" href="http://localhost/DesignWeb/digitalperson/src/views/trace/test.php">test</a>
+                        </div>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="http://localhost/DesignWeb/digitalperson/src/views/components/codigo.html">Manual</a>
                     </li>
