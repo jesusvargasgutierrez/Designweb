@@ -14,28 +14,45 @@
     <?php include('../components/header.php') ?>
     <div class="container mt-3">
         <div class="row">
-            <table class="table">
+            <table class="table text-center">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Producto</th>
-                        <th scope="col">codigo rapido</th>
-                        <th scope="col">Precio compra</th>
-                        <th scope="col">Precio empleado</th>
-                        <th scope="col">Precio venta</th>
+                        <th scope="col">Codigo rapido</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Almacen</th>
+                        <th scope="col">Proveedor</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                        foreach(json_decode($_GET['products']) as $p){
+                        require_once('../../vendor/autoload.php');
+                        require_once('../../conexion.php');
+                        require_once('../../models/products.php');
+
+                        $allprod = products::select([
+                                        "op_products.id_product"
+                                        ,"op_products.description"
+                                        ,"op_products.quick_code"
+                                        ,"op_category.description as category"
+                                        ,"op_suppliers.fullname as supplier"
+                                    ])
+                                   ->join('op_category','op_products.id_category','op_category.id_category')
+                                   ->join('op_suppliers','op_products.id_provider','op_suppliers.id_supplier')
+                                   ->get();
+
+                        foreach($allprod as $p){
                             ?>
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td><?php echo $p->description ?></td>
-                                    <td><?php echo $p->quick_code ?></td>
-                                    <td><?php echo '$'.number_format($p->sales_price, 2, '.', '') ?></td>
-                                    <td><?php echo '$'.number_format($p->employed_price, 2, '.', '') ?></td>
-                                    <td><?php echo '$'.number_format($p->shop_price, 2, '.', '') ?></td>
+                                    <th scope="row">
+                                        <?php echo $p["id_product"] ?>
+                                    </th>
+                                    <td><?php echo $p["description"] ?></td>
+                                    <td><?php echo $p["quick_code"] ?></td>
+                                    <td><?php echo $p["category"] ?></td>
+                                    <td>Hoyo 1</td>
+                                    <td><?php echo $p["supplier"] ?></td>
                                 </tr>
                             <?php
                         }

@@ -32,6 +32,7 @@
                             <a class="dropdown-item" href="http://localhost/DesignWeb/digitalperson/src/views/products/codes.php">Codigos</a>
                             <a class="dropdown-item" href="http://localhost/DesignWeb/digitalperson/src/views/warehouses/index.php">Almacenes</a>
                             <a class="dropdown-item" href="http://localhost/DesignWeb/digitalperson/src/views/categories/index.php">Categorias</a>
+                            <a class="dropdown-item" href="http://localhost/DesignWeb/digitalperson/src/views/suppliers/index.php">Provedores</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">

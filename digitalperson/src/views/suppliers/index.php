@@ -14,29 +14,15 @@
     <?php include('../components/header.php') ?>
     <div class="container mt-3">
         <div class="row">
-            <form action="../../controllers/products/codessave.php" method="post" name="frmExcelImport" id="frmExcelImport" enctype="multipart/form-data">
+            <form action="../../controllers/suppliers/save.php" method="post" name="frmExcelImport" id="frmExcelImport" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label for="exampleFormControlFile1">Importar codigos productos</label>
+                    <label for="exampleFormControlFile1">
+                        Importar proveedores
+                    </label>
                     <input type="file" require name="file" class="form-control-file mt-3" id="exampleFormControlFile1">
                     <input type="submit" name="import" class="form-control btn btn-primary mt-3" value="Enviar" />
                 </div>
             </form>
-        </div>
-        <div class="row">
-            <strong>Notas:</strong>
-            <ul class="text-danger">
-                <li>
-                    Favor de no retirar ninguna columna del archivo
-                </li>
-                <li>
-                    El id producto se obtendra de la pestaña productos
-                    en la seccion <strong>Ver > producto</strong>
-                </li>
-                <li>
-                    Para agregar mas de 1 codigo al producto
-                    es necesario hacer otra fila con el mismo id
-                </li>
-            </ul>
         </div>
     </div>
 </body>
